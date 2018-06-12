@@ -1,0 +1,71 @@
+{
+  "name": "fixme",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.2",
+    "@types/query-string": "^5.1.0",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.2",
+    "@types/react-router-dom": "^4.2.7",
+    "@types/reactstrap": "^5.0.27",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "bootstrap": "^4.1.1",
+    "connected-react-router": "^4.3.0",
+    "history": "^4.7.2",
+    "ncp": "^2.0.0",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "popper.js": "^1.14.3",
+    "prettier": "^1.13.5",
+    "prop-types": "^15.6.1",
+    "query-string": "^6.1.0",
+    "react": "^16.4.0",
+    "react-async-component": "^2.0.0",
+    "react-dom": "^16.4.0",
+    "react-markdown": "^3.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts-ts": "2.16.0",
+    "react-select": "^2.0.0-beta.6",
+    "reactstrap": "^6.1.0",
+    "redux": "4.0.0",
+    "redux-thunk": "2.3.0",
+    "rimraf": "^2.6.2",
+    "styled-components": "^3.3.2",
+    "tslint": "^5.10.0",
+    "tslint-plugin-prettier": "^1.3.0",
+    "typesafe-actions": "^2.0.4",
+    "typescript": "^2.9.1",
+    "utility-types": "^2.0.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "tslint --fix",
+      "git add"
+    ],
+    "**/*.{json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts-ts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "yarn build-css && react-scripts-ts build && rimraf dist/ && ncp build dist",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "precommit": "lint-staged",
+    "deploy": "yarn build"
+  }
+}

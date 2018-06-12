@@ -1,0 +1,101 @@
+.home-container {
+  background: #102131;
+  color: #fafafa;
+  .home-call-to-action-text,
+  .home-call-to-action-text>span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    color: #ffffff;
+    .extra-bold {
+      font-weight: 800;
+    }
+  }
+  .learn-more {
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom, #de4270, #1f2b44);
+    border: none;
+    min-width: 140px;
+    min-height: 39px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    color: #fafafa
+  }
+  .home-illustration-img {
+    margin-bottom: -2em;
+  }
+  .home-about-you {
+    padding-top: 3em;
+    background-color: #e7e7e7;
+    &-title {
+      font-weight: bold;
+      text-align: center;
+      color: #EA006E;
+    }
+    &-magic {
+      font-weight: 300;
+      text-align: center;
+      color: #1f2b44;
+      display: flex;
+      justify-content: center;
+      .h2 {
+        display: inline-block;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+    &-btn {
+      border-radius: 10px;
+      border: solid 3px #de4270;
+      span {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .home-project {
+    background-image: linear-gradient(118deg, #EA006E, #1f2b44);
+    &-text {
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: -0.6px;
+      text-align: center;
+      color: #fafafa;
+      span {
+        font-size: 36px;
+        font-weight: 500;
+      }
+    }
+    &-img {
+      min-height: 30vh;
+      object-fit: fill;
+    }
+  }
+  .home-twitter {
+    background-color: #e7e7e7;
+    color: #EA006E;
+    h2 {
+      color: #EA006E;
+      padding-bottom: 0;
+    }
+    span {
+      font-family: "Open Sans", sans-serif;
+    }
+    &-tweet {
+      border-radius: 4px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 2em;
+    }
+  }
+  .arrow-right {
+    border: solid #de4270;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    transform: rotate(-45deg);
+  }
+}
