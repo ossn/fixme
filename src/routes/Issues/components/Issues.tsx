@@ -65,8 +65,8 @@ export const Issues: React.SFC<IHomeProps> = ({
       <section className="container">
         <FixMeNavbar white={true} />
         <div className="row my-5">
-          <div className="col-4 d-flex flex-column align-middle position-relative">
-            <div className="sticky-top mx-5">
+          <div className="col-md-4 col-12 d-flex flex-column align-middle position-relative">
+            <div className="issues-filter-wrapper">
               <h2>Filter</h2>
               <div className="issues-filter-container p-4">
                 {filters.map(filter => (
@@ -109,7 +109,7 @@ export const Issues: React.SFC<IHomeProps> = ({
               </div>
             </div>
           </div>
-          <div className="col-8">
+          <div className="col-md-8 col-12">
             <div className="d-flex justify-content-between">
               <h2>
                 Found {issuesLength} {issuesLength === 1 ? "issue" : "issues"}

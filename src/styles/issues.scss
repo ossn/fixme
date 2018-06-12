@@ -1,4 +1,10 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
 .issues-container {
+  .navbar-toggler {
+    color: #282a3a;
+  }
   .nav-item>a.nav-link {
     color: #282a3a;
     &.active {
@@ -93,15 +99,24 @@
     font-weight: 500;
     letter-spacing: 0.4px;
     color: #282a3a;
-    &::focus,
-    &::active {
+    &:focus,
+    &:active {
       border: solid 1px #de4270;
-    } // select {
-    //   -moz-appearance: none;
-    //   /* Firefox */
-    //   -webkit-appearance: none;
-    //   /* Safari and Chrome */
-    //   appearance: none;
-    // }
+    }
+  }
+  .issues-filter-wrapper {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: unset;
+      @supports (position: sticky) {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: 3em;
+      margin-right: 3em;
+    }
   }
 }

@@ -15,7 +15,13 @@
 @import '../../node_modules/bootstrap/scss/type';
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: .8rem;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -173,7 +179,9 @@ li {
     max-width: 400px;
     text-align: center;
   }
-  &-left {
-    margin: 0 68px;
+  @include media-breakpoint-up(md) {
+    &-left {
+      margin: 0 68px;
+    }
   }
 }
