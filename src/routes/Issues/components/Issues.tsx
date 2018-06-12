@@ -56,7 +56,7 @@ export const Issues: React.SFC<IHomeProps> = ({
         ? [...(params[filterType] || []), value]
         : (params[filterType] || []).filter((key: string) => key !== value);
     }
-    push(`${location}?${stringify(params)}`);
+    push(`${location}?${stringify({ ...params, order })}`);
   };
 
   const issuesLength = finalIssues.length;
