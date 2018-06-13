@@ -9,14 +9,14 @@ import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { multiFilter } from "../../../helpers/helpers";
 import { filters, issuesListMockData } from "../../../helpers/mockData";
 
-interface IHomeProps {
+interface IIssuesProps {
   readonly issues: typeof issuesListMockData;
   search: string;
   location: string;
   push: any;
 }
 
-export const Issues: React.SFC<IHomeProps> = ({
+export const Issues: React.SFC<IIssuesProps> = ({
   issues,
   search,
   location,
