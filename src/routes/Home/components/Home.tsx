@@ -42,12 +42,12 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
       <div className="container">
         <div className="d-flex row">
           <div className="col-md-6 col-12 d-flex">
-            <h4 className="home-project-text m-auto">
+            <h4 className="home-project-text py-5 m-auto">
               24 projects on board <br /> <span>(and counting…)</span>
             </h4>
           </div>
           <div className="col-md-6 col-12">
-            <img className="img-fluid home-projects-img" src={GroupCopy} alt="projects" />
+            <img className="img-fluid home-project-img" src={GroupCopy} alt="projects" />
           </div>
         </div>
         </div>
