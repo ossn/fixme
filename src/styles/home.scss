@@ -1,8 +1,12 @@
 .home-container {
   background: #102131;
-  color: #fafafa;
+  .nav-item > a.nav-link {
+    &.active {
+      border-bottom: 1px solid transparent;
+    }
+  }
   .home-call-to-action-text,
-  .home-call-to-action-text>span {
+  .home-call-to-action-text > span {
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: -0.4px;
@@ -22,7 +26,7 @@
     letter-spacing: 0.8px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    color: #fafafa
+    color: #fafafa;
   }
   .home-illustration-img {
     margin-bottom: -2em;
@@ -33,7 +37,7 @@
     &-title {
       font-weight: bold;
       text-align: center;
-      color: #EA006E;
+      color: #ea006e;
     }
     &-magic {
       font-weight: 300;
@@ -56,7 +60,7 @@
     }
   }
   .home-project {
-    background-image: linear-gradient(118deg, #EA006E, #1f2b44);
+    background-image: linear-gradient(118deg, #ea006e, #1f2b44);
     &-text {
       font-size: 48px;
       font-weight: bold;
@@ -75,9 +79,9 @@
   }
   .home-twitter {
     background-color: #e7e7e7;
-    color: #EA006E;
+    color: #ea006e;
     h2 {
-      color: #EA006E;
+      color: #ea006e;
       padding-bottom: 0;
     }
     span {

@@ -2,21 +2,6 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 .issues-container {
-  .navbar-toggler {
-    color: #282a3a;
-  }
-  .nav-item>a.nav-link {
-    color: #282a3a;
-    &.active {
-      color: #282a3a;
-      border-radius: 1px;
-      border-bottom: 1px solid #de4270;
-    }
-    &:hover {
-      color: #282a3a;
-      text-decoration: none;
-    }
-  }
   .easy {
     box-shadow: inset 4px 0 0 0 #d9ffaf;
     border-radius: 4px;
@@ -34,17 +19,17 @@
     border-radius: 4px;
     font-family: "Open Sans", sans-serif;
     background: #fff;
-    padding: 1em .75em;
+    padding: 1em 0.75em;
     margin-bottom: 1.5em;
     cursor: pointer;
     &-main {
-      padding: .75em 1.5em;
-      padding-right: .5em;
+      padding: 0.75em 1.5em;
+      padding-right: 0.5em;
       color: #282a3a;
     }
     &-meta {
       padding-left: 0;
-      padding: .75em 1.5em;
+      padding: 0.75em 1.5em;
       background: #fcfcfc;
       &::before {
         background: #e7e7e7;
@@ -59,7 +44,7 @@
         height: 100%;
       }
       span {
-        font-size: .8em;
+        font-size: 0.8em;
         color: #9b9b9b;
         font-weight: 500;
         letter-spacing: 0.3px;

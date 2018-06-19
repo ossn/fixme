@@ -25,10 +25,11 @@ export default class FixMeNavbar extends React.Component<
     }));
   };
   public render() {
-    const fill = this.props.white ? "#282a3a" : "#FAFAFA";
+    const { white } = this.props;
+    const fill = white ? "#282a3a" : "#FAFAFA";
     return (
       <div>
-        <Navbar expand="md" light={true}>
+        <Navbar expand="md" light={white} dark={!white}>
           <NavLink className="mr-auto navbar-brand" to="/">
             <img src={Logo} className="d-inline-block align-top" alt="FixMe" />
           </NavLink>

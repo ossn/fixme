@@ -1,3 +1,8 @@
-$navbar-light-color:#fafafa;
-$navbar-light-toggler-border-color: transparent;
+$navbar-light-color: #282a3a;
+$navbar-light-active-color: #282a3a;
+$navbar-light-toggler-border-color: #de4270;
+$navbar-light-hover-color: lighten(#282a3a, 20%);
+$navbar-dark-toggler-border-color: #de4270;
+$navbar-dark-active-color: #fafafa;
+$navbar-dark-color: #fafafa;
 $body-bg: #fafafa;
