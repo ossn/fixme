@@ -1,87 +1,8 @@
-// Colors
-$absolute-white: #fff;
-$absolue-black: #000;
-$blue-light-high: rgba(32, 214, 201, 1);
-$blue-light-low: rgba(38, 201, 206, 1);
-$blue-mid: #32aada;
-$blue: #364155;
-$grey-blue: #5e6777;
-$purple: #475369;
-$outline-grey: #888;
-$icon-grey-blue: #999da9;
-// Backgrounds
-$background: #f9f9f9;
-$background-waiting: #f2f2f2;
-$background-inner: $absolute-white;
-$background-svg: #b3b3b3;
-// Text-colors
-$text-white: #fff;
-$text-grey: #888;
-$font-color: #333;
-$text-black: #5a5a5a;
-$text-blue-grey: #8292ae;
-$chart-type-color: #dadada;
-// Gradients
-$gradient-black: linear-gradient( 180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.55) 100%);
-$gradient-blue-limited: linear-gradient( 270deg, $blue-light-high 0%, rgba(77, 64, 255, 0.92) 100%);
-$gradient-blue-full: linear-gradient( 90deg, rgba(161, 232, 234, 1) 0%, rgba(0, 118, 255, 1) 100%);
-// Borders
-$border-grey: 0.05rem solid #ceced0;
-// Active
-$active-button: $purple;
-$active-button-header: $absolute-white;
-// Font sizing
-$font-size--xs: 14px;
-$font-size--sm: 16px;
-$font-size--rg: 18px;
-$font-size--md: 20px;
-$font-size--lg: 26px;
-$font-size--xl: 32px;
-// Spacing
-$full-space: 2.5rem;
-$half-space: 1.25rem;
-$tablet: 768px;
-$smartphone: 737px;
-// Main colors
-$danger: #ef4100;
-$warning: #f0ad4e;
-$info: #5bc0de;
-$alternate: #4d40ff;
-$brand-color: #20d6c9;
-$brand-secondary-color: #14da9e;
-$active: #e6e6e8;
-$primary: #475369;
-$headings-color: #2d2d2d;
-$white-color: #fff;
-$grey-color: #999;
-$grey-color-light: #a349b4;
-$light-grey-color: #cdcdcf;
-$lighter-grey-color: #f1f1f1;
-$lighter-grey-color-medium: #efeff0;
-$dark-grey-color: #808080;
-$light-grey-bg: #f0f0f0;
-$input-border: #ceced0;
-$input-border-normal: #c9cdd7;
-$text-darkgrey-color: #444;
-$border-dark-color: #d0d0d0;
-$rating-label: #dedede;
-// Table Colors
-$table-border-color: #c2c2c2;
-$raw-data-table-thead-color: #3c4144;
-$raw-data-type: #c2c2c2;
-//  Sections
-$recent-projects-color: #676f82;
 // Loader
-// //colors
 $white_70: rgba(#dadada, 0.7);
 $black_40: rgba(#dadada, 0.4);
 $white_20: rgba(#dadada, 0.2);
-$white: #dadada;
 $color_silver_approx: #dadada;
-$black: #dadada;
-$white_10: rgba(#dadada, 0.1);
-$black_10: #dadada;
-$black_30: #dadada;
 $color_gray_nurse_approx: #e8e8e8;
 $color_alto_approx: #dedede;
 $color_quill_gray_approx: #d2d2d2;
@@ -92,83 +13,9 @@ $color_fuscous_gray_approx: #dadada;
 $color_gravel_approx: #dadada;
 $color_cape_cod_approx: #dadada;
 $color_tuatara_approx: #dadada;
-//fonts
-$font_0: HelveticaNeue-Light;
-$font_1: Helvetica Neue Light;
-$font_2: Helvetica Neue;
-$font_3: Helvetica;
-$font_4: Arial;
-$font_5: Lucida Grande;
-$font_6: sans-serif;
-$danger: #ef4100;
-$warning: #f0ad4e;
-$info: #5bc0de;
-$alternate: #4d40ff;
-$brand-color: #20d6c9;
-$brand-secondary-color: #14da9e;
-$active: #e6e6e8;
-$primary: #475369;
-$headings-color: #2d2d2d;
-$main-color: #819891;
-$primary-color: #475369;
-$primary-color-light: #596377;
-$primary-color-medium: #364054;
-$primary-color-dark: #2f3849;
-$secondary-color: #20d6c9;
-$turqoise-color: #1ac0b4;
-$accent-color: #4d40ff;
-$accent-color-dark: #3d33cc;
-$body-bg-color: #f5f5f5;
-$white-color: #ffffff;
-$grey-color: #999;
-$grey-blue-color: #475369;
-$grey-blue-color-light: #9097a8;
-$grey-color-light: #a3a9b4;
-$light-grey-color: #cdcdcf;
-$lighter-grey-color: #f1f1f1;
-$lighter-grey-color-medium: #efeff0;
-$very-light-color: #f9f9f9;
-$dark-grey-color: #808080;
-$darker-grey-color: #3c3c3c;
-$light-grey-bg: #f0f0f0;
-$input-darkgrey-bg: #9b9b9b;
-$input-border: #ceced0;
-$input-border-normal: #e6e6e8;
-$extra-light-grey-bg: #fbfbfb;
-$text-dark-color: #2d2d2d;
-$text-darkgrey-color: #444444;
-$red-color: #ef4100;
-$green-color: #1ba52f;
-$border-dark-color: #d0d0d0;
-$grey-blue-color: #8d95a2;
-$color-dark: #333;
-// Font colors
-$font-color: #333;
-// Main colors
-$danger: #ef4100;
-$warning: #f0ad4e;
-$info: #5bc0de;
-$alternate: #4d40ff;
-$brand-color: #20d6c9;
-$brand-secondary-color: #14da9e;
-$active: #e6e6e8;
-$primary: #475369;
-$headings-color: #2d2d2d;
-$white-color: #ffffff;
-$grey-color: #999;
-$grey-color-light: #a3a9b4;
-$light-grey-color: #cdcdcf;
-$lighter-grey-color: #f1f1f1;
-$lighter-grey-color-medium: #efeff0;
-$dark-grey-color: #808080;
-$light-grey-bg: #f0f0f0;
-$input-border: #ceced0;
-$input-border-normal: #c9cdd7;
-$text-darkgrey-color: #444444;
-$border-dark-color: #d0d0d0;
-// Table Colors
-$table-border-color: #c2c2c2;
-$raw-data-table-thead-color: #3c4144;
-$raw-data-type: #c2c2c2;
-//  Sections
-$recent-projects-color: #676f82;
+// Fonts
+$font_0: Raleway, sans-serif;
+$font_1: "Open Sans", sans-serif;
+// Colors
+$main_white: #fafafa;
+$main_blue: #282a3a;

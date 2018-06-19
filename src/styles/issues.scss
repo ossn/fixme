@@ -1,6 +1,7 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
+@import "./base";
 .issues-container {
   .easy {
     box-shadow: inset 4px 0 0 0 #d9ffaf;
@@ -17,7 +18,7 @@
   .issue-card {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    font-family: "Open Sans", sans-serif;
+    font-family: $font_1;
     background: #fff;
     padding: 1em 0.75em;
     margin-bottom: 1.5em;
@@ -25,7 +26,7 @@
     &-main {
       padding: 0.75em 1.5em;
       padding-right: 0.5em;
-      color: #282a3a;
+      color: $main_blue;
     }
     &-meta {
       padding-left: 0;
@@ -54,23 +55,29 @@
       font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.5px;
-      color: #282a3a;
+      color: $main_blue;
       text-transform: capitalize;
     }
     &-subtitle {
       text-transform: capitalize;
+      font-size: 0.9em;
       letter-spacing: 0.4px;
-      color: #282a3a;
+      color: $main_blue;
     }
     &-description {
       line-height: 16px;
+      font-size: 0.9em;
       letter-spacing: 0.3px;
-      text-align: justify;
-      color: #282a3a;
+      color: $main_blue;
+      code {
+        font-size: 0.9em;
+        letter-spacing: 0.3px;
+        color: #9b9b9b;
+      }
     }
   }
   .issues-filter-container {
-    font-family: "Open Sans", sans-serif;
+    font-family: $font_1;
     border-radius: 4px;
     background-color: #fcfcfc;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
@@ -78,12 +85,12 @@
   .issue-order-by {
     border-radius: 4px;
     border: solid 1px #de4270;
-    background-color: #fafafa;
-    font-family: Raleway;
+    background-color: $main_white;
+    font-family: $font_0;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.4px;
-    color: #282a3a;
+    color: $main_blue;
     &:focus,
     &:active {
       border: solid 1px #de4270;

@@ -1,3 +1,4 @@
+@import "./base";
 .home-container {
   background: #102131;
   .nav-item > a.nav-link {
@@ -26,7 +27,7 @@
     letter-spacing: 0.8px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    color: #fafafa;
+    color: $main_white;
   }
   .home-illustration-img {
     margin-bottom: -2em;
@@ -47,7 +48,7 @@
       justify-content: center;
       .h2 {
         display: inline-block;
-        font-family: "Open Sans", sans-serif;
+        font-family: $font_1;
       }
     }
     &-btn {
@@ -55,7 +56,11 @@
       border: solid 3px #de4270;
       span {
         font-size: 1.4rem;
-        font-weight: 500;
+        font-family: $font_1;
+        font-weight: 300;
+        letter-spacing: -0.4px;
+        text-align: center;
+        color: #1f2b44;
       }
     }
   }
@@ -66,7 +71,7 @@
       font-weight: bold;
       letter-spacing: -0.6px;
       text-align: center;
-      color: #fafafa;
+      color: $main_white;
       span {
         font-size: 36px;
         font-weight: 500;
@@ -78,7 +83,7 @@
     }
     &-link {
       text-decoration: underline;
-      color: #fafafa;
+      color: $main_white;
     }
   }
   .home-twitter {
@@ -89,7 +94,7 @@
       padding-bottom: 0;
     }
     span {
-      font-family: "Open Sans", sans-serif;
+      font-family: $font_1;
     }
     &-tweet {
       border-radius: 4px;
