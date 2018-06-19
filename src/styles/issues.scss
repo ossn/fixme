@@ -11,10 +11,12 @@
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ffc98f;
   }
+
   .senior {
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ff9696;
   }
+
   .issue-card {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -23,13 +25,14 @@
     padding: 1em 0.75em;
     margin-bottom: 1.5em;
     cursor: pointer;
+
     &-main {
       padding: 0.75em 1.5em;
       padding-right: 0.5em;
       color: $main_blue;
     }
+
     &-meta {
-      padding-left: 0;
       padding: 0.75em 1.5em;
       background: #fcfcfc;
       &::before {
@@ -44,6 +47,7 @@
         min-height: 70px;
         height: 100%;
       }
+
       span {
         font-size: 0.8em;
         color: #9b9b9b;
@@ -51,6 +55,7 @@
         letter-spacing: 0.3px;
       }
     }
+
     &-title {
       font-size: 18px;
       font-weight: 500;
@@ -58,17 +63,20 @@
       color: $main_blue;
       text-transform: capitalize;
     }
+
     &-subtitle {
       text-transform: capitalize;
       font-size: 0.9em;
       letter-spacing: 0.4px;
       color: $main_blue;
     }
+
     &-description {
       line-height: 16px;
       font-size: 0.9em;
       letter-spacing: 0.3px;
       color: $main_blue;
+
       code {
         font-size: 0.9em;
         letter-spacing: 0.3px;
@@ -76,12 +84,14 @@
       }
     }
   }
+
   .issues-filter-container {
     font-family: $font_1;
     border-radius: 4px;
     background-color: #fcfcfc;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   }
+
   .issue-order-by {
     border-radius: 4px;
     border: solid 1px #de4270;
@@ -96,8 +106,10 @@
       border: solid 1px #de4270;
     }
   }
+
   .issues-filter-wrapper {
     display: none;
+
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
@@ -106,6 +118,7 @@
         z-index: $zindex-sticky;
       }
     }
+
     @include media-breakpoint-up(lg) {
       margin-left: 3em;
       margin-right: 3em;
