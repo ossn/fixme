@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import "../../../styles/home.css";
@@ -43,7 +44,7 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
         <div className="d-flex row">
           <div className="col-md-6 col-12 d-flex">
             <h4 className="home-project-text py-5 m-auto">
-              24 projects on board <br /> <span>(and counting…)</span>
+              <Link to="/projects" className="home-project-link">24 projects </Link> on board <br /> <span>(and counting…)</span>
             </h4>
           </div>
           <div className="col-md-6 col-12">

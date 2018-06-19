@@ -76,6 +76,10 @@
       min-height: 30vh;
       object-fit: fill;
     }
+    &-link {
+      text-decoration: underline;
+      color: #fafafa;
+    }
   }
   .home-twitter {
     background-color: #e7e7e7;
