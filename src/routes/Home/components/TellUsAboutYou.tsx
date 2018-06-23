@@ -61,6 +61,10 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
     values: Array<{ value: string; label: string }>
   ) => {
     this.props.updateLanguage(values.map(value => value.value));
+    if (values.length <= 0) {
+      this.props.updateLevel("");
+      this.props.updateType("");
+    }
   };
   public handleTypeChange = (value: { value: string; label: string }) => {
     this.props.updateType(value.value);
