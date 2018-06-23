@@ -1,77 +1,77 @@
 @import "./base";
 .home-container {
   background: #102131;
-  .nav-item > a.nav-link {
+  .nav-item > .nav-link {
     &.active {
       border-bottom: 1px solid transparent;
     }
   }
   .home-call-to-action-text,
   .home-call-to-action-text > span {
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: -0.4px;
-    color: #ffffff;
-    .extra-bold {
-      font-weight: 800;
-    }
+  }
+  .home-call-to-action-text > .extra-bold {
+    font-weight: 800;
   }
   .learn-more {
-    border-radius: 6px;
     background-image: linear-gradient(to bottom, #de4270, #1f2b44);
-    border: none;
-    min-width: 140px;
-    min-height: 39px;
+    border: 0;
+    border-radius: 6px;
+    color: $main-white;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.8px;
+    min-height: 39px;
+    min-width: 140px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    color: $main_white;
   }
   .home-illustration-img {
     margin-bottom: -2em;
   }
   .home-about-you {
-    padding-top: 3em;
     background-color: #e7e7e7;
+    padding-top: 3em;
     &-title {
+      color: #ea006e;
       font-weight: bold;
       text-align: center;
-      color: #ea006e;
     }
     &-magic {
-      font-weight: 300;
-      text-align: center;
       color: #1f2b44;
       display: flex;
+      font-weight: 300;
       justify-content: center;
+      text-align: center;
       .h2 {
         display: inline-block;
-        font-family: $font_1;
+        font-family: $font-1;
       }
     }
     &-btn {
-      border-radius: 10px;
       border: solid 3px #de4270;
+      border-radius: 10px;
       span {
+        color: #1f2b44;
+        font-family: $font-1;
         font-size: 1.4rem;
-        font-family: $font_1;
         font-weight: 300;
         letter-spacing: -0.4px;
         text-align: center;
-        color: #1f2b44;
       }
     }
   }
   .home-project {
     background-image: linear-gradient(118deg, #ea006e, #1f2b44);
     &-text {
+      color: $main-white;
       font-size: 48px;
       font-weight: bold;
       letter-spacing: -0.6px;
       text-align: center;
-      color: $main_white;
       span {
         font-size: 36px;
         font-weight: 500;
@@ -82,8 +82,8 @@
       object-fit: fill;
     }
     &-link {
+      color: $main-white;
       text-decoration: underline;
-      color: $main_white;
     }
   }
   .home-twitter {
@@ -94,14 +94,14 @@
       padding-bottom: 0;
     }
     span {
-      font-family: $font_1;
+      font-family: $font-1;
     }
     &-tweet {
+      background-color: #fff;
       border-radius: 4px;
-      background-color: #ffffff;
       box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-      text-align: center;
       padding: 2em;
+      text-align: center;
     }
   }
   .arrow-right {

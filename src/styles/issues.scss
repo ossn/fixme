@@ -4,112 +4,99 @@
 @import "./base";
 .issues-container {
   .easy {
-    box-shadow: inset 4px 0 0 0 #d9ffaf;
     border-radius: 4px;
+    box-shadow: inset 4px 0 0 0 #d9ffaf;
   }
   .moderate {
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ffc98f;
   }
-
   .senior {
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ff9696;
   }
-
   .issue-card {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    font-family: $font_1;
     background: #fff;
-    padding: 1em 0.75em;
-    margin-bottom: 1.5em;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
-
+    font-family: $font-1;
+    margin-bottom: 1.5em;
+    padding: 1em 0.75em;
     &-main {
+      color: $main-blue;
       padding: 0.75em 1.5em;
       padding-right: 0.5em;
-      color: $main_blue;
     }
-
     &-meta {
-      padding: 0.75em 1.5em;
       background: #fcfcfc;
+      padding: 0.75em 1.5em;
       &::before {
         background: #e7e7e7;
-        width: 1px;
+        bottom: 0;
         content: "";
         display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
+        height: 100%;
         left: 0;
         min-height: 70px;
-        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 1px;
       }
-
       span {
-        font-size: 0.8em;
         color: #9b9b9b;
+        font-size: 0.8em;
         font-weight: 500;
         letter-spacing: 0.3px;
       }
     }
-
     &-title {
+      color: $main-blue;
       font-size: 18px;
       font-weight: 500;
       letter-spacing: 0.5px;
-      color: $main_blue;
       text-transform: capitalize;
     }
-
     &-subtitle {
-      text-transform: capitalize;
+      color: $main-blue;
       font-size: 0.9em;
       letter-spacing: 0.4px;
-      color: $main_blue;
+      text-transform: capitalize;
     }
-
     &-description {
-      line-height: 16px;
+      color: $main-blue;
       font-size: 0.9em;
       letter-spacing: 0.3px;
-      color: $main_blue;
-
+      line-height: 16px;
       code {
+        color: #9b9b9b;
         font-size: 0.9em;
         letter-spacing: 0.3px;
-        color: #9b9b9b;
       }
     }
   }
-
   .issues-filter-container {
-    font-family: $font_1;
-    border-radius: 4px;
     background-color: #fcfcfc;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .issue-order-by {
     border-radius: 4px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    font-family: $font-1;
+  }
+  .issue-order-by {
+    background-color: $main-white;
     border: solid 1px #de4270;
-    background-color: $main_white;
-    font-family: $font_0;
+    border-radius: 4px;
+    color: $main-blue;
+    font-family: $font-0;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.4px;
-    color: $main_blue;
     &:focus,
     &:active {
       border: solid 1px #de4270;
     }
   }
-
   .issues-filter-wrapper {
     display: none;
-
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
@@ -118,7 +105,6 @@
         z-index: $zindex-sticky;
       }
     }
-
     @include media-breakpoint-up(lg) {
       margin-left: 3em;
       margin-right: 3em;

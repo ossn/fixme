@@ -32,17 +32,17 @@ body {
 
 html,
 body {
+  font-family: $font-0;
   height: 100%;
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
-  font-family: $font_0;
   padding: 0;
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -50,113 +50,96 @@ li {
   list-style-type: none;
 }
 
-#root {
-  min-height: 100vh;
-  max-width: 100vw;
-}
-
 .loader {
   position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 38px;
-    height: 1px;
+  &::before {
     background: linear-gradient(
       to left,
       rgba(0, 0, 0, 0),
-      $white_70,
+      $white-70,
       rgba(0, 0, 0, 0)
     );
-    top: -19px;
-    left: 10%;
-  }
-  &:after {
     content: "";
+    height: 1px;
+    left: 10%;
     position: absolute;
-    top: -21px;
-    left: 16.5%;
-    width: 3px;
-    height: 3px;
+    top: -19px;
+    width: 38px;
+  }
+  &::after {
     background: #dadada; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 50%; //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 0 10px 5px $white_20;
+    box-shadow: 0 0 10px 5px $white-20;
+    content: "";
+    height: 3px;
+    left: 16.5%;
+    position: absolute;
+    top: -21px;
+    width: 3px;
   }
   li {
-    width: 8px;
-    height: 20px;
     background: $white; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 30px;
+    height: 20px;
+    left: 46px;
     position: absolute;
     top: 40px;
-    left: 46px;
+    width: 8px;
     &:nth-child(1) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $white; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(30deg) translate(0, -30px);
-      background: $white;
     }
     &:nth-child(2) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-gray-nurse-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(60deg) translate(0, -30px);
-      background: $color_gray_nurse_approx;
     }
     &:nth-child(3) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-alto-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(90deg) translate(0, -30px);
-      background: $color_alto_approx;
     }
     &:nth-child(4) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-quil-gray-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(120deg) translate(0, -30px);
-      background: $color_quill_gray_approx;
     }
     &:nth-child(5) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-silver-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(150deg) translate(0, -30px);
-      background: $color_silver_approx;
     }
     &:nth-child(6) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-delta-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(180deg) translate(0, -30px);
-      background: $color_delta_approx;
     }
     &:nth-child(7) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-tapa-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(210deg) translate(0, -30px);
-      background: $color_tapa_approx;
     }
     &:nth-child(8) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-storm-dust-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(240deg) translate(0, -30px);
-      background: $color_storm_dust_approx;
     }
     &:nth-child(9) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-fuscous-gray-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(270deg) translate(0, -30px);
-      background: $color_fuscous_gray_approx;
     }
     &:nth-child(10) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-gravel-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(300deg) translate(0, -30px);
-      background: $color_gravel_approx;
     }
     &:nth-child(11) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-cape-cod-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(330deg) translate(0, -30px);
-      background: $color_cape_cod_approx;
     }
     &:nth-child(12) {
-      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      background: $color-tuatara-approx; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
       transform: rotate(0deg) translate(0, -30px);
-      background: $color_tuatara_approx;
     }
   }
   ul {
     animation: spinner 1s steps(12, end) infinite;
+    height: 100px;
+    margin: 0 auto 20px;
     position: relative;
     width: 100px;
-    height: 100px;
-    margin: 0 auto 20px auto;
   }
 }
 
@@ -171,13 +154,13 @@ li {
   }
 }
 
-.nav-item > a.nav-link {
+.nav-item > .nav-link {
   &:hover {
     text-decoration: none;
   }
   &.active {
-    border-radius: 1px;
     border-bottom: 1px solid #de4270;
+    border-radius: 1px;
   }
 }
 
@@ -188,13 +171,13 @@ li {
 .fixme-footer {
   background-color: #1f2b44;
   box-shadow: inset 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-  &-moz-text {
-    max-width: 400px;
-    text-align: center;
-  }
   @include media-breakpoint-up(md) {
     &-left {
       margin: 0 68px;
     }
+  }
+  &-moz-text {
+    max-width: 400px;
+    text-align: center;
   }
 }
