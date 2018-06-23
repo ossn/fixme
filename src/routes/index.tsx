@@ -11,12 +11,18 @@ const Issues = asyncComponent({
   LoadingComponent: Spinner,
   resolve: () => import(/* webpackPrefetch: true*/ "./Issues")
 });
+const Projects = asyncComponent({
+  LoadingComponent: Spinner,
+  resolve: () => import(/* webpackPrefetch: true*/ "./Projects")
+});
+
 const RedirectComponent = () => <Redirect to="/" push={true} />;
 
 export const Routes = () => (
   <Switch>
     <Route path="/" component={Home} exact={true} />
     <Route path="/issues" component={Issues} exact={true} />
+    <Route path="/projects" component={Projects} exact={true} />
 
     <Route render={RedirectComponent} />
   </Switch>
