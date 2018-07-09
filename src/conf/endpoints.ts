@@ -6,48 +6,33 @@ export interface IJobConf {
 // Define endpoints
 const endpoints = {
   issues: {
-    getIssues: {
-      segment: "data/${dash_type}/${campaign}/${question}",
+    get: {
+      segment: "issues/${search}",
+      type: "GET"
+    }
+  },
+  metadata: {
+    get: {
+      segment: "metadata/",
+      type: "GET"
+    }
+  },
+  projects: {
+    get: {
+      segment: "projects/",
       type: "GET"
     }
   }
 };
+
 export let conf = {
-  apiBaseUrl: "https://data-api-dev.pprl.io/api/v1/",
+  apiBaseUrl: "https://api.ossn.club/",
   endpoints
 };
 
-// FIXME: Change apiUrl based on env
 if (process.env.REACT_APP_ENV === "development") {
   conf = {
-    apiBaseUrl: "https://data-api-dev.pprl.io/api/v1/",
+    apiBaseUrl: "http://localhost:8000/",
     endpoints
   };
 }
-
-// if (__DEVELOP__) {
-//   conf = {
-//     apiBaseUrl: "https://data-api-dev.pprl.io/api/v1/",
-//     authUrl: "https://dev-access.pureprofile.com/api/v1/",
-//     demoUrl: "https://rscd-demo.pureprofile.com/",
-//     endpoints
-//   };
-// }
-
-// if (__STAGING__) {
-//   conf = {
-//     apiBaseUrl: "https://data-api-dev.pprl.io/api/v1/",
-//     authUrl: "https://staging-access.pureprofile.com/api/v1/",
-//     demoUrl: "https://rscd-demo.pureprofile.com/",
-//     endpoints
-//   };
-// }
-
-// if (__PROD__) {
-//   conf = {
-//     apiBaseUrl: "https://data-api-dev.pprl.io/api/v1/",
-//     authUrl: "https://access.pureprofile.com/api/v1/",
-//     demoUrl: "https://rscd-demo.pureprofile.com/",
-//     endpoints
-//   };
-// }
