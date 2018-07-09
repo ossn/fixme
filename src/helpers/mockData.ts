@@ -8,7 +8,7 @@ export const issuesListMockData = [
     tech_stack: "django",
     created_at: "2017-06-05T11:47:01Z",
     updated_at: "2017-06-06T10:35:57Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 7,
     issue_labels: [
       {
@@ -33,7 +33,7 @@ export const issuesListMockData = [
     tech_stack: "django",
     created_at: "2017-06-04T12:11:53Z",
     updated_at: "2017-06-06T11:30:33Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 6,
     issue_labels: [
       {
@@ -59,7 +59,7 @@ export const issuesListMockData = [
     created_at: "2017-06-01T05:50:38Z",
     updated_at: "2017-06-06T11:31:00Z",
     issue_number: 4,
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_labels: [],
     issue_url:
       "https://github.com/mozillacampusclubs/issue_parser_backend/issues/4",
@@ -75,7 +75,7 @@ export const issuesListMockData = [
     language: "python",
     tech_stack: "django, celery",
     created_at: "2017-06-01T05:40:42Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     updated_at: "2017-06-06T11:31:28Z",
     issue_number: 3,
     issue_labels: [],
@@ -94,7 +94,7 @@ export const issuesListMockData = [
     created_at: "2017-06-09T10:10:25Z",
     updated_at: "2017-06-09T10:13:41Z",
     issue_number: 1,
-    label_type: "task",
+    issue_type: "task",
     issue_labels: [],
     issue_url:
       "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/1",
@@ -110,7 +110,7 @@ export const issuesListMockData = [
     tech_stack: "react.js",
     created_at: "2017-06-09T10:32:45Z",
     updated_at: "2017-06-09T10:32:45Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 3,
     issue_labels: [
       {
@@ -134,7 +134,7 @@ export const issuesListMockData = [
     tech_stack: "react.js",
     created_at: "2017-06-10T14:26:15Z",
     updated_at: "2017-06-10T14:26:31Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 5,
     issue_labels: [],
     issue_url:
@@ -151,7 +151,7 @@ export const issuesListMockData = [
     created_at: "2017-06-10T14:41:07Z",
     updated_at: "2017-06-10T14:41:53Z",
     issue_number: 6,
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_labels: [],
     issue_url:
       "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/6",
@@ -166,7 +166,7 @@ export const issuesListMockData = [
     tech_stack: "django",
     created_at: "2017-06-13T07:17:21Z",
     updated_at: "2017-06-13T07:17:21Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 8,
     issue_labels: [],
     issue_url:
@@ -180,7 +180,7 @@ export const issuesListMockData = [
     expected_time: "1 day",
     language: "yml",
     tech_stack: "django",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     created_at: "2017-06-17T10:27:01Z",
     updated_at: "2017-06-17T10:27:01Z",
     issue_number: 11,
@@ -198,7 +198,7 @@ export const issuesListMockData = [
     tech_stack: "django",
     created_at: "2017-06-17T10:29:33Z",
     updated_at: "2017-06-19T17:18:35Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     issue_number: 12,
     issue_labels: [],
     issue_url:
@@ -213,7 +213,7 @@ export const issuesListMockData = [
     language: "javascript",
     tech_stack: "react.js",
     created_at: "2017-06-10T14:21:30Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     updated_at: "2017-06-20T06:30:03Z",
     issue_number: 4,
     issue_labels: [],
@@ -230,7 +230,7 @@ export const issuesListMockData = [
     language: "javascript",
     tech_stack: "jest",
     created_at: "2017-06-20T06:36:11Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     updated_at: "2017-06-20T06:36:11Z",
     issue_number: 8,
     issue_labels: [],
@@ -247,7 +247,7 @@ export const issuesListMockData = [
     language: "javascript",
     tech_stack: "react.js",
     created_at: "2017-06-20T06:32:03Z",
-    label_type: "enhancement",
+    issue_type: "enhancement",
     updated_at: "2017-06-20T06:36:55Z",
     issue_number: 7,
     issue_labels: [],
@@ -257,41 +257,93 @@ export const issuesListMockData = [
   }
 ];
 
-export const technologies = [
-  { value: "c", label: "C" },
-  { value: "c++", label: "C++" },
-  { value: "cuda", label: "CUDA" },
-  { value: "go", label: "Go" },
-  { value: "html", label: "HTML" },
-  { value: "javascript", label: "JavaScript" },
-  { value: "python", label: "Python" },
-  { value: "rust", label: "Rust" },
-  { value: "sass", label: "Sass" },
-  { value: "typescript", label: "TypeScript" }
-];
-
-export const lvlOfDifficulty = [
-  { value: "easy", label: "Easy" },
-  { value: "moderate", label: "Moderate" },
-  { value: "senior", label: "Senior" }
-];
-
-export const issueType = [
-  { value: "enhancement", label: "Enhancement" },
-  { value: "task", label: "Task" },
-  { value: "bugfix", label: "Bugfix" }
-];
-
-export const filters = [
-  { label: "Technologies", value: "language", options: technologies },
+export const mockProjectData = [
   {
-    label: "Level of difficulty",
-    value: "experience_needed",
-    options: lvlOfDifficulty
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
   },
   {
-    label: "Type",
-    value: "label_type",
-    options: issueType
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+  },
+  {
+    color: "#f52664",
+    title: "Moz",
+    issueCount: 150,
+    setup: "20 min",
+    tags: ["HTML", "Rust", "Some long shit"],
+    logo:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
   }
 ];

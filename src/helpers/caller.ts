@@ -7,19 +7,18 @@ export interface IMakeCallOptions {
 export interface IMakeCall {
   call: IMakeCallOptions;
   params?: { [key: string]: any };
-  urlParams?: string[];
+  urlParams?: { [key: string]: string };
   demo?: boolean;
   authUrl?: boolean;
 }
 
-const assemble = (literal?: string, urlParams?: string[]) => {
-  if (literal == null) {
-    return null;
-  }
-  return urlParams
-    ? literal.replace(/\${(\w+)}/g, (_, v) => urlParams[v])
-    : literal;
-};
+const assemble = (
+  literal?: string,
+  urlParams: { [key: string]: string } = {}
+) =>
+  literal == null
+    ? null
+    : literal.replace(/\${(\w+)}/g, (_, v) => urlParams[v] || "");
 
 export const makeCall = ({
   call,
