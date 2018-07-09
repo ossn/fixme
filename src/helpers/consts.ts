@@ -14,7 +14,8 @@ export const technologies = [
 export const lvlOfDifficulty = [
   { value: "easy", label: "Easy" },
   { value: "moderate", label: "Moderate" },
-  { value: "senior", label: "Senior" }
+  { value: "senior", label: "Senior" },
+  { value: "", label: "Not sure" }
 ];
 
 export const issueType = [
