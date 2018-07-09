@@ -1,8 +1,10 @@
 import { connectRouter, RouterState } from "connected-react-router";
 import { combineReducers } from "redux";
+import { IProjectsState } from "./../routes/Projects/modules/projectReducer";
 
 import homeReducer, { IHomeState } from "../routes/Home/modules/homeReducer";
 import issueReducer from "../routes/Issues/modules/issuesReducer";
+import projectReducer from "../routes/Projects/modules/projectReducer";
 import { IIssuesState } from "./../routes/Issues/modules/issuesReducer";
 import { history } from "./createStore";
 
@@ -12,6 +14,7 @@ export interface IRootState {
   issues: IIssuesState;
   router: RouterState;
   home: IHomeState;
+  projects: IProjectsState;
 }
 
 export class ReducerRegistry {
@@ -37,7 +40,8 @@ export class ReducerRegistry {
     connectRouter(history)(
       combineReducers({
         issues: issueReducer,
-        home: homeReducer
+        home: homeReducer,
+        projects: projectReducer
         // ...this.asyncReducers
       })
     );

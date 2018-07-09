@@ -2,7 +2,12 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
+$opacity: 0.3;
+
 .projects-container {
+  a:hover {
+    text-decoration: none !important;
+  }
   .projects {
     @include media-breakpoint-up(md) {
       &-tile-tag-wrapper {
@@ -24,9 +29,28 @@
         text-align: justify;
       }
     }
+    &-description {
+      bottom: 0;
+      display: flex;
+      font-family: $font-1;
+      font-size: 1em;
+      left: 0;
+      line-height: 17px;
+      position: absolute;
+      right: 0;
+      text-align: justify;
+      top: 0;
+      visibility: hidden;
+      &-text {
+        color: #fff;
+        margin: 1em;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, $opacity);
+      }
+    }
     &-tile {
       &-bottom-wrapper {
         height: 80%;
+        position: relative;
       }
       &-top-wrapper {
         height: 20%;
@@ -39,11 +63,28 @@
       &-wrapper {
         border-radius: 10px;
         color: $main-white;
-        height: 20vh;
+        height: 30vh;
         min-height: 150px;
         overflow: hidden;
+        width: 100%;
+
+        &:hover {
+          .projects-tile-top-wrapper {
+            background: rgba(0, 0, 0, $opacity);
+          }
+          .projects-tile-logo-wrapper::before {
+            background: rgba(0, 0, 0, $opacity);
+            opacity: 1;
+          }
+          .projects-description {
+            visibility: visible;
+          }
+        }
       }
       &-logo {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         max-height: 100%; // height: 100%; //
         object-fit: fill;
       }
@@ -51,8 +92,17 @@
         display: inline-flex;
         height: 100%;
         left: 7%;
-        position: relative;
         top: 7%;
+        &::before {
+          background: rgb(0, 0, 0);
+          content: " ";
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
       }
     }
     &-tile-tag {
@@ -64,11 +114,12 @@
       display: inline-block;
       font-size: 0.9em;
       height: 22px;
-      line-height: 23px;
+      line-height: 20px;
       margin: 0.2em 15px;
       padding: 0 15px;
       position: relative;
       white-space: nowrap;
+      z-index: 1;
       &::before {
         border-bottom: 1px solid $main-white;
         border-left: 1px solid $main-white;

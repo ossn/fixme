@@ -1,15 +1,15 @@
-import { push } from "connected-react-router";
 import { connect } from "react-redux";
 import { IRootState } from "../../../store/reducers";
 import Projects from "../components/Projects";
+import { getProjects } from "../modules/projectReducer";
 
-const mapDispatchToProps = { push };
+const mapDispatchToProps = { getProjects };
 const mapStateToProps = (state: IRootState) => {
-  if (!state.issues) {
+  if (!state.projects) {
     return {};
   }
   return {
-
+    projects: state.projects.projectList
   };
 };
 
