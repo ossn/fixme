@@ -1,8 +1,15 @@
 @import "./base";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
 .home-container {
   background: #102131;
   .home-section {
-    min-height: 45vh;
+    min-height: 70vh;
+    @include media-breakpoint-up(md) {
+      min-height: 45vh;
+    }
     .container,
     .row {
       align-items: center;
@@ -51,7 +58,12 @@
   }
   .home-about-you {
     background-color: #e7e7e7;
-    padding-top: 3em;
+    padding-bottom: 6em;
+    padding-top: 6em;
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 10em;
+      padding-top: 10em;
+    }
     &-title {
       color: #ea006e;
       font-weight: bold;
