@@ -113,7 +113,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
           <h3 className="mb-4 projects-include-title">
             Want to include your project here?
           </h3>
-          <p className="text-justify">
+          <p className="text-justify pb-5 mb-5">
             Great! Here’s what you need to know: lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Nunc et tincidunt dui, ut egestas
             tortor. Vestibulum non ullamcorper lacus. Ut sed porttitor dolor.

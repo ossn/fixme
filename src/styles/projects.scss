@@ -44,6 +44,7 @@ $opacity: 0.3;
       z-index: 2;
       &-text {
         color: #fff;
+        font-size: 0.8em;
         margin: 1em;
         text-shadow: 0 1px 0 rgba(0, 0, 0, $opacity);
       }
@@ -115,11 +116,11 @@ $opacity: 0.3;
       border-radius: 0 5px 5px 0;
       color: $main-white;
       display: inline-block;
-      font-size: 0.9em;
+      font-size: 0.8em;
       height: 22px;
       line-height: 20px;
-      margin: 0.2em 15px;
-      padding: 0 15px;
+      margin: 0.1em 15px;
+      padding: 0 8px;
       position: relative;
       white-space: nowrap;
       z-index: 1;
