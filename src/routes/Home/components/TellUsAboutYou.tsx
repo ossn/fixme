@@ -3,14 +3,15 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Select from "react-select";
-import { multiFilter } from "../../../helpers/helpers";
+import scrollIntoView from "scroll-into-view-if-needed";
+import smoothScrollIntoView from "smooth-scroll-into-view-if-needed";
 import {
-  issuesListMockData,
   issueType,
+  lvlOfDifficulty,
   technologies
-} from "../../../helpers/mockData";
-import { lvlOfDifficulty } from "../../../helpers/mockData";
+} from "../../../helpers/consts";
 import { IRootState } from "../../../store/reducers";
+import { getIssues } from "../../Issues/modules/issuesReducer";
 import {
   updateLanguage,
   updateLevel,
@@ -19,44 +20,70 @@ import {
 import { customStyles } from "./customStyles";
 
 interface ITellUsAboutYou {
-  updateLanguage: (language: string[]) => any;
-  updateLevel: (level: string) => any;
-  updateType: (type: string) => any;
-  showMore: boolean;
-  languages: string[];
-  type: string;
-  level: string;
-  listing: typeof issuesListMockData;
+  readonly updateLanguage: (language: string[]) => any;
+  readonly updateLevel: (level: string) => any;
+  readonly updateType: (type: string) => any;
+  readonly getIssues: (args: any) => any;
+  readonly language: string[];
+  readonly issue_type: string;
+  readonly experience_needed: string;
+  readonly issuesLength: number;
+  readonly home: any;
+  readonly focus: boolean;
 }
 
-const getResults = (listing: typeof issuesListMockData, filter: any) => {
-  const length = multiFilter(listing, filter).length;
+const scrollIntoViewSmoothly =
+  "scrollBehavior" in document.documentElement.style
+    ? scrollIntoView
+    : smoothScrollIntoView;
 
-  return (
-    <React.Fragment>
-      <h6 className="home-about-you-title mt-5">
-        {length > 0
-          ? "BECAUSE WE HAVE JUST FOR YOU"
-          : " WE COULDN'T FIND ANY ISSUES BUT YOU CAN"}
-      </h6>
-      <Link
-        to={`/issues?${length > 0 ? stringify(filter) : ""}`}
-        className="btn home-about-you-btn d-inline-flex"
-      >
-        <span className="p-1">
-          {length === 0
-            ? "Browse All Issues"
-            : length === 1
-              ? "1 issue"
-              : `${length} issues`}
-          <i className="arrow-right" />
-        </span>
-      </Link>
-    </React.Fragment>
-  );
-};
+const getResults = (length: number, params: any) => (
+  <React.Fragment>
+    <h6 className="home-about-you-title mt-5">
+      {length > 0
+        ? "BECAUSE WE HAVE JUST FOR YOU"
+        : " WE COULDN'T FIND ANY ISSUES BUT YOU CAN"}
+    </h6>
+    <Link
+      to={`/issues?${length > 0 ? stringify(params) : ""}`}
+      className="btn home-about-you-btn d-inline-flex"
+    >
+      <span className="p-1">
+        {length === 0
+          ? "Browse All Issues"
+          : length === 1
+            ? "1 issue"
+            : `${length} issues`}
+        <i className="arrow-right" />
+      </span>
+    </Link>
+  </React.Fragment>
+);
 
 class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
+  public selectRef = React.createRef();
+  public componentDidUpdate(prevProps: ITellUsAboutYou): void {
+    if (
+      prevProps.home !== this.props.home &&
+      (this.props.language || []).length > 0
+    ) {
+      this.props.getIssues(this.props.home);
+    }
+    if (prevProps.focus !== this.props.focus) {
+      scrollIntoViewSmoothly(
+        document.getElementById("language-select") as Element,
+        {
+          behavior: "smooth",
+          inline: "center",
+          block: "center"
+        } as any
+      );
+      setTimeout(() => {
+        (this.selectRef as any).focus();
+      }, 350);
+    }
+  }
+
   public handleLanguageChange = (
     values: Array<{ value: string; label: string }>
   ) => {
@@ -73,21 +100,16 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
     this.props.updateLevel(value.value);
   };
   public render() {
-    const { languages, type, listing, level } = this.props;
-    const filter: {
-      language: string[];
-      label_type?: string;
-      experience_needed?: string;
-    } = { language: languages };
-    if (type) {
-      filter.label_type = type;
-    }
+    const {
+      language,
+      issue_type,
+      issuesLength,
+      experience_needed,
+      home
+    } = this.props;
 
-    if (level) {
-      filter.experience_needed = level;
-    }
     return (
-      <div className="pb-5">
+      <div className="d-flex justify-content-center flex-column">
         <h6 className="home-about-you-title mb-2">
           TELL US A BIT ABOUT YOURSELF
         </h6>
@@ -95,26 +117,32 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
           <div>
             <p className="h2">I do my magic in</p>
             <Select
+              ref={(ref: React.RefObject<{}>) => {
+                this.selectRef = ref;
+              }}
+              id="language-select"
               options={technologies}
               isMulti={true}
               placeholder="type in your favorite languages"
               defaultValue={
-                languages &&
-                technologies.filter(tech => languages.includes(tech.value))
+                language &&
+                technologies.filter(tech => language.includes(tech.value))
               }
               styles={customStyles(false)}
               onChange={this.handleLanguageChange}
             />
           </div>
           <br />
-          {this.props.showMore && (
+          {(this.props.language || []).length > 0 && (
             <div>
               <p className="h2">and I’m looking for issues that are</p>
               <div className="d-inline-block">
                 <Select
                   options={lvlOfDifficulty}
                   defaultValue={lvlOfDifficulty.find(
-                    lvl => lvl.value === level
+                    lvl =>
+                      !!experience_needed &&
+                      experience_needed.includes(lvl.value)
                   )}
                   styles={customStyles(true)}
                   onChange={this.handleLvlChange}
@@ -122,12 +150,14 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
                 <span className="h2">&</span>
                 <Select
                   options={issueType}
-                  defaultValue={issueType.find(issue => issue.value === type)}
+                  defaultValue={issueType.find(
+                    issue => !!issue_type && issue_type.includes(issue.value)
+                  )}
                   styles={customStyles(true)}
                   onChange={this.handleTypeChange}
                 />
               </div>
-              {getResults(listing, filter)}
+              {getResults(issuesLength, home)}
             </div>
           )}
         </div>
@@ -138,17 +168,18 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
 
 const mapStateToProps = (state: IRootState) => {
   return {
-    showMore: state.home.showMore,
-    languages: state.home.languages,
-    type: state.home.type,
-    level: state.home.level,
-    listing: state.issues.issuesList
+    language: state.home.language,
+    issue_type: state.home.issue_type,
+    experience_needed: state.home.experience_needed,
+    issuesLength: state.issues.issuesLength,
+    home: state.home
   };
 };
 
 const mapDispatchToProps = {
   updateLanguage,
   updateType,
+  getIssues,
   updateLevel
 };
 

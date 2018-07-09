@@ -8,12 +8,38 @@ import LoudSpeaker from "./assets/icon-loudspeaker.svg"
 import Illustration from "./assets/illustration.png";
 import TellUsAboutYou from "./TellUsAboutYou";
 interface IHomeProps {
-  readonly languages: string;
+  readonly getProjects: () => any;
+  readonly projectLength: number;
+   readonly updateLanguage: (language: string[]) => any;
+  readonly updateLevel: () => any;
+  readonly updateType: () => any;
+
 }
-export const Home: React.SFC<IHomeProps> = ({}) => {
+export default class Home extends React.PureComponent<IHomeProps,{
+  readonly focusSelect: boolean;
+
+}>{
+
+public state = {focusSelect:false}
+  public componentDidMount(): void {
+    this.props.getProjects()
+  }
+
+  public componentWillUnmount() {
+    this.props.updateLanguage([]);
+    this.props.updateLevel();
+    this.props.updateType();
+  }
+
+public onClick=()=> {
+  this.setState(state => ({ focusSelect: !state.focusSelect}))
+}
+
+  public render(){
+    const {projectLength} = this.props
   return (
     <div className="row home-container">
-      <section className="container">
+      <section className="home-section container">
         <FixMeNavbar />
         <div className="row">
           <div className="col-md-4 d-flex flex-column justify-content-center align-middle">
@@ -23,7 +49,7 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
               <span className="extra-bold">your skills</span>.
               <br /> <br />We’ll fix you up!
             </h2>
-            <button className="btn btn-lg learn-more">LEARN MORE</button>
+            <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
           </div>
           <div className="col-md-8">
             <img
@@ -34,9 +60,9 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
           </div>
         </div>
       </section>
-      <section className="container-fluid home-about-you">
-        <div className="container">
-          <TellUsAboutYou />
+      <section className="home-section container-fluid home-about-you">
+        <div className="container d-flex justify-content-center">
+          <TellUsAboutYou focus={this.state.focusSelect}/>
         </div>
       </section>
       <section className="container-fluid home-project">
@@ -44,16 +70,16 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
         <div className="d-flex row">
           <div className="col-md-6 col-12 d-flex">
             <h4 className="home-project-text py-5 m-auto">
-              <Link to="/projects" className="home-project-link">24 projects </Link> on board <br /> <span>(and counting…)</span>
+                <Link to="/projects" className="home-project-link">{`${projectLength === 1 ? "1 project" :`${projectLength} projects`}`} </Link> on board <br /> <span>(and counting…)</span>
             </h4>
           </div>
-          <div className="col-md-6 col-12">
+          <div className="col-md-6 col-12 h-100">
             <img className="img-fluid home-project-img" src={GroupCopy} alt="projects" />
           </div>
         </div>
         </div>
       </section>
-      <section className="container-fluid home-twitter pb-3">
+      <section className="home-section container-fluid home-twitter pb-3">
       <div className="row">
         <div className="container mb-4 mt-4">
           <div className="row">
@@ -73,6 +99,5 @@ export const Home: React.SFC<IHomeProps> = ({}) => {
       </section>
       <FixMeFooter />
     </div>
-  );
-};
-export default Home;
+  )
+}}

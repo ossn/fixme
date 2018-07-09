@@ -1,6 +1,16 @@
 @import "./base";
 .home-container {
   background: #102131;
+  .home-section {
+    min-height: 45vh;
+    .container,
+    .row {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+    }
+  }
   .nav-item > .nav-link {
     &.active {
       border-bottom: 1px solid transparent;
@@ -28,6 +38,13 @@
     min-width: 140px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    &:active {
+      background-image: linear-gradient(
+        to bottom,
+        darken(#de4270, 10),
+        darken(#1f2b44, 10)
+      ) !important;
+    }
   }
   .home-illustration-img {
     margin-bottom: -2em;
@@ -78,7 +95,8 @@
       }
     }
     &-img {
-      min-height: 30vh;
+      height: 100%;
+      min-height: 35vh;
       object-fit: fill;
     }
     &-link {

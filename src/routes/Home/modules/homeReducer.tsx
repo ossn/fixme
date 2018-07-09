@@ -1,10 +1,9 @@
 import { createAction } from "typesafe-actions";
 
 export interface IHomeState {
-  readonly languages: string[];
-  readonly showMore: boolean;
-  readonly type: string;
-  readonly level: string;
+  readonly language: string[];
+  readonly issue_type: string;
+  readonly experience_needed: string;
 }
 
 // ------------------------------------
@@ -55,18 +54,17 @@ export const actions = {
 // Action Handlers
 // --------------------------------------------------
 export const ACTION_HANDLERS = {
-  [HomeActions.UPDATE_LANGUAGE]: (state: IHomeState, action: any) => ({
+  [HomeActions.UPDATE_LANGUAGE]: (state: IHomeState, { payload }: any) => ({
     ...state,
-    languages: action.payload,
-    showMore: action.payload.length > 0
+    language: payload
   }),
-  [HomeActions.UPDATE_TYPE]: (state: IHomeState, action: any) => ({
+  [HomeActions.UPDATE_TYPE]: (state: IHomeState, { payload }: any) => ({
     ...state,
-    type: action.payload
+    issue_type: payload ? [payload] : undefined
   }),
-  [HomeActions.UPDATE_LEVEL]: (state: IHomeState, action: any) => ({
+  [HomeActions.UPDATE_LEVEL]: (state: IHomeState, { payload }: any) => ({
     ...state,
-    level: action.payload
+    experience_needed: payload ? [payload] : undefined
   })
 };
 // --------------------------------------------------
