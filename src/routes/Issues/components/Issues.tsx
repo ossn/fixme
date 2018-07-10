@@ -198,7 +198,7 @@ export default class Issues extends React.PureComponent<
                     >
                       <h5 className="issue-card-title">{issue.title}</h5>
                       <p className="issue-card-subtitle mb-5">
-                        {issue.tech_stack}
+                        {(issue.project || { display_name: "" }).display_name}
                       </p>
 
                       <div className="issue-card-description">
