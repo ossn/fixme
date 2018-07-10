@@ -27,8 +27,8 @@ const IssueFilter: React.SFC<IssueCardProps> = ({
           type="checkbox"
           defaultChecked={
             params[defaultValue] && Array.isArray(params[defaultValue])
-              ? params[defaultValue].includes(value)
-              : params[defaultValue] === value
+              ? params[defaultValue].includes((value || "").toString())
+              : params[defaultValue] === (value || "").toString()
           }
           // tslint:disable-next-line:jsx-no-lambda
           onChange={e =>
