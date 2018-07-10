@@ -8,6 +8,7 @@ import { stringify } from "querystring";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { filters } from "../../../helpers/consts";
+import { customOutboundLink, customPageView } from "../../../helpers/helpers";
 import { issuesListMockData } from "../../../helpers/mockData";
 import { IProject } from "../../Projects/modules/projectReducer";
 import Tag from "./icons/icon-tag.svg";
@@ -20,8 +21,8 @@ import IssueFilter from "./IssueFilter";
 const icons = {
   bugfix: BugFix,
   bug: BugFix,
-  task: Task,
-  fix: BugFix
+  fix: BugFix,
+  enhancement: Enhancement
 };
 
 export interface IParams {
@@ -43,7 +44,7 @@ interface IIssuesProps {
 }
 
 const getParamsFromProps = (props: IIssuesProps) => {
-  const { experience_needed, issue_type, language, ordering } = parse(
+  const { experience_needed, issue_type, language, ordering, project } = parse(
     props.search
   );
   return {
@@ -62,6 +63,11 @@ const getParamsFromProps = (props: IIssuesProps) => {
         ? [issue_type]
         : issue_type
       : undefined,
+    project: project
+      ? typeof project === "string"
+        ? [project]
+        : project
+      : undefined,
     ordering
   };
 };
@@ -70,11 +76,15 @@ export default class Issues extends React.PureComponent<
   IIssuesProps,
   { readonly params: IParams; readonly propKey: number }
 > {
-  public state = { params: getParamsFromProps(this.props), propKey: 1 };
+  public readonly state = {
+    params: getParamsFromProps(this.props),
+    propKey: 1
+  };
 
   public componentDidMount(): void {
     this.props.getIssues(this.state.params);
     this.props.getProjects();
+    customPageView(window.location.pathname + window.location.search);
   }
 
   public componentDidUpdate(prevProps: IIssuesProps) {
@@ -89,7 +99,7 @@ export default class Issues extends React.PureComponent<
   }
 
   public render() {
-    const { issues, issuesLength } = this.props;
+    const { issues, issuesLength, projects } = this.props;
     const { params, propKey } = this.state;
 
     if (!params) {
@@ -103,7 +113,7 @@ export default class Issues extends React.PureComponent<
           <div className="row my-5">
             <div className="col-md-4 col-12 d-flex flex-column align-middle position-relative">
               <div className="issues-filter-wrapper">
-                <h2>Filter</h2>
+                <h2 className="mb-4">Filter</h2>
                 <div className="issues-filter-container p-4">
                   {filters.map(filter => (
                     <div className="mb-5">
@@ -118,22 +128,24 @@ export default class Issues extends React.PureComponent<
                       />
                     </div>
                   ))}
-                  {/*  <div className="mb-5">
+                  <div className="mb-5">
                     <h6 className="mb-3">Projects</h6>
                     <IssueFilter
                       handleChange={this.handleChange}
-                      options={(projects || []).map(project => ({ label: project.display_name, value: project.id as string))}}
+                      options={(projects || []).map(project => ({
+                        label: project.display_name,
+                        value: project.id as string
+                      }))}
                       params={params}
                       propKey={propKey}
                       defaultValue="project"
                     />
-                    </div>
-                  */}
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-md-8 col-12">
-              <div className="d-flex justify-content-between">
+              <div className="d-flex justify-content-between mb-4">
                 <h2>
                   Found {issuesLength} {issuesLength === 1 ? "issue" : "issues"}
                 </h2>
@@ -176,13 +188,13 @@ export default class Issues extends React.PureComponent<
                     // tslint:disable-next-line:jsx-no-lambda
                     onClick={e => {
                       e.preventDefault();
-                      window.open(issue.issue_url, "_blank");
+                      const url = issue.issue_url;
+                      customOutboundLink(url);
                     }}
                   >
                     <div
-                      className={`col-9 issue-card-main ${
-                        issue.experience_needed
-                      }`}
+                      className={`col-9 issue-card-main ${issue.experience_needed ||
+                        "moderate"}`}
                     >
                       <h5 className="issue-card-title">{issue.title}</h5>
                       <p className="issue-card-subtitle mb-5">
@@ -203,7 +215,7 @@ export default class Issues extends React.PureComponent<
                             className={`circle ${issue.experience_needed}`}
                           />
                           <span className="text-capitalize ml-1">
-                            {issue.experience_needed || "Easy"}
+                            {issue.experience_needed || "Moderate"}
                           </span>
                         </div>
                         <div className="text-nowrap">
@@ -216,12 +228,12 @@ export default class Issues extends React.PureComponent<
                           <img
                             src={
                               icons[(issue.issue_type || "").toLowerCase()] ||
-                              Enhancement
+                              Task
                             }
                             alt=""
                           />
                           <span className="text-capitalize ml-1">
-                            {issue.issue_type || "Enhancement"}
+                            {issue.issue_type || "Issue"}
                           </span>
                         </div>
                         {issue.expected_time && (
@@ -267,6 +279,8 @@ export default class Issues extends React.PureComponent<
     if ((params[filterType] || []).length <= 0) {
       delete params[filterType];
     }
-    this.props.push(`${this.props.location}?${stringify(params)}`);
+    const url = `${this.props.location}?${stringify(params)}`;
+    customPageView(url);
+    this.props.push(url);
   };
 }
