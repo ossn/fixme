@@ -1,9 +1,9 @@
 import * as React from "react";
-
 import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
+import { customPageView } from "../../../helpers/helpers";
 import "../../../styles/projects.css";
 import { IProject } from "../modules/projectReducer";
 
@@ -21,6 +21,7 @@ interface IProjectProps {
 export default class Projects extends React.PureComponent<IProjectProps, {}> {
   public componentDidMount(): void {
     this.props.getProjects();
+    customPageView(window.location.pathname + window.location.search);
   }
   public render() {
     const { projects } = this.props;

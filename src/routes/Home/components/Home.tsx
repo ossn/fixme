@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
+import { customPageView } from '../../../helpers/helpers';
 import "../../../styles/home.css";
 import GroupCopy from "./assets/group-copy@2x.png";
 import LoudSpeaker from "./assets/icon-loudspeaker.svg"
@@ -20,9 +21,12 @@ export default class Home extends React.PureComponent<IHomeProps,{
 
 }>{
 
-public state = {focusSelect:false}
+  public  readonly state = { focusSelect: false }
+
   public componentDidMount(): void {
     this.props.getProjects()
+    customPageView(window.location.pathname + window.location.search);
+
   }
 
   public componentWillUnmount() {

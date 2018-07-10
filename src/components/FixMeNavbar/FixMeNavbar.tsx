@@ -1,4 +1,5 @@
 import * as React from "react";
+import { OutboundLink } from "react-ga";
 import { NavLink } from "react-router-dom";
 import { Collapse, Nav, Navbar, NavbarToggler, NavItem } from "reactstrap";
 import Logo from "./logo-fixme.svg";
@@ -11,13 +12,9 @@ export default class FixMeNavbar extends React.Component<
   { white?: boolean },
   IFixMeNavbarState
 > {
-  constructor(props: {}) {
-    super(props);
-
-    this.state = {
-      isOpen: false
-    };
-  }
+  public readonly state = {
+    isOpen: false
+  };
 
   public toggleNavbar = () => {
     this.setState(state => ({
@@ -51,7 +48,8 @@ export default class FixMeNavbar extends React.Component<
                   About
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* facebook
+               <NavItem>
                 <a className="nav-link" target="_blank" href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +65,14 @@ export default class FixMeNavbar extends React.Component<
                   </svg>
                 </a>
               </NavItem>
+             */}
               <NavItem>
-                <a className="nav-link" target="_blank" href="#">
+                <OutboundLink
+                  className="nav-link"
+                  target="_blank"
+                  to="https://twitter.com/fixmeparser"
+                  eventLabel="Twitter on menu clicked"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="19"
@@ -81,8 +85,9 @@ export default class FixMeNavbar extends React.Component<
                       d="M17.064 4.213v.489c0 1.254-.242 2.52-.726 3.8a10.83 10.83 0 0 1-2.128 3.465c-.935 1.032-2.091 1.874-3.47 2.526-1.378.653-2.968.98-4.77.98-1.102 0-2.158-.15-3.166-.45A11.486 11.486 0 0 1 0 13.768l.454.04a7.816 7.816 0 0 0 3.076-.411A8.136 8.136 0 0 0 5.769 12.2a3.836 3.836 0 0 1-2.27-.754 3.661 3.661 0 0 1-1.361-1.87c.108.026.225.043.353.05.128.006.252.01.373.01.175 0 .35-.01.525-.03.174-.02.342-.05.504-.088a3.918 3.918 0 0 1-2.229-1.312 3.57 3.57 0 0 1-.898-2.409v-.03-.01c.256.131.535.239.838.324.302.085.608.134.917.147a3.829 3.829 0 0 1-1.26-1.342 3.598 3.598 0 0 1-.474-1.811 3.47 3.47 0 0 1 .545-1.9 9.906 9.906 0 0 0 1.603 1.557A12.07 12.07 0 0 0 4.85 3.948c.679.346 1.398.62 2.158.823.76.202 1.543.323 2.35.362a2.427 2.427 0 0 1-.08-.43 4.619 4.619 0 0 1-.021-.431c0-.523.1-1.015.303-1.479.201-.463.48-.865.837-1.204.356-.34.77-.61 1.24-.813.47-.202.975-.303 1.513-.303.565 0 1.092.107 1.583.323.49.215.911.506 1.26.871a7.237 7.237 0 0 0 1.292-.352 8.91 8.91 0 0 0 1.19-.549 3.876 3.876 0 0 1-1.714 2.076c.39-.04.772-.108 1.149-.206.376-.097.74-.225 1.089-.381a7.505 7.505 0 0 1-1.936 1.958z"
                     />
                   </svg>
-                </a>
+                </OutboundLink>
               </NavItem>
+              {/* github
               <NavItem>
                 <a className="nav-link" target="_blank" href="#">
                   <svg
@@ -99,6 +104,7 @@ export default class FixMeNavbar extends React.Component<
                   </svg>
                 </a>
               </NavItem>
+             */}
             </Nav>
           </Collapse>
         </Navbar>
