@@ -274,7 +274,9 @@ export default class Issues extends React.PureComponent<
     } else {
       params[filterType] = checked
         ? [...(params[filterType] || []), value]
-        : (params[filterType] || []).filter((key: string) => key !== value);
+        : (params[filterType] || []).filter(
+            (key: string) => ![value, (value || "").toString()].includes(key)
+          );
     }
     if ((params[filterType] || []).length <= 0) {
       delete params[filterType];
