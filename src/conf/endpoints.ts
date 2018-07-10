@@ -1,3 +1,5 @@
+import { develop } from "../helpers/helpers";
+
 export interface IJobConf {
   type?: string;
   segment?: "GET" | "PUT" | "POST" | "DELETE";
@@ -30,7 +32,7 @@ export let conf = {
   endpoints
 };
 
-if (process.env.REACT_APP_ENV === "development") {
+if (develop) {
   conf = {
     apiBaseUrl: "http://localhost:8000/",
     endpoints
