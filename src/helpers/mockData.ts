@@ -94,7 +94,7 @@ export const issuesListMockData = [
     created_at: "2017-06-09T10:10:25Z",
     updated_at: "2017-06-09T10:13:41Z",
     issue_number: 1,
-    issue_type: "task",
+    issue_type: "bug",
     issue_labels: [],
     issue_url:
       "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/1",
