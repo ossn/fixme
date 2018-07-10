@@ -50,43 +50,45 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                 description
               }) => (
                 <div className="col-12 col-md-6 col-lg-4" key={id}>
-                  <div
-                    style={gradient(first_color, second_color)}
-                    className="d-flex flex-column justify-content-between projects-tile-wrapper my-1"
-                  >
-                    <div className="d-flex justify-content-between projects-tile-top-wrapper">
-                      <h3>{display_name}</h3>
-                      <div className="projects-tile-top-issues">
-                        <span>
-                          {issues_count}{" "}
-                          {issues_count === 1 ? "issue" : "issues"}
-                        </span>
-                        <br />
-                        <span className="small">{setup_duration} setup</span>
-                      </div>
-                    </div>
-                    <div className="d-flex justify-content-between align-items-end projects-tile-bottom-wrapper">
-                      <div className="projects-tile-tag-wrapper pb-2 ml-2">
-                        {(tags || []).map(tag => (
-                          <span className="projects-tile-tag mr-1" key={tag}>
-                            {tag}
+                  <Link to={`issues?project=${id}`}>
+                    <div
+                      style={gradient(first_color, second_color)}
+                      className="d-flex flex-column justify-content-between projects-tile-wrapper my-1"
+                    >
+                      <div className="d-flex justify-content-between projects-tile-top-wrapper">
+                        <h3>{display_name}</h3>
+                        <div className="projects-tile-top-issues">
+                          <span>
+                            {issues_count}{" "}
+                            {issues_count === 1 ? "issue" : "issues"}
                           </span>
-                        ))}
+                          <br />
+                          <span className="small">{setup_duration} setup</span>
+                        </div>
                       </div>
-                      <div className="projects-tile-logo-wrapper">
-                        <img
-                          className="img-fluid projects-tile-logo"
-                          src={logo}
-                          alt="logo"
-                        />
-                      </div>
-                      <div className="projects-description">
-                        <p className="projects-description-text">
-                          {description}
-                        </p>
+                      <div className="d-flex justify-content-between align-items-end projects-tile-bottom-wrapper">
+                        <div className="projects-tile-tag-wrapper pb-2 ml-2">
+                          {(tags || []).map(tag => (
+                            <span className="projects-tile-tag mr-1" key={tag}>
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="projects-tile-logo-wrapper">
+                          <img
+                            className="img-fluid projects-tile-logo"
+                            src={logo}
+                            alt="logo"
+                          />
+                        </div>
+                        <div className="projects-description">
+                          <p className="projects-description-text">
+                            {description}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               )
             )}
