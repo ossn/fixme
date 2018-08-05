@@ -2,22 +2,29 @@ import { Dispatch } from "redux";
 import { IMakeCall, makeCall } from "../../../helpers/caller";
 import { issuesListMockData } from "../../../helpers/mockData";
 
+export type Status = "loading" | "ready" | "error";
 export interface IIssuesState {
   readonly issuesList?: typeof issuesListMockData;
   readonly issuesLength: number;
+  readonly status: Status;
 }
 
 // ------------------------------------
 // Actions
 // ------------------------------------
 export enum IssueActions {
-  GET_ISSUES = "GET_ISSUES"
+  GET_ISSUES = "GET_ISSUES",
+  SET_ISSUE_STATUS = "SET_ISSUE_STATUS"
 }
 
 // --------------------------------------------------
 // Map actions and their payload to type consts
 // --------------------------------------------------
 export const getIssues = (params: any) => (dispatch: Dispatch) => {
+  dispatch({
+    type: IssueActions.SET_ISSUE_STATUS,
+    action: { payload: "loading" }
+  });
   let url = "?";
   Object.entries(params).forEach(
     ([key, value]) =>
@@ -45,7 +52,12 @@ export const ACTION_HANDLERS = {
   [IssueActions.GET_ISSUES]: (state: IIssuesState, { action }: any) => ({
     ...state,
     issuesList: action.payload,
-    issuesLength: (action.payload || []).length
+    issuesLength: (action.payload || []).length,
+    status: "ready"
+  }),
+  [IssueActions.SET_ISSUE_STATUS]: (state: IIssuesState, { action }: any) => ({
+    ...state,
+    status: action.payload
   })
 };
 
@@ -54,7 +66,8 @@ export const ACTION_HANDLERS = {
 // --------------------------------------------------
 const initialState: Partial<IIssuesState> = {
   issuesList: [],
-  issuesLength: 0
+  issuesLength: 0,
+  status: "loading"
 };
 export default function issueReducer(
   state = initialState,

@@ -8,14 +8,22 @@ import { getIssues } from "../modules/issuesReducer";
 const mapDispatchToProps = { push, getIssues, getProjects };
 const mapStateToProps = (state: IRootState) => {
   if (!state.issues) {
-    return {};
+    return {
+      issues: [],
+      search: state.router.location.search,
+      location: state.router.location.pathname,
+      issuesLength: 0,
+      projects: [],
+      status: "loading"
+    };
   }
   return {
     issues: state.issues.issuesList,
     search: state.router.location.search,
     location: state.router.location.pathname,
     issuesLength: state.issues.issuesLength,
-    projects: state.projects.projectList
+    projects: state.projects.projectList,
+    status: state.issues.status
   };
 };
 

@@ -4,9 +4,11 @@ import { parse } from "query-string";
 import * as React from "react";
 import * as ReactMarkdown from "react-markdown";
 
+import { push } from "connected-react-router";
 import { stringify } from "querystring";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
+import Spinner from "../../../components/Spinner";
 import { filters } from "../../../helpers/consts";
 import { customOutboundLink, customPageView } from "../../../helpers/helpers";
 import { issuesListMockData } from "../../../helpers/mockData";
@@ -33,14 +35,15 @@ export interface IParams {
 }
 
 interface IIssuesProps {
-  readonly issues: typeof issuesListMockData;
+  readonly issues?: typeof issuesListMockData;
   readonly search: string;
   readonly location: string;
-  readonly push: any;
+  readonly issuesLength: number;
+  readonly projects: IProject[];
+  readonly status: string;
+  readonly push: typeof push;
   readonly getIssues: (params: IParams) => any;
   readonly getProjects: () => any;
-  readonly issuesLength: number;
-  readonly projects?: IProject[];
 }
 
 const getParamsFromProps = (props: IIssuesProps) => {
@@ -99,11 +102,11 @@ export default class Issues extends React.PureComponent<
   }
 
   public render() {
-    const { issues, issuesLength, projects } = this.props;
+    const { issues, issuesLength, projects, status } = this.props;
     const { params, propKey } = this.state;
 
-    if (!params) {
-      return;
+    if (!params || !issues) {
+      return <Spinner />;
     }
 
     return (
@@ -116,10 +119,9 @@ export default class Issues extends React.PureComponent<
                 <h2 className="mb-4">Filter</h2>
                 <div className="issues-filter-container p-4">
                   {filters.map(filter => (
-                    <div className="mb-5">
+                    <div key={filter.value} className="mb-5">
                       <h6 className="mb-3">{filter.label}</h6>
                       <IssueFilter
-                        key={filter.value}
                         handleChange={this.handleChange}
                         options={filter.options}
                         params={params}
@@ -146,10 +148,10 @@ export default class Issues extends React.PureComponent<
             </div>
             <div className="col-md-8 col-12">
               <div className="d-flex justify-content-between mb-4">
-                <h2>
+                <h2 className="col-12 col-md-6">
                   Found {issuesLength} {issuesLength === 1 ? "issue" : "issues"}
                 </h2>
-                <div className="justify-content-center">
+                <div className="justify-content-center col-12 col-md-6">
                   <select
                     className="issue-ordering-by"
                     value={params.ordering || "-1"}
@@ -180,75 +182,87 @@ export default class Issues extends React.PureComponent<
                   </select>
                 </div>
               </div>
-              {issuesLength > 0 ? (
-                issues.map(issue => (
-                  <div
-                    key={issue.issue_id}
-                    className="row p-0 issue-card"
-                    // tslint:disable-next-line:jsx-no-lambda
-                    onClick={e => {
-                      e.preventDefault();
-                      const url = issue.issue_url;
-                      customOutboundLink(url);
-                    }}
-                  >
-                    <div
-                      className={`col-9 issue-card-main ${issue.experience_needed ||
-                        "moderate"}`}
-                    >
-                      <h5 className="issue-card-title">{issue.title}</h5>
-                      <p className="issue-card-subtitle mb-5">
-                        {(issue.project || { display_name: "" }).display_name}
-                      </p>
-
-                      <div className="issue-card-description">
-                        <ReactMarkdown source={issue.issue_body} />
-                      </div>
-                    </div>
-                    <div className="col-3 d-flex flex-column issue-card-meta justify-content-between">
-                      <span className="mb-4 align-self-start">
-                        {new Date(issue.created_at).toDateString()}
-                      </span>
-                      <div className="align-self-start d-flex flex-column">
-                        <div className="text-nowrap">
-                          <span
-                            className={`circle ${issue.experience_needed}`}
-                          />
-                          <span className="text-capitalize ml-1">
-                            {issue.experience_needed || "Moderate"}
-                          </span>
-                        </div>
-                        <div className="text-nowrap">
-                          <img src={Tag} alt="" />
-                          <span className="text-capitalize ml-1">
-                            {issue.language}
-                          </span>
-                        </div>
-                        <div className="text-nowrap">
-                          <img
-                            src={
-                              icons[(issue.issue_type || "").toLowerCase()] ||
-                              Task
-                            }
-                            alt=""
-                          />
-                          <span className="text-capitalize ml-1">
-                            {issue.issue_type || "Issue"}
-                          </span>
-                        </div>
-                        {issue.expected_time && (
-                          <div className="text-nowrap">
-                            <img src={Time} alt="" />
-
-                            <span className="ml-1">{issue.expected_time}</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))
+              {status === "loading" ? (
+                <Spinner />
               ) : (
-                <p>Couldn't find any issues with your criteria</p>
+                <React.Fragment>
+                  {issuesLength > 0 ? (
+                    issues.map(issue => (
+                      <div
+                        key={issue.issue_id}
+                        className="row p-0 issue-card"
+                        // tslint:disable-next-line:jsx-no-lambda
+                        onClick={e => {
+                          e.preventDefault();
+                          const url = issue.issue_url;
+                          customOutboundLink(url);
+                        }}
+                      >
+                        <div
+                          className={`col-9 issue-card-main ${issue.experience_needed ||
+                            "moderate"}`}
+                        >
+                          <h5 className="issue-card-title">{issue.title}</h5>
+                          <p className="issue-card-subtitle mb-5">
+                            {
+                              (issue.project || { display_name: "" })
+                                .display_name
+                            }
+                          </p>
+
+                          <div className="issue-card-description">
+                            <ReactMarkdown source={issue.issue_body} />
+                          </div>
+                        </div>
+                        <div className="col-3 d-flex flex-column issue-card-meta justify-content-between">
+                          <span className="mb-4 align-self-start">
+                            {new Date(issue.created_at).toDateString()}
+                          </span>
+                          <div className="align-self-start d-flex flex-column">
+                            <div className="text-nowrap">
+                              <span
+                                className={`circle ${issue.experience_needed}`}
+                              />
+                              <span className="text-capitalize ml-1">
+                                {issue.experience_needed || "Moderate"}
+                              </span>
+                            </div>
+                            <div className="text-nowrap">
+                              <img src={Tag} alt="" />
+                              <span className="text-capitalize ml-1">
+                                {issue.language}
+                              </span>
+                            </div>
+                            <div className="text-nowrap">
+                              <img
+                                src={
+                                  icons[
+                                    (issue.issue_type || "").toLowerCase()
+                                  ] || Task
+                                }
+                                alt=""
+                              />
+                              <span className="text-capitalize ml-1">
+                                {issue.issue_type || "Issue"}
+                              </span>
+                            </div>
+                            {issue.expected_time && (
+                              <div className="text-nowrap">
+                                <img src={Time} alt="" />
+
+                                <span className="ml-1">
+                                  {issue.expected_time}
+                                </span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <p>Couldn't find any issues with your criteria</p>
+                  )}
+                </React.Fragment>
               )}
             </div>
           </div>
