@@ -24,11 +24,11 @@ export const updateLanguage = createAction(
 );
 export const updateType = createAction(
   HomeActions.UPDATE_TYPE,
-  resolve => (type: string) => resolve(type)
+  resolve => (type?: string) => resolve(type)
 );
 export const updateLevel = createAction(
   HomeActions.UPDATE_LEVEL,
-  resolve => (level: string) => resolve(level)
+  resolve => (level?: string) => resolve(level)
 );
 // const appendToProjects = createAction(
 //   HomeActions.PROJECTS_DATA,

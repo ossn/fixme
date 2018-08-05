@@ -6,7 +6,7 @@ import { getProjects } from "../modules/projectReducer";
 const mapDispatchToProps = { getProjects };
 const mapStateToProps = (state: IRootState) => {
   if (!state.projects) {
-    return {};
+    return { projects: [] };
   }
   return {
     projects: state.projects.projectList

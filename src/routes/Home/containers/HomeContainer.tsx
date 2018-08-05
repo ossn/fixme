@@ -13,12 +13,9 @@ const mapDispatchToProps = {
   updateType,
   updateLevel
 };
-const mapStateToProps = (state: IRootState) => {
-  return {
-    projectLength: state.projects.projectLength,
-    issuesLength: state.issues.issuesLength
-  };
-};
+const mapStateToProps = (state: IRootState) => ({
+  projectLength: state.projects.projectLength
+});
 
 export default connect(
   mapStateToProps,

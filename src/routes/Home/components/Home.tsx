@@ -12,13 +12,12 @@ interface IHomeProps {
   readonly getProjects: () => any;
   readonly projectLength: number;
    readonly updateLanguage: (language: string[]) => any;
-  readonly updateLevel: () => any;
-  readonly updateType: () => any;
+  readonly updateLevel: (level?:string) => any;
+  readonly updateType: (type?: string) => any;
 
 }
 export default class Home extends React.PureComponent<IHomeProps,{
   readonly focusSelect: boolean;
-
 }>{
 
   public  readonly state = { focusSelect: false }
