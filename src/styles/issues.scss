@@ -143,3 +143,40 @@
     }
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  a {
+    color: #de4270;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  li {
+    background-color: #f9f9f9;
+    border: solid 0.5px #bbb;
+    border-radius: 4px;
+    color: #de4270;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font-1;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    padding: 0.3em 0.5em;
+    text-align: center;
+
+    .active {
+      background: #efefef;
+      border: solid 1px #bbb;
+
+      a {
+        color: #9b9b9b;
+      }
+    }
+  }
+}

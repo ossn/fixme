@@ -6,6 +6,7 @@ import * as ReactMarkdown from "react-markdown";
 
 import { push } from "connected-react-router";
 import { stringify } from "querystring";
+import ReactPaginate from "react-paginate";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import Spinner from "../../../components/Spinner";
@@ -30,7 +31,7 @@ const icons = {
 export interface IParams {
   experience_needed?: string[] | string;
   language?: string[];
-  issue_type?: string[] | string;
+  type?: string[] | string;
   ordering?: string;
 }
 
@@ -42,12 +43,12 @@ interface IIssuesProps {
   readonly projects: IProject[];
   readonly status: string;
   readonly push: typeof push;
-  readonly getIssues: (params: IParams) => any;
+  readonly getIssues: (params: IParams, page?: number) => any;
   readonly getProjects: () => any;
 }
 
 const getParamsFromProps = (props: IIssuesProps) => {
-  const { experience_needed, issue_type, language, ordering, project } = parse(
+  const { experience_needed, type, language, ordering, project_id } = parse(
     props.search
   );
   return {
@@ -61,15 +62,11 @@ const getParamsFromProps = (props: IIssuesProps) => {
         ? [language]
         : language
       : undefined,
-    issue_type: issue_type
-      ? typeof issue_type === "string"
-        ? [issue_type]
-        : issue_type
-      : undefined,
-    project: project
-      ? typeof project === "string"
-        ? [project]
-        : project
+    type: type ? (typeof type === "string" ? [type] : type) : undefined,
+    project_id: project_id
+      ? typeof project_id === "string"
+        ? [project_id]
+        : project_id
       : undefined,
     ordering
   };
@@ -77,11 +74,12 @@ const getParamsFromProps = (props: IIssuesProps) => {
 
 export default class Issues extends React.PureComponent<
   IIssuesProps,
-  { readonly params: IParams; readonly propKey: number }
+  { readonly params: IParams; readonly propKey: number; readonly page: number }
 > {
   public readonly state = {
     params: getParamsFromProps(this.props),
-    propKey: 1
+    propKey: 1,
+    page: 1
   };
 
   public componentDidMount(): void {
@@ -103,7 +101,7 @@ export default class Issues extends React.PureComponent<
 
   public render() {
     const { issues, issuesLength, projects, status } = this.props;
-    const { params, propKey } = this.state;
+    const { params, propKey, page } = this.state;
 
     if (!params || !issues) {
       return <Spinner />;
@@ -113,6 +111,7 @@ export default class Issues extends React.PureComponent<
       <div className="row issues-container">
         <section className="container">
           <FixMeNavbar white={true} />
+
           <div className="row my-5">
             <div className="col-md-4 col-12 d-flex flex-column align-middle position-relative">
               <div className="issues-filter-wrapper">
@@ -140,17 +139,19 @@ export default class Issues extends React.PureComponent<
                       }))}
                       params={params}
                       propKey={propKey}
-                      defaultValue="project"
+                      defaultValue="project_id"
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 col-12">
+            <div className="col-md-8 col-12" id="scrollableDiv">
               <div className="d-flex justify-content-between mb-4">
-                <h2 className="col-12 col-md-6">
-                  Found {issuesLength} {issuesLength === 1 ? "issue" : "issues"}
+                <h2 className="col-12">
+                  Showing {(page - 1) * 20}-{Math.min(page * 20, issuesLength)}{" "}
+                  of {issuesLength} {issuesLength === 1 ? "issue" : "issues"}
                 </h2>
+                {/*
                 <div className="justify-content-center col-12 col-md-6">
                   <select
                     className="issue-ordering-by"
@@ -164,104 +165,116 @@ export default class Issues extends React.PureComponent<
                     <option value="-1" disabled={true}>
                       Sort by...
                     </option>
-                    {/* <option value="language">Language</option>
-                    <option value="issue_type">Issue Type</option>
-                  <option value="tech_stack">Tech Stack</option>*/}
                     <option value="experience_needed">
                       Experience Needed Ascending
                     </option>
                     <option value="-experience_needed">
                       Experience Needed Descending
                     </option>{" "}
-                    <option value="-expected_time">
-                      Time Needed Ascending
-                    </option>
-                    <option value="expected_time">
-                      Time Needed Descending
-                    </option>
                   </select>
                 </div>
+                */}
               </div>
+
               {status === "loading" ? (
                 <Spinner />
               ) : (
                 <React.Fragment>
-                  {issuesLength > 0 ? (
-                    issues.map(issue => (
-                      <div
-                        key={issue.issue_id}
-                        className="row p-0 issue-card"
-                        // tslint:disable-next-line:jsx-no-lambda
-                        onClick={e => {
-                          e.preventDefault();
-                          const url = issue.issue_url;
-                          customOutboundLink(url);
-                        }}
-                      >
-                        <div
-                          className={`col-9 issue-card-main ${issue.experience_needed ||
-                            "moderate"}`}
-                        >
-                          <h5 className="issue-card-title">{issue.title}</h5>
-                          <p className="issue-card-subtitle mb-5">
-                            {
-                              (issue.project || { display_name: "" })
-                                .display_name
-                            }
-                          </p>
-
-                          <div className="issue-card-description">
-                            <ReactMarkdown source={issue.issue_body} />
-                          </div>
-                        </div>
-                        <div className="col-3 d-flex flex-column issue-card-meta justify-content-between">
-                          <span className="mb-4 align-self-start">
-                            {new Date(issue.created_at).toDateString()}
-                          </span>
-                          <div className="align-self-start d-flex flex-column">
-                            <div className="text-nowrap">
-                              <span
-                                className={`circle ${issue.experience_needed}`}
-                              />
-                              <span className="text-capitalize ml-1">
-                                {issue.experience_needed || "Moderate"}
-                              </span>
-                            </div>
-                            <div className="text-nowrap">
-                              <img src={Tag} alt="" />
-                              <span className="text-capitalize ml-1">
-                                {issue.language}
-                              </span>
-                            </div>
-                            <div className="text-nowrap">
-                              <img
-                                src={
-                                  icons[
-                                    (issue.issue_type || "").toLowerCase()
-                                  ] || Task
+                  <React.Fragment>
+                    {issuesLength > 0 ? (
+                      <React.Fragment>
+                        {issues.map(issue => (
+                          <div
+                            key={issue.id}
+                            className="row p-0 issue-card" // tslint:disable-next-line:jsx-no-lambda
+                            onClick={e => {
+                              e.preventDefault();
+                              const url = issue.url;
+                              customOutboundLink(url);
+                            }}
+                          >
+                            <div
+                              className={`col-9 issue-card-main ${issue.experience_needed ||
+                                "moderate"}`}
+                            >
+                              <h5 className="issue-card-title">
+                                {issue.title}
+                              </h5>
+                              <p className="issue-card-subtitle mb-5">
+                                {
+                                  (issue.project || { display_name: "" })
+                                    .display_name
                                 }
-                                alt=""
-                              />
-                              <span className="text-capitalize ml-1">
-                                {issue.issue_type || "Issue"}
-                              </span>
-                            </div>
-                            {issue.expected_time && (
-                              <div className="text-nowrap">
-                                <img src={Time} alt="" />
+                              </p>
 
-                                <span className="ml-1">
-                                  {issue.expected_time}
-                                </span>
+                              <div className="issue-card-description">
+                                <ReactMarkdown source={issue.body} />
                               </div>
-                            )}
+                            </div>
+                            <div className="col-3 d-flex flex-column issue-card-meta justify-content-between">
+                              <span className="mb-4 align-self-start">
+                                {new Date(issue.created_at).toDateString()}
+                              </span>
+                              <div className="align-self-start d-flex flex-column">
+                                <div className="text-nowrap">
+                                  <span
+                                    className={`circle ${issue.experience_needed ||
+                                      "moderate"}`}
+                                  />
+                                  <span className="text-capitalize ml-1">
+                                    {issue.experience_needed || "Moderate"}
+                                  </span>
+                                </div>
+                                <div className="text-nowrap">
+                                  <img src={Tag} alt="" />
+                                  <span className="text-capitalize ml-1">
+                                    {issue.language}
+                                  </span>
+                                </div>
+                                <div className="text-nowrap">
+                                  <img
+                                    src={
+                                      icons[(issue.type || "").toLowerCase()] ||
+                                      Task
+                                    }
+                                    alt=""
+                                  />
+                                  <span className="text-capitalize ml-1">
+                                    {issue.type || "Issue"}
+                                  </span>
+                                </div>
+                                {issue.expected_time && (
+                                  <div className="text-nowrap">
+                                    <img src={Time} alt="" />
+
+                                    <span className="ml-1">
+                                      {issue.expected_time}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <p>Couldn't find any issues with your criteria</p>
-                  )}
+                        ))}
+                        <ReactPaginate
+                          previousLabel="previous"
+                          nextLabel="next"
+                          breakLabel={<a href="">...</a>}
+                          breakClassName={"break-me"}
+                          pageCount={Math.ceil(issuesLength / 20)}
+                          marginPagesDisplayed={2}
+                          pageRangeDisplayed={5}
+                          onPageChange={this.fetchData}
+                          containerClassName="pagination"
+                          activeClassName="active"
+                          subContainerClassName="pages pagination"
+                          forcePage={page - 1}
+                        />
+                      </React.Fragment>
+                    ) : (
+                      <p>Couldn't find any issues with your criteria</p>
+                    )}
+                  </React.Fragment>
                 </React.Fragment>
               )}
             </div>
@@ -271,6 +284,12 @@ export default class Issues extends React.PureComponent<
       </div>
     );
   }
+
+  public fetchData = ({ selected: page }: { selected: number }) => {
+    const { params } = this.state;
+    this.props.getIssues(params, page + 1);
+    this.setState({ page: page + 1 });
+  };
 
   private handleChange = (
     checked: boolean,

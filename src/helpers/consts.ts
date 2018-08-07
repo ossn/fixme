@@ -4,6 +4,7 @@ export const technologies = [
   { value: "cuda", label: "CUDA" },
   { value: "go", label: "Go" },
   { value: "html", label: "HTML" },
+  { value: "java", label: "Java" },
   { value: "javascript", label: "JavaScript" },
   { value: "python", label: "Python" },
   { value: "rust", label: "Rust" },
@@ -14,13 +15,13 @@ export const technologies = [
 export const lvlOfDifficulty = [
   { value: "easy", label: "Easy" },
   { value: "moderate", label: "Moderate" },
-  { value: "", label: "Not sure" }
+  { value: "*", label: "Not sure" }
 ];
 
 export const issueType = [
   { value: "enhancement", label: "Enhancement" },
   { value: "bugfix", label: "Bugfix" },
-  { value: "", label: "Not sure" }
+  { value: "*", label: "Not sure" }
 ];
 
 export const filters = [
@@ -30,5 +31,5 @@ export const filters = [
     value: "experience_needed",
     options: lvlOfDifficulty
   },
-  { label: "Type", value: "issue_type", options: issueType }
+  { label: "Type", value: "type", options: issueType }
 ];

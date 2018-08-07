@@ -2,7 +2,7 @@ import { createAction } from "typesafe-actions";
 
 export interface IHomeState {
   readonly language: string[];
-  readonly issue_type: string;
+  readonly type: string;
   readonly experience_needed: string;
 }
 
@@ -60,7 +60,7 @@ export const ACTION_HANDLERS = {
   }),
   [HomeActions.UPDATE_TYPE]: (state: IHomeState, { payload }: any) => ({
     ...state,
-    issue_type: payload ? [payload] : undefined
+    type: payload ? [payload] : undefined
   }),
   [HomeActions.UPDATE_LEVEL]: (state: IHomeState, { payload }: any) => ({
     ...state,

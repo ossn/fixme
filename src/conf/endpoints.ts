@@ -9,19 +9,23 @@ export interface IJobConf {
 const endpoints = {
   issues: {
     get: {
-      segment: "issues/${search}",
+      segment: "issues${search}",
+      type: "GET"
+    },
+    count: {
+      segment: "issues-count${search}",
       type: "GET"
     }
   },
   metadata: {
     get: {
-      segment: "metadata/",
+      segment: "metadata",
       type: "GET"
     }
   },
   projects: {
     get: {
-      segment: "projects/",
+      segment: "projects",
       type: "GET"
     }
   }
@@ -34,7 +38,7 @@ export let conf = {
 
 if (develop) {
   conf = {
-    apiBaseUrl: "http://localhost:8000/",
+    apiBaseUrl: "http://localhost:3000/",
     endpoints
   };
 }

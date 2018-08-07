@@ -21,7 +21,7 @@ const mapStateToProps = (state: IRootState) => {
     issues: state.issues.issuesList,
     search: state.router.location.search,
     location: state.router.location.pathname,
-    issuesLength: state.issues.issuesLength,
+    issuesLength: state.issues.issuesLength || 0,
     projects: state.projects.projectList,
     status: state.issues.status
   };

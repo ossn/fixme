@@ -11,7 +11,7 @@ import {
   technologies
 } from "../../../helpers/consts";
 import { IRootState } from "../../../store/reducers";
-import { getIssues } from "../../Issues/modules/issuesReducer";
+import { countIssues } from "../../Issues/modules/issuesReducer";
 import {
   updateLanguage,
   updateLevel,
@@ -23,9 +23,9 @@ interface ITellUsAboutYou {
   readonly updateLanguage: (language: string[]) => any;
   readonly updateLevel: (level: string) => any;
   readonly updateType: (type: string) => any;
-  readonly getIssues: (args: any) => any;
+  readonly countIssues: (args: any) => any;
   readonly language: string[];
-  readonly issue_type: string;
+  readonly type: string;
   readonly experience_needed: string;
   readonly issuesLength: number;
   readonly home: any;
@@ -67,7 +67,7 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
       prevProps.home !== this.props.home &&
       (this.props.language || []).length > 0
     ) {
-      this.props.getIssues(this.props.home);
+      this.props.countIssues(this.props.home);
     }
     if (prevProps.focus !== this.props.focus) {
       scrollIntoViewSmoothly(
@@ -102,7 +102,7 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
   public render() {
     const {
       language,
-      issue_type,
+      type,
       issuesLength,
       experience_needed,
       home
@@ -151,7 +151,7 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
                 <Select
                   options={issueType}
                   defaultValue={issueType.find(
-                    issue => !!issue_type && issue_type.includes(issue.value)
+                    issue => !!type && type.includes(issue.value)
                   )}
                   styles={customStyles(true)}
                   onChange={this.handleTypeChange}
@@ -169,7 +169,7 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
 const mapStateToProps = (state: IRootState) => {
   return {
     language: state.home.language,
-    issue_type: state.home.issue_type,
+    type: state.home.type,
     experience_needed: state.home.experience_needed,
     issuesLength: state.issues.issuesLength,
     home: state.home
@@ -179,7 +179,7 @@ const mapStateToProps = (state: IRootState) => {
 const mapDispatchToProps = {
   updateLanguage,
   updateType,
-  getIssues,
+  countIssues,
   updateLevel
 };
 

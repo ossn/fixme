@@ -1,1420 +1,1139 @@
 export const issuesListMockData = [
   {
-    issue_id: 248006788,
-    title: "Implement issue parsing functionality using `isuue-labels`.",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "python",
-    tech_stack: "",
-    created_at: "2017-08-04T13:30:25Z",
-    updated_at: "2017-08-04T13:30:25Z",
-    issue_number: 22,
-    issue_labels: [
-      {
-        label_id: 661918134,
-        label_name: "Django",
-        label_color: "006b75",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Django"
-      },
-      {
-        label_id: 661917194,
-        label_name: "moderate",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/moderate"
-      },
-      {
-        label_id: 661917884,
-        label_name: "Python",
-        label_color: "bfdadc",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Python"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/22",
-    issue_body:
-      "Add issue parsing functionality according to labels instead of a template.",
-    issue_type: "",
-    repo: 6,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 244833992,
-    title: "Add regions model to add different regions to the system",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "python",
-    tech_stack: "",
-    created_at: "2017-07-22T08:43:46Z",
-    updated_at: "2017-08-04T13:31:17Z",
-    issue_number: 20,
-    issue_labels: [
-      {
-        label_id: 661918134,
-        label_name: "Django",
-        label_color: "006b75",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Django"
-      },
-      {
-        label_id: 613678729,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/enhancement"
-      },
-      {
-        label_id: 661917194,
-        label_name: "moderate",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/moderate"
-      },
-      {
-        label_id: 661917884,
-        label_name: "Python",
-        label_color: "bfdadc",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Python"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/20",
-    issue_body:
-      "Experience: Moderate\r\nExpected-time: 1 week\r\nLanguage: python\r\nTechnology-stack: Django\r\n\r\n## Description\r\nAdd regions model to add different regions to the system",
-    issue_type: "enhancement",
-    repo: 6,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 233564738,
-    title: "Dockerize Project",
-    experience_needed: "easyfix",
-    expected_time: "",
-    language: "python",
-    tech_stack: "",
-    created_at: "2017-06-05T11:47:01Z",
-    updated_at: "2017-08-04T13:31:42Z",
-    issue_number: 7,
-    issue_labels: [
-      {
-        label_id: 661918134,
-        label_name: "Django",
-        label_color: "006b75",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Django"
-      },
-      {
-        label_id: 661916826,
-        label_name: "easyfix",
-        label_color: "0e8a16",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/easyfix"
-      },
-      {
-        label_id: 613678729,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/enhancement"
-      },
-      {
-        label_id: 661917884,
-        label_name: "Python",
-        label_color: "bfdadc",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Python"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/7",
-    issue_body:
-      "Experience: Easyfix\r\nExpected-time: 3 hours\r\nLanguage: Python\r\nTechnology-stack Django\r\n\r\n## Description\r\nDockerize this backend project for development and deployment purposes.",
-    issue_type: "enhancement",
-    repo: 6,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 233429779,
-    title: "Implement expected time feature",
-    experience_needed: "senior",
-    expected_time: "",
-    language: "python",
-    tech_stack: "",
-    created_at: "2017-06-04T12:11:53Z",
-    updated_at: "2017-08-04T13:32:49Z",
-    issue_number: 6,
-    issue_labels: [
-      {
-        label_id: 661918134,
-        label_name: "Django",
-        label_color: "006b75",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Django"
-      },
-      {
-        label_id: 613678729,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/enhancement"
-      },
-      {
-        label_id: 661917884,
-        label_name: "Python",
-        label_color: "bfdadc",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/Python"
-      },
-      {
-        label_id: 661917366,
-        label_name: "senior",
-        label_color: "d93f0b",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/senior"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/6",
-    issue_body:
-      "Experience: Senior\r\nExpected-time: 1 week\r\nLanguage: Python\r\nTechnology-stack Django\r\n\r\n## Description\r\nRight now the expected time is a string field. It should work logically so that we can easily filter issues with different expected time.",
-    issue_type: "enhancement",
-    repo: 6,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 245506542,
-    title: "Implement regions functionality",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-07-25T19:17:03Z",
-    updated_at: "2017-08-05T09:22:03Z",
-    issue_number: 14,
-    issue_labels: [
-      {
-        label_id: 613678815,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/enhancement"
-      },
-      {
-        label_id: 662395378,
-        label_name: "JavaScript",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/JavaScript"
-      },
-      {
-        label_id: 662396383,
-        label_name: "moderate",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/moderate"
-      },
-      {
-        label_id: 662395505,
-        label_name: "React.js",
-        label_color: "1d76db",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/React.js"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/14",
-    issue_body:
-      "Experience: Moderate\r\nExpected-time: 1 week\r\nLanguage: JavaScript\r\nTechnology-stack: ReactJS\r\n\r\n# Description\r\nImplement a home page which will show all the regions and we can click on a region to see region specific issues.",
-    issue_type: "enhancement",
-    repo: 7,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 235006561,
-    title: "Add a repository name and url field to backend & frontend",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-06-10T14:41:07Z",
-    updated_at: "2017-08-05T09:22:45Z",
-    issue_number: 6,
-    issue_labels: [
-      {
-        label_id: 662395378,
-        label_name: "JavaScript",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/JavaScript"
-      },
-      {
-        label_id: 662396383,
-        label_name: "moderate",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/moderate"
-      },
-      {
-        label_id: 662395505,
-        label_name: "React.js",
-        label_color: "1d76db",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/React.js"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/6",
-    issue_body:
-      "Experience: Moderate\r\nExpected-time: 2 hours\r\nLanguage: JavaScript\r\nTechnology-stack: React.js\r\n\r\n## Description\r\nAdd a `repository name` and `URL` field to backend",
-    issue_type: "",
-    repo: 7,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 235005767,
-    title: "Implement an easy to use expected time feature.",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-06-10T14:26:15Z",
-    updated_at: "2017-08-05T09:23:20Z",
-    issue_number: 5,
-    issue_labels: [
-      {
-        label_id: 662395378,
-        label_name: "JavaScript",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/JavaScript"
-      },
-      {
-        label_id: 662396383,
-        label_name: "moderate",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/moderate"
-      },
-      {
-        label_id: 662395505,
-        label_name: "React.js",
-        label_color: "1d76db",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/React.js"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/5",
-    issue_body:
-      "Experience: Moderate\r\nExpected-time: 2 days\r\nLanguage: JavaScript\r\nTechnology-stack: React.js\r\n\r\n## Description\r\nImplement an easy to use `expected time` feature.",
-    issue_type: "",
-    repo: 7,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 221503041,
-    title: "[Suggestions] What other visualization to use?",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-04-13T09:10:46Z",
-    updated_at: "2017-08-05T10:40:23Z",
-    issue_number: 18,
-    issue_labels: [
-      {
-        label_id: 572979207,
-        label_name: "challenging",
-        label_color: "f9d0c4",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/challenging"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/18",
-    issue_body:
-      "> Right now app shows only one visualization (Pie Chart). Please comment some innovative suggestions for more visualization components. :smile: \r\n\r\n### Visualization\r\n![image](https://cloud.githubusercontent.com/assets/10090911/24997960/1fccfe60-2056-11e7-99c2-f462a8ccbb57.png)",
-    issue_type: "",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 219336257,
-    title: "Make the app responsive in mobile",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-04-04T18:09:54Z",
-    updated_at: "2017-08-05T10:40:40Z",
-    issue_number: 16,
-    issue_labels: [
-      {
-        label_id: 568483642,
-        label_name: "bug",
-        label_color: "ee0701",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/bug"
-      },
-      {
-        label_id: 568483645,
-        label_name: "help wanted",
-        label_color: "128A0C",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/help%20wanted"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 572978882,
-        label_name: "medium",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/medium"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/16",
-    issue_body: "> Right now the app looks horrible in mobile. :smile: ",
-    issue_type: "bugfix",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 218542756,
-    title: "Main page design suggestions",
+    id: "eb22f040-58b6-4580-9dad-cad1e8b9a2a4",
+    created_at: "2018-08-07T15:30:46.956501Z",
+    updated_at: "2018-08-07T15:30:46.956502Z",
+    title: "[staging] Social overlay updates",
     experience_needed: "easy",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-03-31T15:50:19Z",
-    updated_at: "2017-08-05T10:44:02Z",
-    issue_number: 4,
-    issue_labels: [
-      {
-        label_id: 572978663,
-        label_name: "easy",
-        label_color: "c2e0c6",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/easy"
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 335920377,
+    url: "https://github.com/mozilla/voice-web/issues/1154",
+    body:
+      '- `h1` needs to be visually centered in the space between the image and the social icons.\n- Remove `\u003cb\u003e` tag from `Help us`\n- `class="share-button"` appears to be sitting low within the pill background. When experimenting I increased bottom padding to 22px and this appeared to visually center.\n\n\u003cimg width="1054" alt="social-overlay" src="https://user-images.githubusercontent.com/18686986/41928898-855e34a4-792b-11e8-9c1a-c86a77baa762.png"\u003e',
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
       },
-      {
-        label_id: 568483644,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/enhancement"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      },
-      {
-        label_id: 573884010,
-        label_name: "UI/UX",
-        label_color: "5319e7",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/UI/UX"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/4",
-    issue_body:
-      "Right now page looks like this.\r\n\r\n### Timeline\r\n![image](https://cloud.githubusercontent.com/assets/10090911/24997925/04308c94-2056-11e7-92fb-d66f5e15fb90.png)\r\n\r\n### Visualization\r\n![image](https://cloud.githubusercontent.com/assets/10090911/24997960/1fccfe60-2056-11e7-99c2-f462a8ccbb57.png)\r\n\r\n",
-    issue_type: "enhancement",
-    repo: 8,
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
     project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1154,
+    labels: ["Design", '"help wanted"']
   },
   {
-    issue_id: 218923408,
-    title: "Add a create issue modal on the app.",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-04-03T12:52:52Z",
-    updated_at: "2017-08-05T10:47:32Z",
-    issue_number: 15,
-    issue_labels: [
-      {
-        label_id: 568483644,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/enhancement"
-      },
-      {
-        label_id: 568483645,
-        label_name: "help wanted",
-        label_color: "128A0C",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/help%20wanted"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 572978882,
-        label_name: "medium",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/medium"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/15",
-    issue_body:
-      "Use GitHub API to create issues directly from the app.\r\n\r\n> This GitHub API will be useful: https://developer.github.com/v3/issues/#create-an-issue.",
-    issue_type: "enhancement",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 218775548,
-    title: "Refactor and document the code",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-04-02T16:29:51Z",
-    updated_at: "2017-08-05T10:48:08Z",
-    issue_number: 13,
-    issue_labels: [
-      {
-        label_id: 568483645,
-        label_name: "help wanted",
-        label_color: "128A0C",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/help%20wanted"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 572978882,
-        label_name: "medium",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/medium"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/13",
-    issue_body:
-      "code refactor involves following tasks.\r\n\r\n- [ ] Setup eslint.\r\n- [ ] Remove all the eslint warnings.\r\n- [ ] Directory structure.\r\n- [ ] Components code refactor.\r\n- [ ] Documentation",
-    issue_type: "",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 218708326,
-    title: "Write code for parsing different events",
-    experience_needed: "easy",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-04-01T16:54:01Z",
-    updated_at: "2017-08-05T10:48:27Z",
-    issue_number: 9,
-    issue_labels: [
-      {
-        label_id: 572978663,
-        label_name: "easy",
-        label_color: "c2e0c6",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/easy"
-      },
-      {
-        label_id: 568483644,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/enhancement"
-      },
-      {
-        label_id: 568483645,
-        label_name: "help wanted",
-        label_color: "128A0C",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/help%20wanted"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/9",
-    issue_body:
-      "Given below is the list of optional events which we need to show on the timeline. Some of these are already done. These events are not required right now but it will be great if we can add them.\r\n> Use GitHub events API for reference [here](https://developer.github.com/v3/activity/events/types/) \r\n> And also this JSON response will be useful [here](https://api.github.com/users/razat249/events)\r\n> Use this file for implementation: [UserEventsList](https://github.com/razat249/github-view/blob/master/src/components/UserEventsList/UserEventsList.jsx) component \r\n\r\n![image](https://cloud.githubusercontent.com/assets/10090911/24514213/19e01fde-1591-11e7-9965-bc7624efb15d.png)\r\n\r\n### optional\r\n- [ ] CommitCommentEvent\r\n- [ ] DeleteEvent\r\n- [ ] DeploymentEvent\r\n- [ ] DeploymentStatusEvent\r\n- [ ] DownloadEvent\r\n- [ ] FollowEvent\r\n- [ ] ForkApplyEvent\r\n- [ ] GistEvent\r\n- [ ] GollumEvent\r\n- [ ] LabelEvent\r\n- [ ] MemberEvent\r\n- [ ] MembershipEvent\r\n- [ ] MilestoneEvent\r\n- [ ] OrganizationEvent\r\n- [ ] OrgBlockEvent\r\n- [ ] PageBuildEvent\r\n- [ ] ProjectCardEvent\r\n- [ ] ProjectColumnEvent\r\n- [ ] ProjectEvent\r\n- [ ] PublicEvent\r\n- [ ] PullRequestReviewEvent\r\n- [ ] PullRequestReviewCommentEvent\r\n- [ ] ReleaseEvent\r\n- [ ] RepositoryEvent\r\n- [ ] StatusEvent\r\n- [ ] TeamEvent\r\n- [ ] TeamAddEvent\r\n- [ ] WatchEvent",
-    issue_type: "enhancement",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 218254683,
-    title:
-      "Consolidate commits created simultaneously but pushed in different push events",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "javascript",
-    tech_stack: "",
-    created_at: "2017-03-30T16:29:56Z",
-    updated_at: "2017-08-05T10:48:44Z",
-    issue_number: 2,
-    issue_labels: [
-      {
-        label_id: 568483644,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/enhancement"
-      },
-      {
-        label_id: 568483645,
-        label_name: "help wanted",
-        label_color: "128A0C",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/help%20wanted"
-      },
-      {
-        label_id: 662423126,
-        label_name: "JavaScript",
-        label_color: "fbca04",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/JavaScript"
-      },
-      {
-        label_id: 572978882,
-        label_name: "medium",
-        label_color: "fef2c0",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/medium"
-      },
-      {
-        label_id: 662423055,
-        label_name: "React.js",
-        label_color: "0052cc",
-        label_url:
-          "https://api.github.com/repos/razat249/github-view/labels/React.js"
-      }
-    ],
-    issue_url: "https://github.com/razat249/github-view/issues/2",
-    issue_body:
-      "This issue is really important for usability of a timeline. Right now commits made are shown in different timeline events. We need to consolidate the issues to show in a single event.\r\n![image](https://cloud.githubusercontent.com/assets/10090911/24515106/2f269eec-1594-11e7-9942-d83728381282.png)\r\n",
-    issue_type: "enhancement",
-    repo: 8,
-    project: {
-      id: 1,
-      logo:
-        "http://ffp4g1ylyit3jdyti1hqcvtb-wpengine.netdna-ssl.com/opendesign/files/2017/01/Mozilla-12jan-1500px_logo.jpg",
-      setup_duration: "29 min",
-      display_name: "Moz",
-      first_color: "#FF614C",
-      second_color: "",
-      description: "Test",
-      issues_count: 5,
-      tags: ["node", "python", "js"]
-    }
-  },
-  {
-    issue_id: 338004325,
+    id: "20819b31-7155-4bc8-9380-8c3d743eeca0",
+    created_at: "2018-08-07T15:30:47.408067Z",
+    updated_at: "2018-08-07T15:30:47.408068Z",
     title: 'Pressing "No" on the last clip should stop the audio from playing',
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-03T18:12:21Z",
-    updated_at: "2018-07-04T16:35:23Z",
-    issue_number: 1217,
-    issue_labels: [
-      {
-        label_id: 653162782,
-        label_name: "help wanted",
-        label_color: "0e8a16",
-        label_url:
-          "https://api.github.com/repos/mozilla/voice-web/labels/help%20wanted"
-      }
-    ],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1217",
-    issue_body:
-      'While validating clips, I ran into a clip which was just the word "F**ker" on loop with the bass boosted. When I pressed "No", I expected the audio to stop playing, but it continued until the clip ended. When the clip is malicious (admittedly a rare occurrence in my experience), this is pretty annoying.\r\n\r\nIt continued to play while on this screen:\r\n\r\n<img width="1426" alt="screen shot 2018-07-03 at 12 08 23 pm" src="https://user-images.githubusercontent.com/2977353/42237072-f923fe80-7eb9-11e8-8ab4-e58c5fb71f23.png">\r\n\r\nI\'m not sure if this was because the clip happened to be the 5th clip in the set, or if this happens for all clips no matter what?',
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 338520946,
-    title: "Being asked to record the same sentence multiple times",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-05T10:42:23Z",
-    updated_at: "2018-07-05T15:16:34Z",
-    issue_number: 1220,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1220",
-    issue_body:
-      "Hi, in the old system it seemed like there was a protection to prevent a user to record himself on the same sentence multiple times, but with the new interface I have been asked multiple times to record a sentence I already did a few minutes before.\r\n\r\nI think that can be problematic for the quality of the dataset as : \r\n- Multiple clips with the same voice on the same sentence can lead to overfit and brings less informations on how to pronounce than if it was recorded by someone else.\r\n- I guess you collect X records for each sentence, which mean if I'm recorded 3 or 4 times on the same sentence, my voice will represent a higher percentage of that sentence recordings which leads to a lack diversity.\r\n\r\nI wonder if being recorded multiple times on the same sentence is intended and if so I am curious to understand why.\r\n\r\nHave a good day,\r\nLuc.\r\n\r\n",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 338916424,
-    title:
-      'Repetition and eventually running out of sentences/blank "Speak" page after ~500-600 samples contributed',
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-06T12:12:59Z",
-    updated_at: "2018-07-07T19:06:55Z",
-    issue_number: 1225,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1225",
-    issue_body:
-      'After I record about 500-600 samples (English language) I start to get the same sentences over and over again (this happens earlier as well, but only occasionally). Clicking "Skip" may also show me a blank page at some point (and the number of sentences to record might be lower than 5). Eventually the "Speak" page permanently appears blank all the time. The only way to overcome this is to clear the cookies/local storage for the domain and create a new profile (possibly with a different `userId`).\r\n\r\nI don\'t think there are any special errors in the browser console (I\'m not sure though, there are a couple of `Content Security Policy` errors though).\r\n\r\n(I\'m using Firefox 61.0.1/Win10 64bit)',
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339356388,
-    title: "string not centered (listen page)",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-09T08:42:10Z",
-    updated_at: "2018-07-09T08:42:10Z",
-    issue_number: 1229,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1229",
-    issue_body:
-      "unlike on the speak page the string above the button isn't centered\r\n![screenshot_20180709-103949__01](https://user-images.githubusercontent.com/5685512/42440025-b90eb984-8364-11e8-9a0f-bd60bae7a398.png)\r\n",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339505415,
-    title: "Changing limit of validation batch",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-09T15:45:42Z",
-    updated_at: "2018-07-10T09:23:22Z",
-    issue_number: 1233,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1233",
-    issue_body:
-      "Right now, we validate sentences 5 by 5, and there's a menu asking if we want to continue after completing a batch of five. This is a bit inconvenient when we want to validate a lot:\r\n - either, having a way in the profile to change the batch size,\r\n - or, disable this feature\r\n - or, add a shortcut to continue",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339530005,
-    title: "icon for voice web",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-09T16:55:39Z",
-    updated_at: "2018-07-10T10:48:54Z",
-    issue_number: 1234,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1234",
-    issue_body:
-      "Hi @mozilla, I am a graphic designer, I want to help you in graphic design.\r\n\r\nAfter I review your project, your app is very good. Therefore I suggest a new logo and icon for you. If you want it, I will design it for you and it's free.",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339438324,
-    title: "Submit button covers reviewing on mobile",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-09T12:57:23Z",
-    updated_at: "2018-07-10T11:14:09Z",
-    issue_number: 1231,
-    issue_labels: [
-      {
-        label_id: 598823682,
-        label_name: "Type: Bug",
-        label_color: "ee0701",
-        label_url:
-          "https://api.github.com/repos/mozilla/voice-web/labels/Type:%20Bug"
-      }
-    ],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1231",
-    issue_body:
-      "From @mansayk:\r\n\r\n![review-1](https://user-images.githubusercontent.com/449545/42451683-45035ca6-8388-11e8-83a0-d56d89395c49.png)\r\n\r\nIdeally the submit button shouldn't be able to float over the review table thing.\r\n\r\nHere are the browser details:\r\n\r\n![review-2](https://user-images.githubusercontent.com/449545/42451691-4b4e3d06-8388-11e8-8244-50bbfe0dbf75.png)\r\n\r\n",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339761360,
-    title: "Validations statistics when using keyboard shortcuts",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-10T09:24:33Z",
-    updated_at: "2018-07-10T11:54:49Z",
-    issue_number: 1238,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1238",
-    issue_body:
-      "Looking at the analytics, I only see 97 validations for july 9th, while I did at least 500. Are keyboard shortcuts properly ingested by analytics ?",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 339543527,
-    title: "after recording blank screen",
-    experience_needed: "moderate",
-    expected_time: "",
-    language: "typescript",
-    tech_stack: "",
-    created_at: "2018-07-09T17:38:45Z",
-    updated_at: "2018-07-10T12:13:13Z",
-    issue_number: 1235,
-    issue_labels: [],
-    issue_url: "https://github.com/mozilla/voice-web/issues/1235",
-    issue_body:
-      "After a user records something on their phone, they get a blank screen, they are not able to continue recording.\r\n\r\nHere is the browser information:\r\n\r\n![error-1](https://user-images.githubusercontent.com/449545/42466603-aa731a82-83af-11e8-9778-3babf196fcf1.png)\r\n",
-    issue_type: "",
-    repo: 9,
-    project: {
-      id: 2,
-      logo: "https://voice.mozilla.org/img/robot-greetings.png",
-      setup_duration: "",
-      display_name: "Common Voice",
-      first_color: "#ABDEF5",
-      second_color: "#CDCFEE",
-      description:
-        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\r\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\r\n\r\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
-      issues_count: 33,
-      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
-    }
-  },
-  {
-    issue_id: 233564738,
-    title: "Dockerize Project",
     experience_needed: "easy",
-    expected_time: "3 hours",
-    language: "python",
-    tech_stack: "django",
-    created_at: "2017-06-05T11:47:01Z",
-    updated_at: "2017-06-06T10:35:57Z",
-    issue_type: "enhancement",
-    issue_number: 7,
-    issue_labels: [
-      {
-        label_id: 613678729,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/enhancement"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/7",
-    issue_body:
-      "Dockerize this backend project for development and deployment purposes."
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 338004325,
+    url: "https://github.com/mozilla/voice-web/issues/1217",
+    body:
+      'While validating clips, I ran into a clip which was just the word "F**ker" on loop with the bass boosted. When I pressed "No", I expected the audio to stop playing, but it continued until the clip ended. When the clip is malicious (admittedly a rare occurrence in my experience), this is pretty annoying.\n\nIt continued to play while on this screen:\n\n\u003cimg width="1426" alt="screen shot 2018-07-03 at 12 08 23 pm" src="https://user-images.githubusercontent.com/2977353/42237072-f923fe80-7eb9-11e8-8ab4-e58c5fb71f23.png"\u003e\n\nI\'m not sure if this was because the clip happened to be the 5th clip in the set, or if this happens for all clips no matter what?',
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1217,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 233429779,
-    title: "Implement expected time feature",
-    experience_needed: "moderate",
-    expected_time: "1 day",
-    language: "python",
-    tech_stack: "django",
-    created_at: "2017-06-04T12:11:53Z",
-    updated_at: "2017-06-06T11:30:33Z",
-    issue_type: "enhancement",
-    issue_number: 6,
-    issue_labels: [
-      {
-        label_id: 613678729,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_backend/labels/enhancement"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/6",
-    issue_body:
-      "Right now the expected time is a string field. It should work logically so that we can easily filter issues with different expected time."
-  },
-  {
-    issue_id: 232772370,
-    title: "Configure MySQL Database",
+    id: "1973f049-61f7-4044-91f5-2ac3adf76943",
+    created_at: "2018-08-07T15:30:47.633571Z",
+    updated_at: "2018-08-07T15:30:47.633573Z",
+    title: "add UI feedback when using yes/no keyboard shortcuts",
     experience_needed: "easy",
-    expected_time: "3 hrs",
-    language: "sql",
-    tech_stack: "django",
-    created_at: "2017-06-01T05:50:38Z",
-    updated_at: "2017-06-06T11:31:00Z",
-    issue_number: 4,
-    issue_type: "enhancement",
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/4",
-    issue_body:
-      "Right now the app is using a sqllite3 database. Configure it to use MySQL."
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 340804330,
+    url: "https://github.com/mozilla/voice-web/issues/1257",
+    body:
+      "shortcuts shouldn't only blink green/red when being clicked by cursors but also when shortcuts are used.  \nthe easiest solution might be to use the DOM and execute the click method on a button, which in return should also trigger the css, right?",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1257,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 232771183,
-    title:
-      "Add a fetcher component to periodically fetch issues from GitHub APIs.",
-    experience_needed: "senior",
-    expected_time: "2 days",
-    language: "python",
-    tech_stack: "django, celery",
-    created_at: "2017-06-01T05:40:42Z",
-    issue_type: "enhancement",
-    updated_at: "2017-06-06T11:31:28Z",
-    issue_number: 3,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/3",
-    issue_body:
-      "We will be using this API for reference: https://api.github.com/repos/razat249/github-view/issues"
-  },
-  {
-    issue_id: 234782146,
-    title: "Initial Setup",
+    id: "9eb0a7a9-b954-4294-83e7-69988eee3091",
+    created_at: "2018-08-07T15:30:47.531054Z",
+    updated_at: "2018-08-07T15:30:47.531056Z",
+    title: "On mobile Chrome for Android: blank screen after recording",
     experience_needed: "easy",
-    expected_time: "3 hours",
-    language: "javascript",
-    tech_stack: "react.js",
-    created_at: "2017-06-09T10:10:25Z",
-    updated_at: "2017-06-09T10:13:41Z",
-    issue_number: 1,
-    issue_type: "bug",
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/1",
-    issue_body:
-      "Use `creeat-react-app` tool for initial setup of environment, linter etc."
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 339543527,
+    url: "https://github.com/mozilla/voice-web/issues/1235",
+    body:
+      "After a user records something on their phone, they get a blank screen, they are not able to continue recording.\n\nHere is the browser information:\n\n![error-1](https://user-images.githubusercontent.com/449545/42466603-aa731a82-83af-11e8-9778-3babf196fcf1.png)",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1235,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 234787315,
-    title: "Add issue listing component to list requested issues",
+    id: "657cda9e-33f9-46ce-8677-d6ff3c196f33",
+    created_at: "2018-08-07T15:30:47.645929Z",
+    updated_at: "2018-08-07T15:30:47.64593Z",
+    title: "listen page - 403 on audio files",
     experience_needed: "easy",
-    expected_time: "3 hours",
-    language: "javascript",
-    tech_stack: "react.js",
-    created_at: "2017-06-09T10:32:45Z",
-    updated_at: "2017-06-09T10:32:45Z",
-    issue_type: "enhancement",
-    issue_number: 3,
-    issue_labels: [
-      {
-        label_id: 613678815,
-        label_name: "enhancement",
-        label_color: "84b6eb",
-        label_url:
-          "https://api.github.com/repos/mozillacampusclubs/issue_parser_frontend/labels/enhancement"
-      }
-    ],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/3",
-    issue_body: "Add issue listing component to list requested issues"
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 340806127,
+    url: "https://github.com/mozilla/voice-web/issues/1258",
+    body:
+      "I don't know how exactly, but I got 403 errors for the new files after listening once through 5 examples.\n\ncurrently I am at sample 2 and I voted \"no\" for the first one.\nit was silent and playing indefinitely.\n\nI looked at the network graph 403\n\nI can still vote with no, even though the sample in the db might be valid.\n\nThe buttons should only work when the file has been loaded correctly.\nWhen the file didn't load correctly -\u003e try again until it works\n\n![firefox_2018-07-12_23-29-34](https://user-images.githubusercontent.com/5685512/42660466-91fd61d2-862b-11e8-84b0-bb3cba84bcb8.png)",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1258,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 235005767,
-    title: "Implement an easy to use expected time feature.",
-    experience_needed: "moderate",
-    expected_time: "2 days",
-    language: "javascript",
-    tech_stack: "react.js",
-    created_at: "2017-06-10T14:26:15Z",
-    updated_at: "2017-06-10T14:26:31Z",
-    issue_type: "enhancement",
-    issue_number: 5,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/5",
-    issue_body: "Implement an easy to use `expected time` feature."
+    id: "4eca7a79-b230-4105-b62c-466eec57530a",
+    created_at: "2018-08-07T15:30:47.828677Z",
+    updated_at: "2018-08-07T15:30:47.828678Z",
+    title: "Language name for Kabyle Shows the language code",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 325765476,
+    url: "https://github.com/mozilla/voice-web/issues/1018",
+    body:
+      "Common Voice web site shows the language iso code rather than the native name 'Taqbaylit'",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1018,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 235006561,
-    title: "Add a repository name and url field to backend & frontend",
-    experience_needed: "moderate",
-    expected_time: "2 hours",
-    language: "javascript",
-    tech_stack: "react.js",
-    created_at: "2017-06-10T14:41:07Z",
-    updated_at: "2017-06-10T14:41:53Z",
-    issue_number: 6,
-    issue_type: "enhancement",
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/6",
-    issue_body: "Add a `repository name` and `URL` field to backend"
+    id: "27524230-0a94-40ae-a9bf-493c048e622e",
+    created_at: "2018-08-07T15:30:47.862656Z",
+    updated_at: "2018-08-07T15:30:47.862657Z",
+    title: "Can't listen if s3proxy+docker is used",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 343379122,
+    url: "https://github.com/mozilla/voice-web/issues/1284",
+    body:
+      'If you try to listen to recorded audio samples that are stored on a local dev setup using s3proxy, you get two errors:\n\n1. CSP errors because http://s3proxy/... wasn\'t mentioned in `media-src`\n2. s3proxy not found\n\nI\'ve worked around the issue locally by:\n\n* In docker-compose.yml: exposing port 80 of the s3proxy machine as 9090 on localhost\n* Adding `.replace("s3proxy:80", "localhost:9090");` to [`getPublicUrl`](https://github.com/mozilla/voice-web/blob/1c143e40f914460425b682345d53875358d1806d/server/src/lib/bucket.ts#L23-L29)\n* Adding `http://localhost:9090/` to the whitelisted items in the CSP\n\nIt would be cool if all of this got set up per default, e.g. by setting values in local-docker-config and then reading them in the appropriate places. This would make it much easier for users to start contributing and to try out changes locally!',
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1284,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 235457957,
-    title: "Add sorting feature for expected time and experience level",
-    experience_needed: "moderate",
-    expected_time: "1 day",
-    language: "python",
-    tech_stack: "django",
-    created_at: "2017-06-13T07:17:21Z",
-    updated_at: "2017-06-13T07:17:21Z",
-    issue_type: "enhancement",
-    issue_number: 8,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/8",
-    issue_body: "Add sorting feature for expected time and experience level."
+    id: "fe2bb4f3-8513-48e0-b272-c1158af888f2",
+    created_at: "2018-08-07T15:30:47.925829Z",
+    updated_at: "2018-08-07T15:30:47.925833Z",
+    title: "[Safari] App won't load on iOS/Safari v10",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 326818270,
+    url: "https://github.com/mozilla/voice-web/issues/1026",
+    body:
+      "A bug was found in the common voice app\nwhen opening app mobile on iPhone,\n sometimes screen turns white. \n it happens more often than I thought, and I think it needs correction.",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1026,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 236652841,
-    title: "Add Travis-CI for continuous integration",
-    experience_needed: "moderate",
-    expected_time: "1 day",
-    language: "yml",
-    tech_stack: "django",
-    issue_type: "enhancement",
-    created_at: "2017-06-17T10:27:01Z",
-    updated_at: "2017-06-17T10:27:01Z",
-    issue_number: 11,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/11",
-    issue_body: "Add Travis-ci for continuous integration."
+    id: "ac4f987b-7a8d-407b-b295-1fdd4e0edfb8",
+    created_at: "2018-08-07T15:30:47.990416Z",
+    updated_at: "2018-08-07T15:30:47.990417Z",
+    title: '"Ready to do 5 more" blinks when hovered and sending clips',
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 344364780,
+    url: "https://github.com/mozilla/voice-web/issues/1295",
+    body:
+      'Every time the progress bar progresses on top (so I guess every time a clip is sent), the "Ready to do 5 more?" button blinks when it is hovered.\r\nIt doesn\'t look good and it also prevents people from actually clicking on the button before all the clips are sent.',
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1295,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 236652934,
-    title: "Write test-cases for back end API",
-    experience_needed: "moderate",
-    expected_time: "1 week",
-    language: "python",
-    tech_stack: "django",
-    created_at: "2017-06-17T10:29:33Z",
-    updated_at: "2017-06-19T17:18:35Z",
-    issue_type: "enhancement",
-    issue_number: 12,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_backend/issues/12",
-    issue_body: "Test the back end api"
+    id: "e641de96-872c-426c-88bf-77db6331be52",
+    created_at: "2018-08-07T15:30:48.023311Z",
+    updated_at: "2018-08-07T15:30:48.023312Z",
+    title: "Use pretty-quick on pre-commit",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 344920694,
+    url: "https://github.com/mozilla/voice-web/issues/1300",
+    body:
+      "https://github.com/azz/pretty-quick\n\nAtm we run prettier over every file, which can take a while. pretty-quick only runs on changed files. Nice!",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1300,
+    labels: ['"help wanted"']
   },
   {
-    issue_id: 235005479,
-    title: "Implement sorting functionality",
-    experience_needed: "moderate",
-    expected_time: "1 hours",
-    language: "javascript",
-    tech_stack: "react.js",
-    created_at: "2017-06-10T14:21:30Z",
-    issue_type: "enhancement",
-    updated_at: "2017-06-20T06:30:03Z",
-    issue_number: 4,
-    issue_labels: [],
-    issue_url:
-      "https://github.com/mozillacampusclubs/issue_parser_frontend/issues/4",
-    issue_body:
-      "Issues can be sorted according to the following attributes:\r\n- [x] Difficulty (easy - senior)\r\n- [x] Difficulty (senior - easy)\r\n- [x] Expected time (ascending)\r\n- [x] Expected time (descending)"
-  }
-];
-
-export const mockProjectData = [
-  {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "1fb22833-d031-4e08-b303-4d7e99c51ea0",
+    created_at: "2018-08-07T15:30:48.09854Z",
+    updated_at: "2018-08-07T15:30:48.098541Z",
+    title: "Show current language first on languages page",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 347866442,
+    url: "https://github.com/mozilla/voice-web/issues/1318",
+    body:
+      'Both "In Progress" and "Launched" should show the currently selected language first.',
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1318,
+    labels: ['"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "0fbbffd3-8d5d-4c42-8d51-5344e98042f8",
+    created_at: "2018-08-07T15:30:48.153676Z",
+    updated_at: "2018-08-07T15:30:48.153678Z",
+    title: 'Homepage "home-title" sizing improvements (wide viewports)',
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 328342718,
+    url: "https://github.com/mozilla/voice-web/issues/1044",
+    body:
+      '@Gregoor it\'d be great to increase the size \u0026 line height of our positioning statement on the homepage and reduce the max-width. Here are the edits I made on desktop viewports (mobile is just fine):\n\n`\u003ch2 id="home-title" style="font-size: 2rem;line-height: 2.5rem;margin-bottom: 0px;width: 680px;"\u003eThe Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\u003c/h2\u003e`\n\n\n\u003cimg width="1434" alt="screen shot 2018-05-31 at 5 37 13 pm" src="https://user-images.githubusercontent.com/18686986/40815202-99521034-64f9-11e8-8f14-17512d6099c1.png"\u003e',
+    type: "enhancement",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1044,
+    labels: ["Design", '"Type: Enhancement"', '"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "42ec8f51-250b-486f-a3fa-3d57ebd47f18",
+    created_at: "2018-08-07T15:30:48.254725Z",
+    updated_at: "2018-08-07T15:30:48.254726Z",
+    title: "Localize Open Graph description tag",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 329074367,
+    url: "https://github.com/mozilla/voice-web/issues/1051",
+    body:
+      "So that if you share https://voice.mozilla.org/cy, you get a welsh description in FB/twitter/slack/etc.",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1051,
+    labels: ['"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "6fac875f-e61a-46d9-a0d7-108f1a6b26ea",
+    created_at: "2018-08-07T15:30:48.484509Z",
+    updated_at: "2018-08-07T15:30:48.48451Z",
+    title: "CSP blocks script",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 330503511,
+    url: "https://github.com/mozilla/voice-web/issues/1074",
+    body: "![Screenshot](https://i.imgur.com/WMYsJk7.png)",
+    type: "bugfix",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1074,
+    labels: ['"Type: Bug"', '"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "7614a693-c16c-49d4-805f-d82e1ce08ac6",
+    created_at: "2018-08-07T15:30:48.612748Z",
+    updated_at: "2018-08-07T15:30:48.612749Z",
+    title: "Back To Top button doesn't work (mobile)",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 330853636,
+    url: "https://github.com/mozilla/voice-web/issues/1085",
+    body: "#987 repeats itself hehe",
+    type: "bugfix",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1085,
+    labels: ['"Type: Bug"', '"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "5e04eac9-866a-4e6f-aa80-dde355c8c05c",
+    created_at: "2018-08-07T15:30:48.62701Z",
+    updated_at: "2018-08-07T15:30:48.627012Z",
+    title: "one line/string doesn't show up on mobile (Contribute page)",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 330854020,
+    url: "https://github.com/mozilla/voice-web/issues/1086",
+    body:
+      '"Aufzeichnungen übertragen" doesn\'t show up on mobile, even though there would be enough space\n![Screenshot](https://i.imgur.com/BXgcqzT.png)',
+    type: "bugfix",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1086,
+    labels: ['"Type: Bug"', '"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "aaf73fbc-a8b9-4c22-8139-faa53278e731",
+    created_at: "2018-08-07T15:30:48.640047Z",
+    updated_at: "2018-08-07T15:30:48.640048Z",
+    title: "jumping div - contribute page (mobile)",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 330854116,
+    url: "https://github.com/mozilla/voice-web/issues/1087",
+    body:
+      "If you switch between Speak and Listen on mobile then the sentence div jumps (different absolute top value), which makes the whole layout jump a bit.",
+    type: "bugfix",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1087,
+    labels: ['"Type: Bug"', '"help wanted"']
   },
   {
-    color: "#f52664",
-    title: "Moz",
-    issueCount: 150,
-    setup: "20 min",
-    tags: ["HTML", "Rust", "Some long shit"],
-    logo:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d2/Firefox_Logo%2C_2017.png",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc et "
+    id: "d25d59d2-b1b0-480d-b06a-dcc28263406d",
+    created_at: "2018-08-07T15:30:49.12906Z",
+    updated_at: "2018-08-07T15:30:49.129062Z",
+    title: "fix font for Kyrgyz",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 335119936,
+    url: "https://github.com/mozilla/voice-web/issues/1141",
+    body:
+      "The letters ө, ү, and ң are different heights from other letters.  They should have the same dimensions as о, у, and н, respectively.  A different default font probably needs to be selected, or a web font should be used.\n\nSee example below:\n\n![2018-06-23-14 03 32_001](https://user-images.githubusercontent.com/963849/41812293-5788ff26-76ee-11e8-92df-533891f35aba.png)",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 1141,
+    labels: ['"help wanted"']
+  },
+  {
+    id: "cf6f1809-d8b0-4429-9a9c-739d4998c09b",
+    created_at: "2018-08-07T15:30:48.946557Z",
+    updated_at: "2018-08-07T15:30:48.946765Z",
+    title: "CSS Sanity Restoration",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 311947976,
+    url: "https://github.com/mozilla/voice-web/issues/912",
+    body:
+      "We considered adding a component styling library, like styled-components, but with those we have to pay the extra size-price (between 8kb-14kb, depending on the lib). So, a better approach might be to take what we already have to a better place. Even if we make the decision to switch to one of those libs after, the effort wouldn't be in vain, since cleaner DRYer styles are easier to port.\n\nSo this is a meta-issue for tracking everything that we can do to make our styling saner. Discussion, other ideas and PRs very much wanted \u0026 appreciated!\n\n- [ ] Standardise\n  - [ ] Margins/Padding (atm we probably have \u003e~ 10 different values) \n  - [ ] Font Sizes (atm \u003e~ 8 differnet values)\n  - [x] Colors\n  - [x] Transitions\n- [ ] Prefer nesting over selector repetition ([example](https://github.com/mozilla/voice-web/commit/411bd75a57ac368bcf44a0f697f5137fca3ba0c0))\n  - While deep nesting is hard to read, I prefer it over the more error-prone selector repetition (also deep nesting being difficult to read, might incentivize componentizaation)\n- [ ] Bootstrap-like mobile-first breakpoints ([example](https://github.com/mozilla/voice-web/commit/6415f246b6a42c59a610fcf27fff38e7bbf73d05))\n  - When we're done, we can delete the [old breakpoints](https://github.com/mozilla/voice-web/blob/6415f246b6a42c59a610fcf27fff38e7bbf73d05/web/src/components/vars.css#L63-L67)\n- [ ] Require CSS files in their respective component js files\n- [ ] Styleint\n  - [ ] order of attributes (imo it should be \"position \u003e display \u003e margin \u003e padding \u003e size \u003e color/opacity/etc. \u003e transition \u003e sub-selectors\")\n  - [ ] forbid new values for colors etc (to enforce standardisation)\n  - [ ] run sth like `stylelint --fix` with our `prettier` task\n- [ ] stop depending on route name for css classes\n  - in `layout.tsx` we set the content's classname to the route and depend on those names all over the place\n- [ ] don't select for tags or specific components. give context specific classNames",
+    type: null,
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 912,
+    labels: ['"help wanted"']
+  },
+  {
+    id: "ce80c671-ec09-4dfd-ac1e-a06461c38239",
+    created_at: "2018-08-07T15:30:49.761042Z",
+    updated_at: "2018-08-07T15:30:49.761043Z",
+    title: "Mobile: Hide header when scrolling down",
+    experience_needed: "easy",
+    expected_time: null,
+    language: "typescript",
+    tech_stack: null,
+    github_id: 318821564,
+    url: "https://github.com/mozilla/voice-web/issues/973",
+    body: "Previous discussion #958",
+    type: "enhancement",
+    repository: {
+      id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+      created_at: "2018-08-07T15:30:28.470491Z",
+      updated_at: "2018-08-07T15:30:54.202909Z",
+      repository_url: "https://github.com/mozilla/voice-web",
+      project: {
+        id: "00000000-0000-0000-0000-000000000000",
+        created_at: "0001-01-01T00:00:00Z",
+        updated_at: "0001-01-01T00:00:00Z",
+        display_name: "",
+        first_color: "",
+        second_color: null,
+        description: "",
+        logo: "",
+        link: "",
+        setup_duration: null,
+        issues_count: 0,
+        tags: null
+      },
+      project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      issue_count: 142,
+      issues: null
+    },
+    repository_id: "e78de351-f3f3-4379-80c1-bc36d4af8687",
+    project: {
+      id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+      created_at: "2018-08-07T15:30:28.465689Z",
+      updated_at: "2018-08-07T15:30:28.46569Z",
+      display_name: "Common Voice",
+      first_color: "#ABDEF5",
+      second_color: "#CDCFEE",
+      description:
+        "The Common Voice project is Mozilla’s initiative to help teach machines how real people speak.\nVoice is natural, voice is human. That’s why we’re fascinated with creating usable voice technology for our machines. But to create voice systems, an extremely large amount of voice data is required.\n\nMost of the data used by large companies isn’t available to the majority of people. We think that stifles innovation. So we’ve launched Project Common Voice, a project to help make voice recognition open to everyone.",
+      logo: "https://voice.mozilla.org/img/robot-greetings.png",
+      link: "https://voice.mozilla.org/en",
+      setup_duration: null,
+      issues_count: 33,
+      tags: ["nodejs", "npm", "ffmpeg", "docker", "yarn"]
+    },
+    project_id: "72d69722-c115-4d47-b851-c8fe01bdfe58",
+    number: 973,
+    labels: ['"Type: Enhancement"', '"help wanted"']
   }
 ];

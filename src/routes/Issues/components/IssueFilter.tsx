@@ -35,9 +35,12 @@ const IssueFilter: React.SFC<IssueCardProps> = ({
             handleChange(e.currentTarget.checked, value, defaultValue)
           }
           key={value}
-          id={value}
+          id={value + defaultValue}
         />
-        <label className="form-check-label pl-4 mb-0" htmlFor={value}>
+        <label
+          className="form-check-label pl-4 mb-0"
+          htmlFor={value + defaultValue}
+        >
           {label}
         </label>
       </div>

@@ -50,7 +50,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                 description
               }) => (
                 <div className="col-12 col-md-6 col-lg-4" key={id}>
-                  <Link to={`issues?project=${id}`}>
+                  <Link to={`issues?project_id=${id}`}>
                     <div
                       style={gradient(first_color, second_color)}
                       className="d-flex flex-column justify-content-between projects-tile-wrapper my-1"
