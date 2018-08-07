@@ -147,10 +147,10 @@
 .pagination {
   display: flex;
   justify-content: center;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+
   a {
     color: #de4270;
+    padding: 0.5em 0.6em;
 
     &:hover {
       text-decoration: none;
@@ -165,12 +165,10 @@
     cursor: pointer;
     display: inline-block;
     font-family: $font-1;
-    margin-left: 0.25em;
-    margin-right: 0.25em;
-    padding: 0.3em 0.5em;
+    margin: 0.25em;
     text-align: center;
 
-    .active {
+    &.active {
       background: #efefef;
       border: solid 1px #bbb;
 
