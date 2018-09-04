@@ -26,7 +26,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
   public render() {
     const { projects } = this.props;
     return (
-      <div className="row projects-container">
+      <div className="projects-container">
         <section className="container">
           <FixMeNavbar white={true} />
           <div className="container">
