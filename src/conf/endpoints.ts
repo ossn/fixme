@@ -38,7 +38,7 @@ const endpoints = {
 };
 
 export let conf = {
-  apiBaseUrl: "https://api.ossn.club/api/",
+  apiBaseUrl: "https://fixme.ossn.club/api/",
   endpoints
 };
 
