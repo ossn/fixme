@@ -28,6 +28,12 @@ const endpoints = {
       segment: "projects",
       type: "GET"
     }
+  },
+  login: {
+    post: {
+      segment: "login",
+      type: "POST"
+    }
   }
 };
 
@@ -38,7 +44,7 @@ export let conf = {
 
 if (develop) {
   conf = {
-    apiBaseUrl: "http://localhost:3000/",
+    apiBaseUrl: "http://localhost:4010/api/",
     endpoints
   };
 }

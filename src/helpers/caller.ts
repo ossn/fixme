@@ -29,6 +29,7 @@ export const makeCall = ({
   const jobConf = conf.endpoints[call.section][call.job];
 
   let endpointUrl = conf.apiBaseUrl + assemble(jobConf.segment, urlParams);
+
   const requestObject: RequestInit = {
     headers: {
       "Content-type": "application/json"
@@ -38,7 +39,6 @@ export const makeCall = ({
   if (authUrl) {
     requestObject.credentials = "include";
   }
-
   if (jobConf.type !== "GET") {
     requestObject.body = JSON.stringify(params);
   } else if (Object.keys(params).length !== 0) {
