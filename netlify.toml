@@ -4,7 +4,7 @@
 
 [[redirects]]
   from="/api/"
-  to="https://api.ossn.club/api/"
+  to="https://api.ossn.club/"
 
 [[redirects]]
   from = "/*"
