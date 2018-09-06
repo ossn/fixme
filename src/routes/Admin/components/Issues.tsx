@@ -6,6 +6,7 @@ import {
   ReferenceField,
   TextField
 } from "react-admin";
+import { TagsField } from "./Projects";
 export const IssueList = (props: any) => (
   <List {...props}>
     <Datagrid>
@@ -20,7 +21,7 @@ export const IssueList = (props: any) => (
       <TextField source="type" />
       <TextField source="type" />
       <NumberField source="number" />
-      <TextField source="labels" />
+      <TagsField source="labels" label="Labels" />
       <ReferenceField
         label="Project"
         source="project_id"
