@@ -73,7 +73,9 @@ const convertHTTPResponseToDataProvider = (
   const { headers, json } = response;
   switch (type) {
     case GET_LIST:
-      const total = JSON.parse(headers.get("X-Pagination")).total_pages;
+      const pagination =
+        headers.get("X-Pagination") || headers.get("x-pagination");
+      const total = JSON.parse(pagination).total_pages;
       return {
         data: json,
         total: 1 || parseInt(total, 10)
@@ -93,14 +95,16 @@ const convertHTTPResponseToDataProvider = (
  */
 export default (type, resource, params) => {
   const { fetchJson } = fetchUtils;
-  const {
-    url,
-    options = { headers: new Headers() }
-  } = convertDataProviderRequestToHTTP(type, resource, params);
+  const { url, options = {} } = convertDataProviderRequestToHTTP(
+    type,
+    resource,
+    params
+  );
   const jwt = localStorage.getItem("jwt");
-  if (!options.headers) {
+  if (!(options || {}).headers) {
     options.headers = new Headers();
   }
+  options.headers.set("Content-type", "application/json");
   if (jwt) {
     options.headers.set("Authorization", `Bearer ${jwt}`);
   }
