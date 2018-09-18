@@ -5,7 +5,7 @@
 * Install dependencies
   * `yarn` || `npm i`
 * Run development
-  * `yarn dev` || `npm run dev`
+  * `yarn start` || `npm run start`
 * Deployment
   * `yarn build` || `npm run build`
 
@@ -2502,4 +2502,3 @@ In the future, we might start automatically compiling incompatible third-party m
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
-
