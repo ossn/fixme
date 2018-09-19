@@ -47,10 +47,10 @@ public onClick=()=> {
         <div className="row">
           <div className="col-md-4 d-flex flex-column justify-content-center align-middle">
             <h2 className="home-call-to-action-text mb-5">
-              You are a <span className="extra-bold">code ninja</span>.
+              You are a <span className="extra-bold">coder</span>.
               Open-source projects need{" "}
               <span className="extra-bold">your skills</span>.
-              <br /> <br />We’ll fix you up!
+              <br /> <br />We’ll connect you with meaningful contribution opportunities!
             </h2>
             <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
           </div>
