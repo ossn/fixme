@@ -50,6 +50,12 @@ li {
   list-style-type: none;
 }
 
+.unset-list-style {
+  li {
+    list-style-type: initial;
+  }
+}
+
 .loader {
   position: relative;
   &::before {

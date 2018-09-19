@@ -112,7 +112,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
             </div>
           </div>
         </section>
-        <section className="container mt-5">
+        <section className="container mt-5 unset-list-style">
           <h3 className="mb-4 projects-include-title">
             Want to include your project here?
           </h3>
@@ -128,6 +128,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
             sem ex in dolor.
             <br />
             <br />
+
             Maecenas hendrerit enim sed tellus gravida gravida. Ut vitae est id
             sapien imperdiet tincidunt sit amet in purus. Proin convallis velit
             ut pellentesque dapibus. Nunc sit amet fringilla urna. Morbi vel
