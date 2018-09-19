@@ -117,28 +117,16 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
             Want to include your project here?
           </h3>
           <p className="text-justify pb-5 mb-5">
-            Great! Here’s what you need to know: lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nunc et tincidunt dui, ut egestas
-            tortor. Vestibulum non ullamcorper lacus. Ut sed porttitor dolor.
-            Fusce at interdum justo, vel lacinia sem. Ut accumsan pulvinar
-            porttitor. Ut consequat sem vel molestie pellentesque. Duis id
-            bibendum nisi, vitae vestibulum magna. Proin gravida sit amet diam
-            lacinia faucibus. Praesent eu porttitor nibh. Praesent volutpat,
-            tortor nec sollicitudin aliquam, lectus neque tempus leo, non ornare
-            sem ex in dolor.
+            Your project should meet/include the following:
+            <ul>
+              <li>An Open Source Licence</li>
+              <li>An updated README</li>
+              <li>A Code of Conduct or Community Participation Guidelines</li>
+              <li>Do a proper use of the labels provided by GitHub</li>
+              <li>A communication channel for questions to be addressed (is it through GitHub issues, IRC, Slack etc?)</li>
+            </ul>
             <br />
-            <br />
-            Maecenas hendrerit enim sed tellus gravida gravida. Ut vitae est id
-            sapien imperdiet tincidunt sit amet in purus. Proin convallis velit
-            ut pellentesque dapibus. Nunc sit amet fringilla urna. Morbi vel
-            justo mollis, auctor nisi eu, mattis nulla. Nam a libero a justo
-            imperdiet ultrices sit amet lacinia nisl. Nam molestie ornare neque
-            sit amet porttitor. Suspendisse mauris neque, volutpat ultricies
-            malesuada in, euismod fringilla tellus. Donec lobortis varius eros
-            et imperdiet. In a tortor nisl. Ut sollicitudin molestie massa, a
-            vehicula diam volutpat id. Quisque ultricies velit quis tellus
-            hendrerit, ac condimentum velit rutrum. Aenean elementum auctor
-            consequat. Quisque dignissim arcu et risus efficitur egestas.{" "}
+            Add your project(s) by adding its/their details <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFXvaTB9BXx7AEAmght09VcFW1Zq-lqeaKHRzjPjiczzAlrQ/viewform">in this form</a>.
           </p>
         </section>
         <FixMeFooter />
