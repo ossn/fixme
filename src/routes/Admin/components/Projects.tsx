@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Create,
   Datagrid,
@@ -11,12 +11,12 @@ import {
   NumberInput,
   SimpleForm,
   TextField,
-  TextInput
-} from "react-admin";
+  TextInput,
+} from 'react-admin';
 
 export const TagsField = ({ record }: any) => (
   <ul>
-    {record.tags.map((item: any) => (
+    {((record || {}).tags || []).map((item: any) => (
       <li key={item}>{`${item}, `}</li>
     ))}
   </ul>
