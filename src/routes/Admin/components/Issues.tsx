@@ -1,12 +1,8 @@
-import * as React from "react";
-import {
-  Datagrid,
-  List,
-  NumberField,
-  ReferenceField,
-  TextField
-} from "react-admin";
-import { TagsField } from "./Projects";
+import * as React from 'react';
+import { Datagrid, List, NumberField, ReferenceField, TextField } from 'react-admin';
+
+import { TagsField } from './Projects';
+
 export const IssueList = (props: any) => (
   <List {...props}>
     <Datagrid>
@@ -17,8 +13,7 @@ export const IssueList = (props: any) => (
       <TextField source="language" />
       <TextField source="tech_stack" />
       <TextField source="url" />
-      <TextField source="logo" />
-      <TextField source="type" />
+      <TextField source="body" />
       <TextField source="type" />
       <NumberField source="number" />
       <TagsField source="labels" label="Labels" />
@@ -36,6 +31,7 @@ export const IssueList = (props: any) => (
       >
         <TextField source="repository_url" />
       </ReferenceField>
+      <TextField source="github_id" />
     </Datagrid>
   </List>
 );

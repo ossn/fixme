@@ -1,16 +1,14 @@
-import * as React from "react";
-import { Admin, Resource } from "react-admin";
-import "../../../styles/projects.css";
-import authProvider from "../helpers/authProvider";
-import dataProvider from "../helpers/dataProvider";
-import { IssueList } from "./Issues";
-import { ProjectCreate, ProjectEdit, ProjectList } from "./Projects";
-import {
-  RepositoryCreate,
-  RepositoryEdit,
-  RepositoryList
-} from "./Repositories";
-import { UserCreate, UserEdit, UserList } from "./Users";
+import '../../../styles/projects.css';
+
+import * as React from 'react';
+import { Admin, Resource } from 'react-admin';
+
+import authProvider from '../helpers/authProvider';
+import dataProvider from '../helpers/dataProvider';
+import { IssueList } from './Issues';
+import { ProjectCreate, ProjectEdit, ProjectList } from './Projects';
+import { RepositoryCreate, RepositoryEdit, RepositoryList } from './Repositories';
+import { UserCreate, UserEdit, UserList } from './Users';
 
 export default class AdminComponent extends React.PureComponent<{}, {}> {
   public render() {
