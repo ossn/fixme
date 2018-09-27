@@ -30,7 +30,7 @@ export default class FixMeNavbar extends React.Component<
           <NavLink className="mr-auto navbar-brand" to="/">
             <img src={Logo} className="d-inline-block align-top" alt="FixMe" />
           </NavLink>
-          <NavbarToggler onClick={this.toggleNavbar} />
+          <NavbarToggler aria-label="Navigation Toggler" onClick={this.toggleNavbar} />
           <Collapse isOpen={this.state.isOpen} navbar={true}>
             <Nav className="ml-auto" navbar={true}>
               <NavItem>
@@ -68,6 +68,7 @@ export default class FixMeNavbar extends React.Component<
              */}
               <NavItem>
                 <OutboundLink
+                  aria-label="TWITTER"
                   className="nav-link"
                   target="_blank"
                   to="https://twitter.com/fixmeparser"
