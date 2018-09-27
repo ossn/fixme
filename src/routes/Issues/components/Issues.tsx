@@ -114,7 +114,7 @@ export default class Issues extends React.PureComponent<
 
           <div className="row my-5">
             <div className="col-md-4 col-12 d-flex flex-column align-middle position-relative">
-              <div className="issues-filter-wrapper">
+              <div className="issues-filter-wrapper" style={{position: "relative"}}>
                 <h2 className="mb-4">Filter</h2>
                 <div className="issues-filter-container p-4">
                   {filters.map(filter => (
