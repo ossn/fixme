@@ -2,6 +2,7 @@
 
 # FixMe Repo
 
+> This project requires Node.js version >= 8.10
 * Install dependencies
   * `yarn` || `npm i`
 * Run development
