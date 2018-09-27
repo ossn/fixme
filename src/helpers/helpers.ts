@@ -22,7 +22,7 @@ export const customPageView = (url: string) => {
 
 export const customOutboundLink = (url: string) =>
   develop
-    ? window.open(url, "_blank")
+    ? window.open(url, "_blank", 'noopener')
     : outboundLink({ label: url }, () => {
-        window.open(url, "_blank");
+        window.open(url, "_blank", 'noopener');
       });

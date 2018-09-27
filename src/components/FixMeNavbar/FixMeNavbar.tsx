@@ -72,6 +72,7 @@ export default class FixMeNavbar extends React.Component<
                   target="_blank"
                   to="https://twitter.com/fixmeparser"
                   eventLabel="Twitter on menu clicked"
+                  rel="noopener"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
