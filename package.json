@@ -91,7 +91,8 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "precommit": "lint-staged",
-    "deploy": "yarn build"
+    "deploy": "yarn build",
+    "postinstall": "node postinstall.js"
   },
   "proxy": {
     "/api": {
