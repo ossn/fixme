@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
 import { customPageView } from "../../../helpers/helpers";
@@ -26,7 +27,8 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
   public render() {
     const { projects } = this.props;
     return (
-      <div className="projects-container">
+      <div className="projects-container">  
+        <FixMeMetas title="Fixme | Projects" description="projects page meta description"/>  
         <section className="container">
           <FixMeNavbar white={true} />
           <div className="container">
