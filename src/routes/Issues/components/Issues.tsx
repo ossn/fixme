@@ -8,6 +8,7 @@ import { push } from "connected-react-router";
 import { stringify } from "querystring";
 import ReactPaginate from "react-paginate";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import Spinner from "../../../components/Spinner";
 import { filters } from "../../../helpers/consts";
@@ -109,6 +110,7 @@ export default class Issues extends React.PureComponent<
 
     return (
       <div className="row issues-container">
+        <FixMeMetas title="Fixme | Issues" description="Issues page meta description" />
         <section className="container">
           <FixMeNavbar white={true} />
 

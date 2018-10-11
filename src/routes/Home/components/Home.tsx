@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { customPageView } from '../../../helpers/helpers';
 import "../../../styles/home.css";
@@ -42,6 +43,7 @@ public onClick=()=> {
     const {projectLength} = this.props
   return (
     <div className="row home-container">
+      <FixMeMetas title="Fixme" description="home page meta description"/> 
       <section className="home-section container">
         <FixMeNavbar />
         <div className="row">
