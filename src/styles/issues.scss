@@ -115,6 +115,7 @@
   }
   .issues-filter-wrapper {
     display: none;
+    position: relative;
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
