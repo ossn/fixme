@@ -110,7 +110,7 @@ export default class Issues extends React.PureComponent<
 
     return (
       <div className="row issues-container">
-        <FixMeMetas title="Fixme | Issues" description="Issues page meta description" />
+        <FixMeMetas title="Fixme | Issues" description="Find open issues of projects on the FixMe platform according to skill level and technologies of choice." />
         <section className="container">
           <FixMeNavbar white={true} />
 
