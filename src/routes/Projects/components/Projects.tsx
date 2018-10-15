@@ -28,7 +28,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
     const { projects } = this.props;
     return (
       <div className="projects-container">
-        <FixMeMetas title="Fixme | Projects" description="projects page meta description"/>
+        <FixMeMetas title="Fixme | Projects" description="Find open source projects which have active and healthy ecosystems for contributors of all skill levels and technological preferences."/>
         <section className="container">
           <FixMeNavbar white={true} />
           <div className="container">

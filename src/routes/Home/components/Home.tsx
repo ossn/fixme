@@ -43,7 +43,7 @@ public onClick=()=> {
     const {projectLength} = this.props
   return (
     <div className="row home-container">
-      <FixMeMetas title="Fixme" description="home page meta description"/> 
+      <FixMeMetas title="Fixme" description="FixMe is a platform that helps contributors find opensource projects that best fit their skills and abilities."/> 
       <section className="home-section container">
         <FixMeNavbar />
         <div className="row">
