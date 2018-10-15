@@ -68,11 +68,15 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                       </div>
                       <div className="d-flex justify-content-between align-items-end projects-tile-bottom-wrapper">
                         <div className="projects-tile-tag-wrapper pb-2 ml-2">
-                          {(tags || []).map(tag => (
-                            <span className="projects-tile-tag mr-1" key={tag}>
+                          {(tags || []).map(tag => {
+                            if(tag!==""){
+                            return (<span className="projects-tile-tag mr-1" key={tag}>
                               {tag}
-                            </span>
-                          ))}
+                            </span>)
+                            }
+                            return null;
+                          })
+                        }
                         </div>
                         <div className="projects-tile-logo-wrapper">
                           <img

@@ -115,13 +115,14 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
         </h6>
         <div className="home-about-you-magic mt-4 d-flex flex-column">
           <div>
-            <p className="h2">I do my magic in</p>
+            <p className="h2" id="magicLabel">I do my magic in</p>
             <Select
               ref={(ref: React.RefObject<{}>) => {
                 this.selectRef = ref;
               }}
               id="language-select"
               options={technologies}
+			  aria-labelledby="magicLabel"
               isMulti={true}
               placeholder="type in your favorite languages"
               defaultValue={
