@@ -7,6 +7,7 @@ import * as ReactMarkdown from "react-markdown";
 import { push } from "connected-react-router";
 import { stringify } from "querystring";
 import ReactPaginate from "react-paginate";
+
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
