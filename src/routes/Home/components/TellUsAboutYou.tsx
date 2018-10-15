@@ -1,23 +1,16 @@
-import { stringify } from "querystring";
-import * as React from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import Select from "react-select";
-import scrollIntoView from "scroll-into-view-if-needed";
-import smoothScrollIntoView from "smooth-scroll-into-view-if-needed";
-import {
-  issueType,
-  lvlOfDifficulty,
-  technologies
-} from "../../../helpers/consts";
-import { IRootState } from "../../../store/reducers";
-import { countIssues } from "../../Issues/modules/issuesReducer";
-import {
-  updateLanguage,
-  updateLevel,
-  updateType
-} from "../modules/homeReducer";
-import { customStyles } from "./customStyles";
+import { stringify } from 'querystring';
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Select from 'react-select';
+import scrollIntoView from 'scroll-into-view-if-needed';
+import smoothScrollIntoView from 'smooth-scroll-into-view-if-needed';
+
+import { issueType, lvlOfDifficulty, technologies } from '../../../helpers/consts';
+import { IRootState } from '../../../store/reducers';
+import { countIssues } from '../../Issues/modules/issuesReducer';
+import { updateLanguage, updateLevel, updateType } from '../modules/homeReducer';
+import { customStyles } from './customStyles';
 
 interface ITellUsAboutYou {
   readonly updateLanguage: (language: string[]) => any;
@@ -33,7 +26,7 @@ interface ITellUsAboutYou {
 }
 
 const scrollIntoViewSmoothly =
-  "scrollBehavior" in document.documentElement.style
+  document.documentElement && "scrollBehavior" in document.documentElement.style
     ? scrollIntoView
     : smoothScrollIntoView;
 
