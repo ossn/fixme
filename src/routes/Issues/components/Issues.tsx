@@ -1,12 +1,11 @@
-import "../../../styles/issues.css";
+import '../../../styles/issues.css';
 
-import { parse } from "query-string";
-import * as React from "react";
-import * as ReactMarkdown from "react-markdown";
-
-import { push } from "connected-react-router";
-import { stringify } from "querystring";
-import ReactPaginate from "react-paginate";
+import { push } from 'connected-react-router';
+import { parse } from 'query-string';
+import { stringify } from 'querystring';
+import * as React from 'react';
+import * as ReactMarkdown from 'react-markdown';
+import ReactPaginate from 'react-paginate';
 
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
@@ -32,9 +31,10 @@ const icons = {
 
 export interface IParams {
   experience_needed?: string[] | string;
-  language?: string[];
+  language?: string[] | string;
   type?: string[] | string;
   ordering?: string;
+  project_id?: string[] | string;
 }
 
 interface IIssuesProps {
@@ -49,7 +49,7 @@ interface IIssuesProps {
   readonly getProjects: () => any;
 }
 
-const getParamsFromProps = (props: IIssuesProps) => {
+const getParamsFromProps = (props: IIssuesProps): IParams => {
   const { experience_needed, type, language, ordering, project_id } = parse(
     props.search
   );
