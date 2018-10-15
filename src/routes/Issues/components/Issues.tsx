@@ -32,7 +32,7 @@ export interface IParams {
   experience_needed?: string[] | string;
   language?: string[] | string;
   type?: string[] | string;
-  ordering?: string;
+  ordering?: string[] | string;
   project_id?: string[] | string;
 }
 
