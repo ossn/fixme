@@ -8,6 +8,7 @@ import * as ReactMarkdown from 'react-markdown';
 import ReactPaginate from 'react-paginate';
 
 import FixMeFooter from '../../../components/FixMeFooter/FixMeFooter';
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from '../../../components/FixMeNavbar/FixMeNavbar';
 import Spinner from '../../../components/Spinner';
 import { filters } from '../../../helpers/consts';
@@ -110,6 +111,7 @@ export default class Issues extends React.PureComponent<
 
     return (
       <div className="row issues-container">
+        <FixMeMetas title="Fixme | Issues" description="Find open issues of projects on the FixMe platform according to skill level and technologies of choice." />
         <section className="container">
           <FixMeNavbar white={true} />
 
