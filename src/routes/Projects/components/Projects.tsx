@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
 import { customPageView } from "../../../helpers/helpers";
@@ -27,6 +28,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
     const { projects } = this.props;
     return (
       <div className="projects-container">
+        <FixMeMetas title="Fixme | Projects" description="Find open source projects which have active and healthy ecosystems for contributors of all skill levels and technological preferences."/>
         <section className="container">
           <FixMeNavbar white={true} />
           <div className="container">
