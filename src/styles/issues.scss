@@ -115,6 +115,8 @@
   }
   .issues-filter-wrapper {
     display: none;
+    max-height: 100%;
+    overflow: auto;
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
