@@ -32,7 +32,7 @@ export interface IParams {
   experience_needed?: string[] | string;
   language?: string[] | string;
   type?: string[] | string;
-  ordering?: string[] | string;
+  ordering?: string;
   project_id?: string[] | string;
 }
 
@@ -69,11 +69,11 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
         ? [project_id]
         : project_id
       : undefined,
-    ordering: ordering 
-      ?typeof ordering === "string"
-        ?[ordering]
-        :ordering
-      :undefined
+    ordering: ordering
+      ? typeof ordering === "string"
+        ? ordering 
+        : ordering[0] 
+      : undefined
   };
 };
 
