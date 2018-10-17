@@ -64,13 +64,21 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
         ? [language]
         : language
       : undefined,
-    type: type ? (typeof type === "string" ? [type] : type) : undefined,
+    type: type 
+      ? typeof type === "string" 
+        ? [type] 
+        : type 
+      : undefined,
     project_id: project_id
       ? typeof project_id === "string"
         ? [project_id]
         : project_id
       : undefined,
-    ordering
+    ordering: ordering
+      ? Array.isArray(ordering)
+        ? ordering[0] 
+        : ordering 
+      : undefined
   };
 };
 
