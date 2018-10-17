@@ -74,9 +74,9 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
         : project_id
       : undefined,
     ordering: ordering
-      ? typeof ordering === "string"
-        ? ordering 
-        : ordering[0] 
+      ? Array.isArray(ordering)
+        ? ordering[0] 
+        : ordering 
       : undefined
   };
 };
