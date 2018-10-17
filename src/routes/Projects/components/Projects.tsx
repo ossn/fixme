@@ -65,7 +65,9 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                             {issues_count === 1 ? "issue" : "issues"}
                           </span>
                           <br />
-                          <span className="small">{setup_duration} setup</span>
+                          { 
+                            setup_duration && <span className="small">{setup_duration} setup</span> 
+                          }
                         </div>
                       </div>
                       <div className="d-flex justify-content-between align-items-end projects-tile-bottom-wrapper">
