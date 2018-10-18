@@ -8,6 +8,7 @@ import * as ReactMarkdown from 'react-markdown';
 import ReactPaginate from 'react-paginate';
 
 import FixMeFooter from '../../../components/FixMeFooter/FixMeFooter';
+import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from '../../../components/FixMeNavbar/FixMeNavbar';
 import Spinner from '../../../components/Spinner';
 import { filters } from '../../../helpers/consts';
@@ -68,7 +69,35 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
     {project_id = project_id[0];
     }
   return {
+
     experience_needed, type, language, ordering, project_id ,
+=======
+    experience_needed: experience_needed
+      ? typeof experience_needed === "string"
+        ? [experience_needed]
+        : experience_needed
+      : undefined,
+    language: language
+      ? typeof language === "string"
+        ? [language]
+        : language
+      : undefined,
+    type: type 
+      ? typeof type === "string" 
+        ? [type] 
+        : type 
+      : undefined,
+    project_id: project_id
+      ? typeof project_id === "string"
+        ? [project_id]
+        : project_id
+      : undefined,
+    ordering: ordering
+      ? Array.isArray(ordering)
+        ? ordering[0] 
+        : ordering 
+      : undefined
+
   };
 };
 
@@ -109,6 +138,7 @@ export default class Issues extends React.PureComponent<
 
     return (
       <div className="row issues-container">
+        <FixMeMetas title="Fixme | Issues" description="Find open issues of projects on the FixMe platform according to skill level and technologies of choice." />
         <section className="container">
           <FixMeNavbar white={true} />
 
