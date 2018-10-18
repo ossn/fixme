@@ -2,6 +2,19 @@
   "name": "fixme",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ayushianan.github.io/myapp",
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts-ts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "yarn build-css && react-scripts-ts build && ncp build dist",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "precommit": "lint-staged",
+    "deploy": "yarn build",
+    "postinstall": "node postinstall.js"
+  },
   "dependencies": {
     "@types/jest": "^23.3.2",
     "@types/node": "^10.11.0",
@@ -50,6 +63,7 @@
     "rimraf": "^2.6.2",
     "scroll-into-view-if-needed": "^2.2.16",
     "smooth-scroll-into-view-if-needed": "^1.1.19",
+    "source-map-explorer": "^1.6.0",
     "styled-components": "^3.4.9",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-sass-guidelines": "^5.2.0",
@@ -83,18 +97,6 @@
       "stylelint --fix",
       "git add"
     ]
-  },
-  "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts-ts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "yarn build-css && react-scripts-ts build && ncp build dist",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "precommit": "lint-staged",
-    "deploy": "yarn build",
-    "postinstall": "node postinstall.js"
   },
   "proxy": {
     "/api": {
