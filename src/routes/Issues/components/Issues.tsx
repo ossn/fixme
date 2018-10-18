@@ -49,27 +49,26 @@ interface IIssuesProps {
 }
 
 const getParamsFromProps = (props: IIssuesProps): IParams => {
-  const { experience_needed, type, language, ordering, project_id } = parse(
+  let { experience_needed, type, language, ordering, project_id } = parse(
     props.search
   );
+  if (experience_needed instanceof Array)
+    {experience_needed = experience_needed[0];
+    }
+  if (type instanceof Array)
+    {type = type[0];
+    }
+  if (language instanceof Array)
+    {language = language[0];
+    }
+  if (ordering instanceof Array)
+    {ordering= ordering[0];
+    }
+  if (project_id instanceof Array)
+    {project_id = project_id[0];
+    }
   return {
-    experience_needed: experience_needed
-      ? typeof experience_needed === "string"
-        ? [experience_needed]
-        : experience_needed
-      : undefined,
-    language: language
-      ? typeof language === "string"
-        ? [language]
-        : language
-      : undefined,
-    type: type ? (typeof type === "string" ? [type] : type) : undefined,
-    project_id: project_id
-      ? typeof project_id === "string"
-        ? [project_id]
-        : project_id
-      : undefined,
-    ordering
+    experience_needed, type, language, ordering, project_id ,
   };
 };
 
