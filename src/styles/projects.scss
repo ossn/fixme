@@ -55,6 +55,7 @@ $opacity: 0.3;
       &-bottom-wrapper {
         height: 80%;
         position: relative;
+        visibility: visible;
       }
       &-top-wrapper {
         height: 20%;
@@ -93,6 +94,9 @@ $opacity: 0.3;
           .projects-description {
             visibility: visible;
           }
+          .projects-tile-bottom-wrapper{
+            visibility: hidden;
+          }          
         }
       }
       &-logo {
