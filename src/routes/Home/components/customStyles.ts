@@ -82,11 +82,11 @@ export const customStyles = (small: boolean) => ({
   }),
   menu: () => ({
     top: "100%",
-    backgroundColor: "#fcfcfc",
-    borderRadius: "8px",
+    backgroundColor: "#c4c2c2",
+    borderRadius: "6px",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.2)",
-    marginTop: "-4px",
-    position: "absolute",
+    marginTop: "-2px",
+    position: "relative",
     width: "100%",
     zIndex: 1,
     boxSizing: "border-box"
@@ -94,13 +94,13 @@ export const customStyles = (small: boolean) => ({
   menuList: () => ({
     maxHeight: 300,
     overflowY: "auto",
-    paddingBottom: 4,
-    paddingTop: 4,
+    paddingBottom: 2,
+    paddingTop: 2,
     position: "relative",
-    backgroundColor: "#fcfcfc",
+    backgroundColor: "#c4c2c2",
     WebkitOverflowScrolling: "touch",
     boxSizing: "border-box",
-    borderRadius: "8px",
+    borderRadius: "6px",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.2)"
   })
 });
