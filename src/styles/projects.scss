@@ -32,7 +32,7 @@ $opacity: 0.3;
       }
     }
     &-description {
-      bottom: 0;
+      bottom: auto;
       display: flex;
       font-family: $font-1;
       font-size: 1em;
@@ -41,7 +41,7 @@ $opacity: 0.3;
       position: absolute;
       right: 0;
       text-align: justify;
-      top: 0;
+      top: auto;
       visibility: hidden;
       z-index: 2;
       &-text {
