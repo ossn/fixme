@@ -41,19 +41,20 @@ public onClick=()=> {
   public render(){
     const {projectLength} = this.props
   return (
+    
     <div className="row home-container">
       <section className="home-section container">
         <FixMeNavbar />
+    
         <div className="row">
           <div className="col-md-4 d-flex flex-column justify-content-center align-middle">
-            <h2 className="home-call-to-action-text mb-5">
-              You are a <span className="extra-bold">coder</span>.
-              Open-source projects need{" "}
-              <span className="extra-bold">your skills</span>.
-              <br /> <br />We’ll connect you with meaningful contribution opportunities!
-            </h2>
-            <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
+            <h2 className="home-call-to-action-text mb-5"> You are a 
+            <span className="extra-bold">coder</span>. Open-source projects need your skills. We’ll connect you with meaningful contribution opportunities!></h2>
+            <br><br>
+    
+    <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
           </div>
+    
           <div className="col-md-8">
             <img
               className="img-fluid home-illustration-img"
@@ -63,6 +64,7 @@ public onClick=()=> {
           </div>
         </div>
       </section>
+    <br>
       <section className="home-section container-fluid home-about-you">
         <div className="container d-flex justify-content-center">
           <TellUsAboutYou focus={this.state.focusSelect}/>
@@ -73,7 +75,9 @@ public onClick=()=> {
         <div className="d-flex row">
           <div className="col-md-6 col-12 d-flex">
             <h4 className="home-project-text py-5 m-auto">
-                <Link to="/projects" className="home-project-link">{`${projectLength === 1 ? "1 project" :`${projectLength} projects`}`} </Link> on board <br /> <span>(and counting…)</span>
+                <Link to="/projects" className="home-project-link">{`${projectLength === 1 ? "1 project" :`${projectLength} projects`}`} </Link> on board <br /> 
+                <br>
+                <span>(and counting…)</span>
             </h4>
           </div>
           <div className="col-md-6 col-12 h-100">
