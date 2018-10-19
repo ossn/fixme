@@ -115,6 +115,8 @@
   }
   .issues-filter-wrapper {
     display: none;
+    max-height: 80vh;
+    overflow-y: hidden;
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
@@ -124,8 +126,11 @@
       }
     }
     @include media-breakpoint-up(lg) {
-      margin-left: 3em;
-      margin-right: 3em;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+    &:hover {
+      overflow-y: scroll;
     }
   }
   .circle {
