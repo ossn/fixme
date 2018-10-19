@@ -32,7 +32,7 @@ $opacity: 0.3;
       }
     }
     &-description {
-      bottom: auto;
+      bottom: 0;
       display: flex;
       font-family: $font-1;
       font-size: 1em;
@@ -41,7 +41,7 @@ $opacity: 0.3;
       position: absolute;
       right: 0;
       text-align: justify;
-      top: auto;
+      top: 0;
       visibility: hidden;
       z-index: 2;
       &-text {
@@ -55,7 +55,6 @@ $opacity: 0.3;
       &-bottom-wrapper {
         height: 80%;
         position: relative;
-        visibility: visible;
       }
       &-top-wrapper {
         height: 20%;
@@ -94,9 +93,6 @@ $opacity: 0.3;
           .projects-description {
             visibility: visible;
           }
-          .projects-tile-bottom-wrapper{
-            visibility: hidden;
-          }          
         }
       }
       &-logo {
