@@ -64,10 +64,10 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
         ? [language]
         : language
       : undefined,
-    type: type 
-      ? typeof type === "string" 
-        ? [type] 
-        : type 
+    type: type
+      ? typeof type === "string"
+        ? [type]
+        : type
       : undefined,
     project_id: project_id
       ? typeof project_id === "string"
@@ -76,8 +76,8 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
       : undefined,
     ordering: ordering
       ? Array.isArray(ordering)
-        ? ordering[0] 
-        : ordering 
+        ? ordering[0]
+        : ordering
       : undefined
   };
 };
@@ -93,6 +93,10 @@ export default class Issues extends React.PureComponent<
   };
 
   public componentDidMount(): void {
+    const scrolltoRoot = document.getElementById('root');
+    if(!!scrolltoRoot){
+      scrolltoRoot.scrollIntoView();
+    }
     this.props.getIssues(this.state.params);
     this.props.getProjects();
     customPageView(window.location.pathname + window.location.search);
@@ -106,6 +110,10 @@ export default class Issues extends React.PureComponent<
       const params = getParamsFromProps(this.props);
       this.setState({ params });
       this.props.getIssues(params);
+      const scrolltoDiv = document.getElementById('scrollableDiv');
+      if(!!scrolltoDiv){
+        scrolltoDiv.scrollIntoView();
+      }
     }
   }
 
