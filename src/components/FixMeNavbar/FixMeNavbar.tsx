@@ -51,9 +51,15 @@ export default class FixMeNavbar extends React.Component<
               </NavItem>
 
               <NavItem>
-                <a className="nav-link" target="_blank" href="#">
+                <OutboundLink
+                  aria-label="FACEBOOK"
+                  className="nav-link"
+                  target="_blank"
+                  to="#"
+                  eventLabel="Facebook on menu clicked"
+                >
                   <FaFacebook />
-                </a>
+                </OutboundLink>
               </NavItem>
 
               <NavItem>
@@ -69,11 +75,16 @@ export default class FixMeNavbar extends React.Component<
               </NavItem>
 
               <NavItem>
-                <a className="nav-link" href="https://github.com/ossn">
+                <OutboundLink
+                  aria-label="GITHUB"
+                  className="nav-link"
+                  target="_blank"
+                  to="https://github.com/ossn"
+                  eventLabel="Github on menu clicked"
+                >
                   <FaGithub />
-                </a>
+                </OutboundLink>
               </NavItem>
-
             </Nav>
           </Collapse>
         </Navbar>
