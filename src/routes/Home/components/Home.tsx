@@ -42,69 +42,141 @@ public onClick=()=> {
     const {projectLength} = this.props
   return (
     
-    <div className="row home-container">
-      <section className="home-section container">
-        <FixMeNavbar />
-    
-        <div className="row">
-          <div className="col-md-4 d-flex flex-column justify-content-center align-middle">
-            <h2 className="home-call-to-action-text mb-5"> You are a 
-            <span className="extra-bold">coder</span>. Open-source projects need your skills. We’ll connect you with meaningful contribution opportunities!></h2>
-            <br><br>
-    
-    <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
-          </div>
-    
-          <div className="col-md-8">
-            <img
-              className="img-fluid home-illustration-img"
-              src={Illustration}
-              alt=""
-            />
-          </div>
-        </div>
-      </section>
-    <br>
-      <section className="home-section container-fluid home-about-you">
-        <div className="container d-flex justify-content-center">
-          <TellUsAboutYou focus={this.state.focusSelect}/>
-        </div>
-      </section>
-      <section className="container-fluid home-project">
-      <div className="container">
-        <div className="d-flex row">
-          <div className="col-md-6 col-12 d-flex">
-            <h4 className="home-project-text py-5 m-auto">
-                <Link to="/projects" className="home-project-link">{`${projectLength === 1 ? "1 project" :`${projectLength} projects`}`} </Link> on board <br /> 
-                <br>
-                <span>(and counting…)</span>
-            </h4>
-          </div>
-          <div className="col-md-6 col-12 h-100">
-            <img className="img-fluid home-project-img" src={GroupCopy} alt="projects" />
-          </div>
-        </div>
-        </div>
-      </section>
-      <section className="home-section container-fluid home-twitter pb-3">
-      <div className="row">
-        <div className="container mb-4 mt-4">
-          <div className="row">
-            <div className="col-md-5 col-12 d-flex justify-content-center">
-              <div className="justify-content-center d-flex mb-3 flex-column">
-                <h2>@fixmeparser</h2>
-                <span>our latest tweets</span>
-              </div>
-              <div className="justify-content-start">
-              <img src={LoudSpeaker} alt="" className="img-fluid"/>
-            </div></div>
-            <div className="col-md-7 col-12" >
-              <div className="home-twitter-tweet">Latest issue to fix for project Bootstrap! HELP! https://fixmeparser.com/issues#1825 </div>
-            </div>
-          </div></div>
-        </div>
-      </section>
-      <FixMeFooter />
-    </div>
+   React.createElement(
+  "div",
+  { className: "row home-container" },
+  React.createElement(
+    "section",
+    { className: "home-section container" },
+    React.createElement(FixMeNavbar, null),
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-md-4 d-flex flex-column justify-content-center align-middle" },
+        React.createElement(
+          "h2",
+          { className: "home-call-to-action-text mb-5" },
+          " You are a ",
+          React.createElement(
+            "span",
+            { className: "extra-bold" },
+            "coder"
+          ),
+          ". Open-source projects need your skills. We\u2019ll connect you with meaningful contribution opportunities!>"
+        ),
+        React.createElement(
+          "button",
+          { onClick: this.onClick, className: "btn btn-lg learn-more" },
+          "LEARN MORE"
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "col-md-8" },
+        React.createElement("img", { className: "img-fluid home-illustration-img", src: Illustration, alt: "" })
+      )
+    )
   )
-}}
+);
+    React.createElement(
+  "div",
+  { className: "row home-container" },
+  React.createElement(
+    "section",
+    { className: "home-section container-fluid home-about-you" },
+    React.createElement(
+      "div",
+      { className: "container d-flex justify-content-center" },
+      React.createElement(TellUsAboutYou, { focus: this.state.focusSelect })
+    )
+  ),
+  React.createElement(
+    "section",
+    { className: "container-fluid home-project" },
+    React.createElement(
+      "div",
+      { className: "container" },
+      React.createElement(
+        "div",
+        { className: "d-flex row" },
+        React.createElement(
+          "div",
+          { className: "col-md-6 col-12 d-flex" },
+          React.createElement(
+            "h4",
+            { className: "home-project-text py-5 m-auto" },
+            React.createElement(
+              Link,
+              { to: "/projects", className: "home-project-link" },
+              `${projectLength === 1 ? "1 project" : `${projectLength} projects`}`,
+              " "
+            ),
+            " on board ",
+            React.createElement("br", null),
+            React.createElement(
+              "span",
+              null,
+              "(and counting\u2026)"
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { className: "col-md-6 col-12 h-100" },
+          React.createElement("img", { className: "img-fluid home-project-img", src: GroupCopy, alt: "projects" })
+        )
+      )
+    )
+  ),
+  React.createElement(
+    "section",
+    { className: "home-section container-fluid home-twitter pb-3" },
+    React.createElement(
+      "div",
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "container mb-4 mt-4" },
+        React.createElement(
+          "div",
+          { className: "row" },
+          React.createElement(
+            "div",
+            { className: "col-md-5 col-12 d-flex justify-content-center" },
+            React.createElement(
+              "div",
+              { className: "justify-content-center d-flex mb-3 flex-column" },
+              React.createElement(
+                "h2",
+                null,
+                "@fixmeparser"
+              ),
+              React.createElement(
+                "span",
+                null,
+                "our latest tweets"
+              )
+            ),
+            React.createElement(
+              "div",
+              { className: "justify-content-start" },
+              React.createElement("img", { src: LoudSpeaker, alt: "", className: "img-fluid" })
+            )
+          ),
+          React.createElement(
+            "div",
+            { className: "col-md-7 col-12" },
+            React.createElement(
+              "div",
+              { className: "home-twitter-tweet" },
+              "Latest issue to fix for project Bootstrap! HELP! https://fixmeparser.com/issues#1825 "
+            )
+          )
+        )
+      )
+    )
+  ),
+  React.createElement(FixMeFooter, null)
+);
