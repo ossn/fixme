@@ -16,6 +16,9 @@
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ff9696;
   }
+  .issuelist {
+    padding-top: 2em;
+  }
   .issue-card {
     background: #fff;
     border-radius: 4px;
@@ -115,7 +118,8 @@
   }
   .issues-filter-wrapper {
     display: none;
-    max-height: 80vh;
+    margin-top: 2em;
+    max-height: 92vh;
     overflow-y: hidden;
     @include media-breakpoint-up(md) {
       display: unset;
