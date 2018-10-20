@@ -68,6 +68,7 @@ export default class FixMeNavbar extends React.Component<
                   target="_blank"
                   to="https://twitter.com/fixmeparser"
                   eventLabel="Twitter on menu clicked"
+                  rel="noopener noreferrer"
                 >
                   <FaTwitter />
                 </OutboundLink>
