@@ -24,5 +24,5 @@ export const customOutboundLink = (url: string) =>
   develop
     ? Object.assign(document.createElement('a'), { target: '_blank', href: url, rel: 'noopener noreferrer'}).click()
     : outboundLink({ label: url }, () => {
-      Object.assign(document.createElement('a'), { target: '_blank', href: 'http://google.com', rel: 'noopener noreferrer'}).click()
+      Object.assign(document.createElement('a'), { target: '_blank', href: url, rel: 'noopener noreferrer'}).click()
     });
