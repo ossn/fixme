@@ -35,8 +35,11 @@ export default class Home extends React.PureComponent<IHomeProps,{
     this.props.updateType();
   }
 
-public onClick=()=> {
-  this.setState(state => ({ focusSelect: !state.focusSelect}))
+public handleClick = () => {
+  const scrolltoMid = document.getElementById('tellusaboutyou');
+  if(!!scrolltoMid){
+    scrolltoMid.scrollIntoView({ block: 'center',  behavior: 'smooth' });
+  }
 }
 
   public render(){
@@ -54,7 +57,7 @@ public onClick=()=> {
               <span className="extra-bold">your skills</span>.
               <br /> <br />We’ll connect you with meaningful contribution opportunities!
             </h2>
-            <button onClick={this.onClick} className="btn btn-lg learn-more">LEARN MORE</button>
+            <button onClick={this.handleClick} className="btn btn-lg learn-more">LEARN MORE</button>
           </div>
           <div className="col-md-8">
             <img
@@ -65,7 +68,7 @@ public onClick=()=> {
           </div>
         </div>
       </section>
-      <section className="home-section container-fluid home-about-you">
+      <section id="tellusaboutyou" className="home-section container-fluid home-about-you">
         <div className="container d-flex justify-content-center">
           <TellUsAboutYou focus={this.state.focusSelect}/>
         </div>
