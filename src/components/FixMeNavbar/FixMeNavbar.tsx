@@ -24,7 +24,6 @@ export default class FixMeNavbar extends React.Component<
   };
   public render() {
     const { white } = this.props;
-    // const fill = white ? "#282a3a" : "#FAFAFA";
     return (
       <div>
         <Navbar expand="md" light={white} dark={!white}>
@@ -52,7 +51,7 @@ export default class FixMeNavbar extends React.Component<
 
               <NavItem>
                 <OutboundLink
-                  aria-label="FACEBOOK"
+                  aria-label="fixme's facebook"
                   className="nav-link"
                   target="_blank"
                   to="#"
@@ -64,7 +63,7 @@ export default class FixMeNavbar extends React.Component<
 
               <NavItem>
                 <OutboundLink
-                  aria-label="TWITTER"
+                  aria-label="fixme's twitter"
                   className="nav-link"
                   target="_blank"
                   to="https://twitter.com/fixmeparser"
@@ -76,7 +75,7 @@ export default class FixMeNavbar extends React.Component<
 
               <NavItem>
                 <OutboundLink
-                  aria-label="GITHUB"
+                  aria-label="fixme's github"
                   className="nav-link"
                   target="_blank"
                   to="https://github.com/ossn"
