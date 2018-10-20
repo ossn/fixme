@@ -5,6 +5,7 @@ This file acts as a bundler for all variables/mixins/themes, so they
 can easily be swapped out without `core.scss` ever having to know.
 */
 
+@import "./base/fonts";
 @import "./base/vars";
 @import "./base/typography";
 @import "./base/overrides";
