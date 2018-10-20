@@ -39,6 +39,9 @@ public handleClick = () => {
   const scrolltoMid = document.getElementById('tellusaboutyou');
   if(!!scrolltoMid){
     scrolltoMid.scrollIntoView({ block: 'center',  behavior: 'smooth' });
+    setTimeout(() => {
+      this.setState(state => ({ focusSelect: !state.focusSelect }));
+    }, 400);
   }
 }
 
