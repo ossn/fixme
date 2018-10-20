@@ -106,5 +106,8 @@ export const customStyles = (small: boolean) => ({
     boxSizing: "border-box",
     borderRadius: "8px",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.2)"
-  })
+  }),
+  placeholder: () => ({
+    color: "#1f2b44",
+  }),
 });
