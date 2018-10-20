@@ -56,6 +56,7 @@ export default class FixMeNavbar extends React.Component<
                   target="_blank"
                   to="#"
                   eventLabel="Facebook on menu clicked"
+                  rel="noopener noreferrer"
                 >
                   <FaFacebook />
                 </OutboundLink>
@@ -68,6 +69,7 @@ export default class FixMeNavbar extends React.Component<
                   target="_blank"
                   to="https://twitter.com/fixmeparser"
                   eventLabel="Twitter on menu clicked"
+                  rel="noopener noreferrer"
                 >
                   <FaTwitter />
                 </OutboundLink>
@@ -80,6 +82,7 @@ export default class FixMeNavbar extends React.Component<
                   target="_blank"
                   to="https://github.com/ossn"
                   eventLabel="Github on menu clicked"
+                  rel="noopener noreferrer"
                 >
                   <FaGithub />
                 </OutboundLink>
