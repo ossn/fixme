@@ -35,7 +35,9 @@
   }
   .learn-more {
     background-image: linear-gradient(to bottom, #de4270, #1f2b44);
+    border-bottom-width: 0;
     border-radius: 6px;
+    border-top-width: 0;
     color: $main-white;
     font-size: 18px;
     font-weight: 600;
