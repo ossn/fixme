@@ -16,9 +16,6 @@
     border-radius: 4px;
     box-shadow: inset 4px 0 0 0 #ff9696;
   }
-  .issuelist {
-    padding-top: 2em;
-  }
   .issue-card {
     background: #fff;
     border-radius: 4px;
@@ -101,6 +98,8 @@
     border-radius: 4px;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
     font-family: $font-1;
+    max-height: 90vh;
+    overflow-y: scroll;
   }
   .issue-order-by {
     background-color: $main-white;
@@ -118,9 +117,6 @@
   }
   .issues-filter-wrapper {
     display: none;
-    margin-top: 2em;
-    max-height: 92vh;
-    overflow-y: hidden;
     @include media-breakpoint-up(md) {
       display: unset;
       @supports (position: sticky) {
@@ -130,11 +126,8 @@
       }
     }
     @include media-breakpoint-up(lg) {
-      margin-left: 1.5em;
-      margin-right: 1.5em;
-    }
-    &:hover {
-      overflow-y: scroll;
+      margin-left: 3em;
+      margin-right: 3em;
     }
   }
   .circle {
