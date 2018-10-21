@@ -95,7 +95,7 @@ export default class Issues extends React.PureComponent<
   public componentDidMount(): void {
     const scrolltoRoot = document.getElementById('root');
     if(!!scrolltoRoot){
-      scrolltoRoot.scrollIntoView();
+      scrolltoRoot.scrollIntoView({ block: 'start',  behavior: 'smooth' });
     }
     this.props.getIssues(this.state.params);
     this.props.getProjects();
@@ -112,7 +112,7 @@ export default class Issues extends React.PureComponent<
       this.props.getIssues(params);
       const scrolltoDiv = document.getElementById('scrollableDiv');
       if(!!scrolltoDiv){
-        scrolltoDiv.scrollIntoView();
+        scrolltoDiv.scrollIntoView({ block: 'start',  behavior: 'smooth' });
       }
     }
   }
@@ -164,7 +164,7 @@ export default class Issues extends React.PureComponent<
                 </div>
               </div>
             </div>
-            <div className="col-md-8 col-12" id="scrollableDiv">
+            <div className="col-md-8 col-12 issuelist" id="scrollableDiv">
               <div className="d-flex justify-content-between mb-4">
                 <h2 className="col-12">
                   Showing {(page - 1) * 20}-{Math.min(page * 20, issuesLength)}{" "}
