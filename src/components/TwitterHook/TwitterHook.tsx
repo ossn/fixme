@@ -7,7 +7,7 @@ export const TwitterHook = () => (
         <Timeline
             dataSource={{
                 sourceType: 'profile',
-                screenName: 'mozilla'
+                screenName: 'fixmeparser'
             }}
             options={{
                 height: '400'
