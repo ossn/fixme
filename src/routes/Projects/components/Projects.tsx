@@ -134,7 +134,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
               <li>A communication channel for questions to be addressed (is it through GitHub issues, IRC, Slack etc?)</li>
             </ul>
             <br />
-            Add your project(s) by adding its/their details <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFXvaTB9BXx7AEAmght09VcFW1Zq-lqeaKHRzjPjiczzAlrQ/viewform">in this form</a>.
+            Add your project(s) by adding its/their details <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyXGN-hywy9oX-By6qf4lmhP62bz2IDSxOs9AkhzQsjBGGdQ/viewform">in this form</a>.
           </p>
         </section>
         <FixMeFooter />
