@@ -3,10 +3,11 @@ export const customStyles = (small: boolean) => ({
     WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
     backgroundColor: "transparent",
     boxSizing: "border-box",
-    color: "#de4270",
+    color: "#940046",
     cursor: "default",
     display: "block",
     fontSize: "inherit",
+    fontWeight: 600,
     padding: ".5em .1em",
     userSelect: "none",
     width: "100%",
@@ -27,12 +28,13 @@ export const customStyles = (small: boolean) => ({
     color: "#e7e7e7",
     boxSizing: "border-box",
     display: "flex",
-    margin: 2
+    margin: 2,
+    fontWeight: 600
   }),
   multiValueRemove: () => ({
     color: "rgba(231, 231, 231, 0.66)",
     borderRadius: "0px 10px 25% 0px",
-    backgroundColor: "#de4270",
+    backgroundColor: "#940046",
     alignItems: "center",
     display: "flex",
     boxSizing: "border-box",
@@ -46,11 +48,12 @@ export const customStyles = (small: boolean) => ({
   }),
   multiValueLabel: () => ({
     borderRadius: "10px 0px 0px 10px",
-    backgroundColor: "#de4270",
+    backgroundColor: "#940046",
     color: "#e7e7e7",
     overflow: "hidden",
     padding: 3,
     paddingLeft: 6,
+    fontWeight: 600,
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
     boxSizing: "border-box"
@@ -59,7 +62,7 @@ export const customStyles = (small: boolean) => ({
     border: 0,
     alignItems: "center",
     background: "transparent",
-    borderBottom: "2px solid #de4270",
+    borderBottom: "2px solid #940046",
     minWidth: small ? 100 : 250,
     boxShadow: null,
     boxSizing: "border-box",
@@ -74,7 +77,8 @@ export const customStyles = (small: boolean) => ({
   }),
   singleValue: () => ({
     color: "#e7e7e7",
-    backgroundColor: "#de4270",
+    backgroundColor: "#940046",
+    fontWeight: 600,
     borderRadius: "10px",
     boxSizing: "border-box",
     display: "flex",
@@ -102,5 +106,9 @@ export const customStyles = (small: boolean) => ({
     boxSizing: "border-box",
     borderRadius: "8px",
     boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.2)"
-  })
+  }),
+  placeholder: (base: any) => ({
+    ...base,
+    color: "#1f2b44",
+  }),
 });

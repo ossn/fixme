@@ -115,7 +115,7 @@ class TellUsAboutYou extends React.Component<ITellUsAboutYou, {}> {
               }}
               id="language-select"
               options={technologies}
-			  aria-labelledby="magicLabel"
+			        aria-labelledby="magicLabel"
               isMulti={true}
               placeholder="type in your favorite languages"
               defaultValue={

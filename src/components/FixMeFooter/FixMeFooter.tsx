@@ -9,7 +9,7 @@ const FixMeFooter: React.SFC<{}> = () => (
       <div className="d-flex flex-column justify-content-around m-auto">
         <div className="d-flex flex-column justify-content-center">
           <img src={Logo} alt="" />
-          <span className="text-muted mt-2 small fixme-footer-moz-text">
+          <span className="mt-2 small fixme-footer-moz-text">
             Mozilla is a global non-profit dedicated to putting you in control
             of your online experience and shaping the future of the web for the
             public good. Visit us at mozilla.org

@@ -67,23 +67,24 @@
       padding-top: 10em;
     }
     &-title {
-      color: #ea006e;
+      color: #940046;
       font-weight: bold;
       text-align: center;
     }
     &-magic {
       color: #1f2b44;
       display: flex;
-      font-weight: 300;
+      font-weight: 400;
       justify-content: center;
       text-align: center;
       .h2 {
         display: inline-block;
         font-family: $font-1;
+        font-weight: 300;
       }
     }
     &-btn {
-      border: solid 3px #de4270;
+      border: solid 3px #940046;
       border-radius: 10px;
       span {
         color: #1f2b44;
@@ -120,9 +121,9 @@
   }
   .home-twitter {
     background-color: #e7e7e7;
-    color: #ea006e;
+    color: #940046;
     h2 {
-      color: #ea006e;
+      color: #940046;
       padding-bottom: 0;
     }
     span {
@@ -137,7 +138,7 @@
     }
   }
   .arrow-right {
-    border: solid #de4270;
+    border: solid #940046;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 5px;
