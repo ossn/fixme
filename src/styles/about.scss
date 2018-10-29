@@ -1,0 +1,29 @@
+@import "./base";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+.about-container {
+  margin-left: -15px;
+  margin-right: -15px;
+  .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mid-section {
+    background-color: $color-quil-gray-approx;
+  }
+  .about {
+    &-body {
+      img {
+        text-align: center;
+        width: 80%;
+      }
+    }
+    &-title {
+      font-weight: bold;
+    }
+    &-sub-headings {
+      font-weight: bold;
+    }
+  }
+}

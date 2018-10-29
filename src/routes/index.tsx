@@ -15,6 +15,10 @@ const Projects = asyncComponent({
   LoadingComponent: Spinner,
   resolve: () => import(/* webpackPrefetch: true*/ "./Projects")
 });
+const About = asyncComponent({
+  LoadingComponent: Spinner,
+  resolve: () => import(/* webpackPrefetch: true*/ "./About")
+});
 
 const Admin = asyncComponent({
   LoadingComponent: Spinner,
@@ -28,6 +32,7 @@ export const Routes = () => (
     <Route path="/" component={Home} exact={true} />
     <Route path="/issues" component={Issues} exact={true} />
     <Route path="/projects" component={Projects} exact={true} />
+    <Route path="/about" component={About} exact={true} />
     <Route path="/admin" component={Admin} />
 
     <Route render={RedirectComponent} />
