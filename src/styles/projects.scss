@@ -14,7 +14,8 @@ $opacity: 0.3;
   .projects {
     @include media-breakpoint-up(md) {
       &-tile-tag-wrapper {
-        max-width: 50%;
+        max-width: 70%;
+        max-height: 100%;
       }
     }
     &-title {
@@ -101,16 +102,19 @@ $opacity: 0.3;
         }
       }
       &-logo {
-        max-height: 100%;
+        height: 100%;
+        width: 100%;
         object-fit: contain;
       }
       &-logo-wrapper {
         display: inline-flex;
         height: 100%;
-        left: 7%;
-        position: relative;
+        left: 57%;
+        position: absolute;
         top: 7%;
         visibility: visible;
+        min-width: 50%;
+        max-width: 100%;
       }
     }
     &-tile-tag {
