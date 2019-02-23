@@ -22,7 +22,7 @@ export const customPageView = (url: string) => {
 
 export const customOutboundLink = (url: string) =>
   develop
-    ? Object.assign(document.createElement('a'), { target: '_blank', href: url, rel: 'noopener noreferrer'}).click()
+    ? window.open(url, '_blank')
     : outboundLink({ label: url }, () => {
-      Object.assign(document.createElement('a'), { target: '_blank', href: url, rel: 'noopener noreferrer'}).click()
+      window.open(url, '_blank')
     });
