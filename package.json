@@ -62,7 +62,8 @@
     "tslint-react": "^3.6.0",
     "typesafe-actions": "^2.0.4",
     "typescript": "^3.0.1",
-    "utility-types": "^2.1.0"
+    "utility-types": "^2.1.0",
+    "yarn":"^1.13.0"
   },
   "devDependencies": {
     "husky": "^1.0.0",
