@@ -87,7 +87,6 @@ export default class Issues extends React.PureComponent<
   };
 
   public componentDidMount(): void {
-    document.title = "Fixme | Issues";
     const scrolltoRoot = document.getElementById("root");
     if (!!scrolltoRoot) {
       scrolltoRoot.scrollIntoView({ block: "start", behavior: "smooth" });
@@ -124,6 +123,7 @@ export default class Issues extends React.PureComponent<
       <div className="row issues-container">
         <section className="container">
           <Helmet>
+            <title>Fixme | Issues</title>
             <meta
               name="description"
               content="Find open issues of projects on the FixMe platform according to skill level and technologies of choice."
