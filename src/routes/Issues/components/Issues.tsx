@@ -19,8 +19,6 @@ import Enhancement from './icons/icon-type-feature.svg';
 import Task from './icons/icon-type-task.svg';
 import IssueFilter from './IssueFilter';
 
-
-
 const icons = {
   bugfix: BugFix,
   bug: BugFix,
