@@ -20,9 +20,21 @@ export const customPageView = (url: string) => {
   }
 };
 
-export const customOutboundLink = (url: string) =>
-  develop
-    ? window.open(url, '_blank')
-    : outboundLink({ label: url }, () => {
-      window.open(url, '_blank')
+export const customOutboundLink = (url: string) => {
+  if (develop) {
+    const newWindow = window.open(url, "_blank");
+    newWindow!.opener = null;
+    return;
+  } else {
+    outboundLink({ label: url }, () => {
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.target = "_blank";
+      link.style.display = "none";
+      link.setAttribute('rel',"rel: 'noopener noreferrer'")
+
+      document.getElementById("links")!.appendChild(link);
+      link.click();
     });
+  }
+};
