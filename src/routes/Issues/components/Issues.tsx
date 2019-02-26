@@ -1,26 +1,24 @@
-import '../../../styles/issues.css';
-
-import { push } from 'connected-react-router';
-import { parse } from 'query-string';
-import { stringify } from 'querystring';
-import * as React from 'react';
-import * as ReactMarkdown from 'react-markdown';
-import ReactPaginate from 'react-paginate';
-
-import FixMeFooter from '../../../components/FixMeFooter/FixMeFooter';
-import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
-import FixMeNavbar from '../../../components/FixMeNavbar/FixMeNavbar';
-import Spinner from '../../../components/Spinner';
-import { filters } from '../../../helpers/consts';
-import { customOutboundLink, customPageView } from '../../../helpers/helpers';
-import { issuesListMockData } from '../../../helpers/mockData';
-import { IProject } from '../../Projects/modules/projectReducer';
-import Tag from './icons/icon-tag.svg';
-import Time from './icons/icon-time.svg';
-import BugFix from './icons/icon-type-bugfix.svg';
-import Enhancement from './icons/icon-type-feature.svg';
-import Task from './icons/icon-type-task.svg';
-import IssueFilter from './IssueFilter';
+import { push } from "connected-react-router";
+import { parse } from "query-string";
+import { stringify } from "querystring";
+import * as React from "react";
+import Helmet from "react-helmet";
+import * as ReactMarkdown from "react-markdown";
+import ReactPaginate from "react-paginate";
+import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
+import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
+import Spinner from "../../../components/Spinner";
+import { filters } from "../../../helpers/consts";
+import { customOutboundLink, customPageView } from "../../../helpers/helpers";
+import { issuesListMockData } from "../../../helpers/mockData";
+import "../../../styles/issues.css";
+import { IProject } from "../../Projects/modules/projectReducer";
+import Tag from "./icons/icon-tag.svg";
+import Time from "./icons/icon-time.svg";
+import BugFix from "./icons/icon-type-bugfix.svg";
+import Enhancement from "./icons/icon-type-feature.svg";
+import Task from "./icons/icon-type-task.svg";
+import IssueFilter from "./IssueFilter";
 
 const icons = {
   bugfix: BugFix,
@@ -64,11 +62,7 @@ const getParamsFromProps = (props: IIssuesProps): IParams => {
         ? [language]
         : language
       : undefined,
-    type: type
-      ? typeof type === "string"
-        ? [type]
-        : type
-      : undefined,
+    type: type ? (typeof type === "string" ? [type] : type) : undefined,
     project_id: project_id
       ? typeof project_id === "string"
         ? [project_id]
@@ -93,9 +87,9 @@ export default class Issues extends React.PureComponent<
   };
 
   public componentDidMount(): void {
-    const scrolltoRoot = document.getElementById('root');
-    if(!!scrolltoRoot){
-      scrolltoRoot.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+    const scrolltoRoot = document.getElementById("root");
+    if (!!scrolltoRoot) {
+      scrolltoRoot.scrollIntoView({ block: "start", behavior: "smooth" });
     }
     this.props.getIssues(this.state.params);
     this.props.getProjects();
@@ -110,9 +104,9 @@ export default class Issues extends React.PureComponent<
       const params = getParamsFromProps(this.props);
       this.setState({ params });
       this.props.getIssues(params);
-      const scrolltoDiv = document.getElementById('scrollableDiv');
-      if(!!scrolltoDiv){
-        scrolltoDiv.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+      const scrolltoDiv = document.getElementById("scrollableDiv");
+      if (!!scrolltoDiv) {
+        scrolltoDiv.scrollIntoView({ block: "start", behavior: "smooth" });
       }
     }
   }
@@ -127,8 +121,14 @@ export default class Issues extends React.PureComponent<
 
     return (
       <div className="row issues-container">
-        <FixMeMetas title="Fixme | Issues" description="Find open issues of projects on the FixMe platform according to skill level and technologies of choice." />
         <section className="container">
+          <Helmet>
+            <title>Fixme | Issues</title>
+            <meta
+              name="description"
+              content="Find open issues of projects on the FixMe platform according to skill level and technologies of choice."
+            />
+          </Helmet>
           <FixMeNavbar white={true} />
 
           <div className="row my-5">
