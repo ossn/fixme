@@ -11,7 +11,11 @@ export const customStyles = (small: boolean) => ({
     padding: ".5em .1em",
     userSelect: "none",
     width: "100%",
-    borderBottom: "1px solid #e7e7e7"
+    borderBottom: "1px solid #e7e7e7",
+    "&:hover":{
+      backgroundColor:"#E7E7E7",
+      cursor:"pointer"
+    }
   }),
   dropdownIndicator: () => ({ display: "none" }),
   indicatorSeparator: () => ({ display: "none" }),
