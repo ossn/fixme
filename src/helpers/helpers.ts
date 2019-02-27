@@ -12,7 +12,7 @@ export const multiFilter = (
   });
 };
 
-export const develop = process.env.REACT_APP_ENV !== "development";
+export const develop = process.env.REACT_APP_ENV === "development";
 
 export const customPageView = (url: string) => {
   if (!develop) {
