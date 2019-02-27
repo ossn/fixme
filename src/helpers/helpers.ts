@@ -12,7 +12,7 @@ export const multiFilter = (
   });
 };
 
-export const develop = process.env.REACT_APP_ENV === "development";
+export const develop = process.env.REACT_APP_ENV !== "development";
 
 export const customPageView = (url: string) => {
   if (!develop) {
@@ -26,7 +26,7 @@ export const customOutboundLink = (url: string) => {
       link.setAttribute("href", url);
       link.target = "_blank";
       link.style.display = "none";
-      link.setAttribute('rel',"rel: 'noopener noreferrer'")
+      link.setAttribute('rel','noopener noreferrer')
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
