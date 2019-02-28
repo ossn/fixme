@@ -170,10 +170,16 @@ li {
   }
 }
 
-.nav-item {
-  text-transform: uppercase;
+.navbar-toggler:hover {
+  background: rgba(0, 0, 0, 0.08);
 }
 
+.nav-item {
+  font-size: 16px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
 .fixme-footer {
   background-color: #1f2b44;
   box-shadow: inset 0 4px 10px 0 rgba(0, 0, 0, 0.2);
