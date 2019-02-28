@@ -36,7 +36,7 @@ export default class About extends React.PureComponent {
                                         This platform helps contributors find open source projects that are a good fit for their skills and abilities, so that they can start contributing to open source. All of these projects have been vetted to ensure that they’re active, healthy, and ready for beginner contributions.
                             </p>
                                 </div>
-                                <div className="col-md-6 ">
+                                <div className="col-md-6 text-center">
                                     <img
                                         src={SectionOne}
                                         alt="sectionOne.svg"
@@ -49,7 +49,7 @@ export default class About extends React.PureComponent {
                         <section className=" container">
                             <div className="container">
                                 <div className="row ">
-                                    <div className="col-md-6 mt-5 mb-5">
+                                    <div className="col-md-6 mt-5 mb-5 text-center">
                                         <img
                                             src={SectionTwo}
                                             alt="sectionTwo.svg"
@@ -74,7 +74,7 @@ export default class About extends React.PureComponent {
                                         On the home page describe the programming languages you're comfortable using, once you put in a language, the site will ask you more about what kinds of issues you're looking for. It will then search the projects and surface issues that match your criteria. Give it a try!
                                 </p>
                                 </div>
-                                <div className="col-md-6 ">
+                                <div className="col-md-6 text-center">
                                     <img
                                         src={SectionThree}
                                         alt="sectionThree.svg"
