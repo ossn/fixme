@@ -33,3 +33,4 @@ export const filters = [
   },
   { label: "Type", value: "type", options: issueType }
 ];
+

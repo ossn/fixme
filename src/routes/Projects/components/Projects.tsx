@@ -5,6 +5,7 @@ import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
 import { customPageView } from "../../../helpers/helpers";
+import notfound from '../../../images/notfound.png';
 import "../../../styles/projects.css";
 import { IProject } from "../modules/projectReducer";
 
@@ -13,6 +14,10 @@ const gradient = (firstColor: string, secondColor: string) => ({
     secondColor ? firstColor : shade(firstColor, 0.4)
   } 0%,${secondColor ? secondColor : firstColor} 100%)`
 });
+
+function handleImageError(e: any) :void {
+    e.target.src = notfound
+}
 
 interface IProjectProps {
   readonly projects: IProject[];
@@ -24,11 +29,15 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
     this.props.getProjects();
     customPageView(window.location.pathname + window.location.search);
   }
+
   public render() {
     const { projects } = this.props;
     return (
       <div className="projects-container">
-        <FixMeMetas title="Fixme | Projects" description="Find open source projects which have active and healthy ecosystems for contributors of all skill levels and technological preferences."/>
+        <FixMeMetas
+          title="Fixme | Projects"
+          description="Find open source projects which have active and healthy ecosystems for contributors of all skill levels and technological preferences."
+        />
         <section className="container">
           <FixMeNavbar white={true} />
           <div className="container">
@@ -65,28 +74,35 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                             {issues_count === 1 ? "issue" : "issues"}
                           </span>
                           <br />
-                          { 
-                            setup_duration && <span className="small">{setup_duration} setup</span> 
-                          }
+                          {setup_duration && (
+                            <span className="small">
+                              {setup_duration} setup
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="d-flex justify-content-between align-items-end projects-tile-bottom-wrapper">
                         <div className="projects-tile-tag-wrapper pb-2 ml-2">
                           {(tags || []).map(tag => {
-                            if(tag!==""){
-                            return (<span className="projects-tile-tag mr-1" key={tag}>
-                              {tag}
-                            </span>)
+                            if (tag !== "") {
+                              return (
+                                <span
+                                  className="projects-tile-tag mr-1"
+                                  key={tag}
+                                >
+                                  {tag}
+                                </span>
+                              );
                             }
                             return null;
-                          })
-                        }
+                          })}
                         </div>
                         <div className="projects-tile-logo-wrapper">
                           <img
                             className="img-fluid projects-tile-logo"
                             src={logo}
                             alt="logo"
+                            onError={handleImageError}
                           />
                         </div>
                         <div className="projects-description">
@@ -131,10 +147,17 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
               <li>An updated README</li>
               <li>A Code of Conduct or Community Participation Guidelines</li>
               <li>Do a proper use of the labels provided by GitHub</li>
-              <li>A communication channel for questions to be addressed (is it through GitHub issues, IRC, Slack etc?)</li>
+              <li>
+                A communication channel for questions to be addressed (is it
+                through GitHub issues, IRC, Slack etc?)
+              </li>
             </ul>
             <br />
-            Add your project(s) by adding its/their details <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyXGN-hywy9oX-By6qf4lmhP62bz2IDSxOs9AkhzQsjBGGdQ/viewform">in this form</a>.
+            Add your project(s) by adding its/their details{" "}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyXGN-hywy9oX-By6qf4lmhP62bz2IDSxOs9AkhzQsjBGGdQ/viewform">
+              in this form
+            </a>
+            .
           </p>
         </section>
         <FixMeFooter />
