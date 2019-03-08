@@ -34,5 +34,3 @@ export const filters = [
   { label: "Type", value: "type", options: issueType }
 ];
 
-export const ImageFix: string =
-  "https://www.unesale.com/ProductImages/Large/notfound.png";

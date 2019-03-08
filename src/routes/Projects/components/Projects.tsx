@@ -4,8 +4,8 @@ import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
-import { ImageFix } from "../../../helpers/consts";
 import { customPageView } from "../../../helpers/helpers";
+import notfound from '../../../images/notfound.png';
 import "../../../styles/projects.css";
 import { IProject } from "../modules/projectReducer";
 
@@ -14,6 +14,10 @@ const gradient = (firstColor: string, secondColor: string) => ({
     secondColor ? firstColor : shade(firstColor, 0.4)
   } 0%,${secondColor ? secondColor : firstColor} 100%)`
 });
+
+function handleImageError(e: any) :void {
+    e.target.src = notfound
+}
 
 interface IProjectProps {
   readonly projects: IProject[];
@@ -24,10 +28,6 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
   public componentDidMount(): void {
     this.props.getProjects();
     customPageView(window.location.pathname + window.location.search);
-  }
-
-  public handleImageError(e: any) {
-    e.target.src = ImageFix
   }
 
   public render() {
@@ -102,7 +102,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                             className="img-fluid projects-tile-logo"
                             src={logo}
                             alt="logo"
-                            onError={this.handleImageError}
+                            onError={handleImageError}
                           />
                         </div>
                         <div className="projects-description">
