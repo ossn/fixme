@@ -20,7 +20,8 @@
     "alwaysStrict": true,
     "strict": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules",

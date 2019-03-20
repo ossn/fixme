@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";

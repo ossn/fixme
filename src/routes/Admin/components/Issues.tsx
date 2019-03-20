@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Datagrid, List, NumberField, ReferenceField, TextField } from 'react-admin';
 
 import { TagsField } from './Projects';

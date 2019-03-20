@@ -1,9 +1,9 @@
 import { push } from "connected-react-router";
 import { parse } from "query-string";
 import { stringify } from "querystring";
-import * as React from "react";
+import React from "react";
 import Helmet from "react-helmet";
-import * as ReactMarkdown from "react-markdown";
+import  ReactMarkdown from "react-markdown";
 import ReactPaginate from "react-paginate";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";

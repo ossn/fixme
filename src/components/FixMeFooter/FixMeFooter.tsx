@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Left from "./assets/illustration-footer-left.svg";
 import Right from "./assets/illustration-footer-right.svg";
 import Logo from "./assets/moz-logo-white.svg";

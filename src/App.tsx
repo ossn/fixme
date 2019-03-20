@@ -1,6 +1,6 @@
 import { ConnectedRouter } from "connected-react-router";
-import * as React from "react";
-import * as ReactGA from "react-ga";
+import React from "react";
+import ReactGA from "react-ga";
 import { Provider } from "react-redux";
 import { develop } from "./helpers/helpers";
 import { Routes } from "./routes";

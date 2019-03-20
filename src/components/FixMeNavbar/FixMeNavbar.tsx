@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { OutboundLink } from "react-ga";
 import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 import { NavLink } from "react-router-dom";

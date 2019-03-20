@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { asyncComponent } from "react-async-component";
 import { Redirect, Route, Switch } from "react-router";
 import Spinner from "../components/Spinner";

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Helmet } from 'react-helmet';
 export interface IFixMeMetaProps {
     readonly title: string;
@@ -14,4 +14,4 @@ export default class FixMeMetas extends React.Component<IFixMeMetaProps> {
             </Helmet>
         );
     }
-} 
+}
