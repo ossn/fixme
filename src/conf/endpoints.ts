@@ -1,4 +1,4 @@
-import { develop } from "../helpers/helpers";
+import { local } from "../helpers/helpers";
 
 export interface IJobConf {
   type?: string;
@@ -42,7 +42,7 @@ export let conf = {
   endpoints
 };
 
-if (develop) {
+if (local) {
   conf = {
     apiBaseUrl: "http://localhost:4010/api/",
     endpoints

@@ -2,12 +2,12 @@ import { ConnectedRouter } from "connected-react-router";
 import React from "react";
 import ReactGA from "react-ga";
 import { Provider } from "react-redux";
-import { develop } from "./helpers/helpers";
+import { develop, local } from "./helpers/helpers";
 import { Routes } from "./routes";
 import store from "./store/createStore";
 import { history } from "./store/createStore";
 
-if (!develop) {
+if (!develop || !local) {
   ReactGA.initialize("UA-84301250-18");
 }
 class App extends React.Component {
