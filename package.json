@@ -104,7 +104,7 @@
     "start-js": "react-scripts-ts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "yarn build-css && react-scripts-ts build && ncp build dist",
-    "test": "react-scripts-ts test --env=jsdom",
+    "test": "jest --watch",
     "eject": "react-scripts-ts eject",
     "deploy": "yarn build",
     "postinstall": "node postinstall.js"
