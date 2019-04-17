@@ -37,11 +37,7 @@ export default class FixMeNavbar extends React.Component<
           <Collapse isOpen={this.state.isOpen} navbar={true}>
             <Nav className="ml-auto" navbar={true}>
               <NavItem>
-                <NavLink
-                  className="nav-link"
-                  to="/issues"
-                  data-testid="issue-link"
-                >
+                <NavLink className="nav-link" to="/issues">
                   Issues
                 </NavLink>
               </NavItem>
