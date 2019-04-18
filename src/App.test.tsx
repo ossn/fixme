@@ -31,6 +31,6 @@ function renderWithRouter(
   };
 }
 test("App renders without crashing", () => {
-  const component = renderWithRouter(<App />);
-  expect(component).toMatchSnapshot();
+  const { container } = renderWithRouter(<App />);
+  expect(container).toMatchSnapshot();
 });
