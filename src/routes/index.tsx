@@ -1,7 +1,7 @@
 import React from "react";
 import { asyncComponent } from "react-async-component";
 import { Redirect, Route, Switch } from "react-router";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Spinner";  // used for loading animation
 
 const Home = asyncComponent({
   LoadingComponent: Spinner,

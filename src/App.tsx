@@ -8,7 +8,7 @@ import store from "./store/createStore";
 import { history } from "./store/createStore";
 
 if (!develop || !local) {
-  ReactGA.initialize("UA-84301250-18");
+  ReactGA.initialize("UA-84301250-18"); // run google analytics
 }
 class App extends React.Component {
   public render() {
