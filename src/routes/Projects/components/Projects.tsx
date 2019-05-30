@@ -67,7 +67,9 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                       className="d-flex flex-column justify-content-between projects-tile-wrapper my-1"
                     >
                       <div className="d-flex justify-content-between projects-tile-top-wrapper">
-                        <h3>{display_name}</h3>
+                        <div className="projects-tile-top-title">
+                          {display_name}
+                        </div>
                         <div className="projects-tile-top-issues">
                           <span>
                             {issues_count}{" "}

@@ -14,8 +14,8 @@ $opacity: 0.3;
   .projects {
     @include media-breakpoint-up(md) {
       &-tile-tag-wrapper {
-        max-width: 70%;
         max-height: 100%;
+        max-width: 70%;
       }
     }
     &-title {
@@ -64,9 +64,18 @@ $opacity: 0.3;
         padding: 0.3em 1em;
         z-index: 2;
       }
+      &-top-title {
+        font-size: 1.8em;
+        line-height: 1em;
+        margin-top: 0;
+        text-align: left;
+        width: calc(100% - 80px);
+      }
       &-top-issues {
         line-height: 12px;
         margin-top: 0.5em;
+        text-align: right;
+        width: 80px;
       }
       &-wrapper {
         border-radius: 10px;
@@ -96,25 +105,25 @@ $opacity: 0.3;
           .projects-description {
             visibility: visible;
           }
-          .projects-tile-bottom-wrapper{
+          .projects-tile-bottom-wrapper {
             visibility: hidden;
           }
         }
       }
       &-logo {
         height: 100%;
-        width: 100%;
         object-fit: contain;
+        width: 100%;
       }
       &-logo-wrapper {
         display: inline-flex;
         height: 100%;
         left: 57%;
+        max-width: 100%;
+        min-width: 50%;
         position: absolute;
         top: 7%;
         visibility: visible;
-        min-width: 50%;
-        max-width: 100%;
       }
     }
     &-tile-tag {
