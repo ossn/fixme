@@ -1,6 +1,6 @@
 import React from "react";
 import { OutboundLink } from "react-ga";
-import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Collapse, Nav, Navbar, NavbarToggler, NavItem } from "reactstrap";
 import Logo from "./logo-fixme.svg";
@@ -12,7 +12,7 @@ export interface IFixMeNavbarState {
 export default class FixMeNavbar extends React.Component<
   { white?: boolean },
   IFixMeNavbarState
-  > {
+> {
   public readonly state = {
     isOpen: false
   };
@@ -30,7 +30,10 @@ export default class FixMeNavbar extends React.Component<
           <NavLink className="mr-auto navbar-brand" to="/">
             <img src={Logo} className="d-inline-block align-top" alt="FixMe" />
           </NavLink>
-          <NavbarToggler aria-label="Navigation Toggler" onClick={this.toggleNavbar} />
+          <NavbarToggler
+            aria-label="Navigation Toggler"
+            onClick={this.toggleNavbar}
+          />
           <Collapse isOpen={this.state.isOpen} navbar={true}>
             <Nav className="ml-auto" navbar={true}>
               <NavItem>

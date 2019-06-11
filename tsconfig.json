@@ -23,6 +23,9 @@
     "skipLibCheck": true,
     "esModuleInterop": true
   },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
   "exclude": [
     "node_modules",
     "build",
