@@ -3,7 +3,7 @@ import { parse } from "query-string";
 import { stringify } from "querystring";
 import React from "react";
 import Helmet from "react-helmet";
-import  ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import ReactPaginate from "react-paginate";
 import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
@@ -28,11 +28,11 @@ const icons = {
 };
 
 export interface IParams {
-  experience_needed?: string[] | string;
-  language?: string[] | string;
-  type?: string[] | string;
-  ordering?: string;
-  project_id?: string[] | string;
+  experience_needed?: Array<string | number> | (string | number);
+  language?: Array<string | number> | (string | number);
+  type?: Array<string | number> | (string | number);
+  ordering?: string | number;
+  project_id?: Array<string | number> | (string | number);
 }
 
 interface IIssuesProps {
@@ -333,7 +333,7 @@ export default class Issues extends React.PureComponent<
     if ((params[filterType] || []).length <= 0) {
       delete params[filterType];
     }
-    const url = `${this.props.location}?${stringify(params)}`;
+    const url = `${this.props.location}?${stringify(params as any)}`;
     customPageView(url);
     this.props.push(url);
   };
