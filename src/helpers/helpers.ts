@@ -24,23 +24,33 @@ export const customPageView = (url: string) => {
 export const customOutboundLink = (url: string) => {
   if (develop || local) {
     const link = document.createElement("a");
-      link.setAttribute("href", url);
-      link.target = "_blank";
-      link.style.display = "none";
-      link.setAttribute('rel','noopener noreferrer')
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    link.setAttribute("href", url);
+    link.target = "_blank";
+    link.style.display = "none";
+    link.setAttribute('rel', 'noopener noreferrer')
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } else {
     outboundLink({ label: url }, () => {
       const link = document.createElement("a");
       link.setAttribute("href", url);
       link.target = "_blank";
       link.style.display = "none";
-      link.setAttribute('rel','noopener noreferrer')
+      link.setAttribute('rel', 'noopener noreferrer')
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link)
-     });
+    });
   }
 };
+
+export const truncate = (text: string, limit: number, suffix: string) => {
+  let content: string[]
+  text = text.trim();
+  // convert the text into a array of words and remove words beyond the limit
+  content = text.split(' ').slice(0, limit);
+
+  text = content.join(' ') + (suffix ? suffix : '');
+  return text;
+}

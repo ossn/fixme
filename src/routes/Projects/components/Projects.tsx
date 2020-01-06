@@ -4,7 +4,7 @@ import FixMeFooter from "../../../components/FixMeFooter/FixMeFooter";
 import FixMeMetas from "../../../components/FixMeMetas/FixMeMetas";
 import FixMeNavbar from "../../../components/FixMeNavbar/FixMeNavbar";
 import { shade } from "../../../helpers/colors";
-import { customPageView } from "../../../helpers/helpers";
+import { customPageView, truncate } from "../../../helpers/helpers";
 import notfound from '../../../images/notfound.png';
 import "../../../styles/projects.css";
 import { IProject } from "../modules/projectReducer";
@@ -109,7 +109,7 @@ export default class Projects extends React.PureComponent<IProjectProps, {}> {
                         </div>
                         <div className="projects-description">
                           <p className="projects-description-text">
-                            {description}
+                              {truncate(description, 30, "...")}
                           </p>
                         </div>
                       </div>
