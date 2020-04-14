@@ -6,9 +6,11 @@ export const technologies = [
   { value: "html", label: "HTML" },
   { value: "java", label: "Java" },
   { value: "javascript", label: "JavaScript" },
+  { value: "php", label: "PHP" },
   { value: "python", label: "Python" },
   { value: "rust", label: "Rust" },
   { value: "sass", label: "Sass" },
+  { value: "swift", label: "Swift" },
   { value: "typescript", label: "TypeScript" }
 ];
 
